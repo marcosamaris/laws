@@ -55,7 +55,7 @@
           <div class="flex-item flex-column">
 
             <p class="text text-large">
-                Audio: <input type="file" name="audio"><br>
+                Audio: <input type="file" onchange="previewFile()"><br>
               	Video: <input type="file" name="video"><br>
 		<input type="submit" value="Submit">
             </p>
@@ -72,6 +72,21 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function previewFile(){
+      var preview = document.querySelector('video');
+      var file    = document.querySelector('input[type=file]').files[0];
+      var reader  = new FileReader();
+
+      reader.addEventListener("load", function(){
+        preview.src = reader.result;
+      }, false);
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
 </body>
 
 </html>
