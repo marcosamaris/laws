@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ANNOTATION_DOCUMENT AUTHOR="" DATE="2013-09-25T13:29:19+00:00" FORMAT="2.7" VERSION="2.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.7.xsd">
+    <HEADER MEDIA_FILE="" TIME_UNITS="milliseconds">
+        <MEDIA_DESCRIPTOR MEDIA_URL="file:///C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set/2 - setting the participants/ZimmerFrei.mp4" MIME_TYPE="video/mp4" RELATIVE_MEDIA_URL="../2 - setting the participants/ZimmerFrei.mp4"/>
+        <MEDIA_DESCRIPTOR EXTRACTED_FROM="file:///C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set/2 - setting the participants/ZimmerFrei.mp4" MEDIA_URL="file:///C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set/2 - setting the participants/ZimmerFrei.wav" MIME_TYPE="audio/x-wav" RELATIVE_MEDIA_URL="../2 - setting the participants/ZimmerFrei.wav"/>
+        <PROPERTY NAME="lastUsedAnnotationId">1</PROPERTY>
+    </HEADER>
+    <TIME_ORDER>
+        <TIME_SLOT TIME_SLOT_ID="ts1" TIME_VALUE="0"/>
+        <TIME_SLOT TIME_SLOT_ID="ts2" TIME_VALUE="1222"/>
+    </TIME_ORDER>
+    <TIER LINGUISTIC_TYPE_REF="Phrases" PARTICIPANT="A" TIER_ID="A_Transcription-txt-deu"/>
+    <TIER LINGUISTIC_TYPE_REF="Words" PARENT_REF="A_Transcription-txt-deu" PARTICIPANT="A" TIER_ID="A_Words-txt-deu"/>
+    <TIER LINGUISTIC_TYPE_REF="Text" TIER_ID="Interlinear-title-deu">
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a1" TIME_SLOT_REF1="ts1" TIME_SLOT_REF2="ts2">
+                <ANNOTATION_VALUE>Zimmer Frei</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="A_Transcription-txt-deu" PARTICIPANT="A" TIER_ID="A_Translation-gls-en"/>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="A_Transcription-txt-deu" PARTICIPANT="A" TIER_ID="A_Participant-note-en"/>
+    <TIER LINGUISTIC_TYPE_REF="Phrases" PARTICIPANT="B" TIER_ID="B_Transcription-txt-deu"/>
+    <TIER LINGUISTIC_TYPE_REF="Words" PARENT_REF="B_Transcription-txt-deu" PARTICIPANT="B" TIER_ID="B_Words-txt-deu"/>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="B_Transcription-txt-deu" PARTICIPANT="B" TIER_ID="B_Translation-gls-en"/>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="B_Transcription-txt-deu" PARTICIPANT="B" TIER_ID="B_Participant-note-en"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="default-lt" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Phrases" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Blank" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Subdivision" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Words" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Text" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Note" TIME_ALIGNABLE="false"/>
+    <CONSTRAINT DESCRIPTION="Time subdivision of parent annotation's time interval, no time gaps allowed within this interval" STEREOTYPE="Time_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="Symbolic subdivision of a parent annotation. Annotations refering to the same parent are ordered" STEREOTYPE="Symbolic_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="1-1 association with a parent annotation" STEREOTYPE="Symbolic_Association"/>
+    <CONSTRAINT DESCRIPTION="Time alignable annotations within the parent annotation's time interval, gaps are allowed" STEREOTYPE="Included_In"/>
+</ANNOTATION_DOCUMENT>

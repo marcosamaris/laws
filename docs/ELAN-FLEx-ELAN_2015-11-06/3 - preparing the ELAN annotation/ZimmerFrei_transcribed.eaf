@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ANNOTATION_DOCUMENT AUTHOR="" DATE="2013-09-25T13:29:56+00:00" FORMAT="2.7" VERSION="2.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.7.xsd">
+    <HEADER MEDIA_FILE="" TIME_UNITS="milliseconds">
+        <MEDIA_DESCRIPTOR MEDIA_URL="file:///C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set/2 - setting the participants/ZimmerFrei.mp4" MIME_TYPE="video/mp4" RELATIVE_MEDIA_URL="../2 - setting the participants/ZimmerFrei.mp4"/>
+        <MEDIA_DESCRIPTOR EXTRACTED_FROM="file:///C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set/2 - setting the participants/ZimmerFrei.mp4" MEDIA_URL="file:///C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set/2 - setting the participants/ZimmerFrei.wav" MIME_TYPE="audio/x-wav" RELATIVE_MEDIA_URL="../2 - setting the participants/ZimmerFrei.wav"/>
+        <PROPERTY NAME="lastUsedAnnotationId">13</PROPERTY>
+    </HEADER>
+    <TIME_ORDER>
+        <TIME_SLOT TIME_SLOT_ID="ts1" TIME_VALUE="0"/>
+        <TIME_SLOT TIME_SLOT_ID="ts2" TIME_VALUE="100"/>
+        <TIME_SLOT TIME_SLOT_ID="ts3" TIME_VALUE="1170"/>
+        <TIME_SLOT TIME_SLOT_ID="ts4" TIME_VALUE="1417"/>
+        <TIME_SLOT TIME_SLOT_ID="ts5" TIME_VALUE="1580"/>
+        <TIME_SLOT TIME_SLOT_ID="ts6" TIME_VALUE="3431"/>
+        <TIME_SLOT TIME_SLOT_ID="ts7" TIME_VALUE="3431"/>
+        <TIME_SLOT TIME_SLOT_ID="ts8" TIME_VALUE="5039"/>
+        <TIME_SLOT TIME_SLOT_ID="ts9" TIME_VALUE="5039"/>
+        <TIME_SLOT TIME_SLOT_ID="ts10" TIME_VALUE="7519"/>
+        <TIME_SLOT TIME_SLOT_ID="ts11" TIME_VALUE="7519"/>
+        <TIME_SLOT TIME_SLOT_ID="ts12" TIME_VALUE="8314"/>
+        <TIME_SLOT TIME_SLOT_ID="ts13" TIME_VALUE="8314"/>
+        <TIME_SLOT TIME_SLOT_ID="ts14" TIME_VALUE="9227"/>
+    </TIME_ORDER>
+    <TIER LINGUISTIC_TYPE_REF="Phrases" PARTICIPANT="A" TIER_ID="A_Transcription-txt-deu">
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a2" TIME_SLOT_REF1="ts2" TIME_SLOT_REF2="ts3">
+                <ANNOTATION_VALUE>Wer ist heut unser Gast?</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Words" PARENT_REF="A_Transcription-txt-deu" PARTICIPANT="A" TIER_ID="A_Words-txt-deu"/>
+    <TIER LINGUISTIC_TYPE_REF="Text" TIER_ID="Interlinear-title-deu">
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a1" TIME_SLOT_REF1="ts1" TIME_SLOT_REF2="ts5">
+                <ANNOTATION_VALUE>Zimmer Frei</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="A_Transcription-txt-deu" PARTICIPANT="A" TIER_ID="A_Translation-gls-en">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a3" ANNOTATION_REF="a2">
+                <ANNOTATION_VALUE>Who is our guest today?</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="A_Transcription-txt-deu" PARTICIPANT="A" TIER_ID="A_Participant-note-en"/>
+    <TIER LINGUISTIC_TYPE_REF="Phrases" PARTICIPANT="B" TIER_ID="B_Transcription-txt-deu">
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a4" TIME_SLOT_REF1="ts4" TIME_SLOT_REF2="ts6">
+                <ANNOTATION_VALUE>Unser Gast heut abend ist eine Frau,</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a5" TIME_SLOT_REF1="ts7" TIME_SLOT_REF2="ts9">
+                <ANNOTATION_VALUE>eine sehr bekannte Frau,</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a6" TIME_SLOT_REF1="ts8" TIME_SLOT_REF2="ts10">
+                <ANNOTATION_VALUE>sie ist eine Sängerin mit einer begnadeten Stimme,</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a7" TIME_SLOT_REF1="ts11" TIME_SLOT_REF2="ts12">
+                <ANNOTATION_VALUE>Schauspielerin,</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a8" TIME_SLOT_REF1="ts13" TIME_SLOT_REF2="ts14">
+                <ANNOTATION_VALUE>sie rettet die Welt.</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Words" PARENT_REF="B_Transcription-txt-deu" PARTICIPANT="B" TIER_ID="B_Words-txt-deu"/>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="B_Transcription-txt-deu" PARTICIPANT="B" TIER_ID="B_Translation-gls-en">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a9" ANNOTATION_REF="a4">
+                <ANNOTATION_VALUE>Our guest tonight is a woman,</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a10" ANNOTATION_REF="a5">
+                <ANNOTATION_VALUE>a very well-known woman,</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a11" ANNOTATION_REF="a6">
+                <ANNOTATION_VALUE>she is a singer with a divine voice</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a12" ANNOTATION_REF="a7">
+                <ANNOTATION_VALUE>actress</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a13" ANNOTATION_REF="a8">
+                <ANNOTATION_VALUE>she saves the world.</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="B_Transcription-txt-deu" PARTICIPANT="B" TIER_ID="B_Participant-note-en"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="default-lt" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Phrases" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Blank" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Subdivision" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Words" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Text" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Note" TIME_ALIGNABLE="false"/>
+    <CONSTRAINT DESCRIPTION="Time subdivision of parent annotation's time interval, no time gaps allowed within this interval" STEREOTYPE="Time_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="Symbolic subdivision of a parent annotation. Annotations refering to the same parent are ordered" STEREOTYPE="Symbolic_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="1-1 association with a parent annotation" STEREOTYPE="Symbolic_Association"/>
+    <CONSTRAINT DESCRIPTION="Time alignable annotations within the parent annotation's time interval, gaps are allowed" STEREOTYPE="Included_In"/>
+</ANNOTATION_DOCUMENT>
