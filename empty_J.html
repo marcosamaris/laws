@@ -5,11 +5,7 @@
   <title>Load archive</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/empty.css" rel="stylesheet" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/menu.js"></script>
+  
   <style>
     .menu-index {
       color: rgb(255, 255, 255) !important;
@@ -20,51 +16,73 @@
 </head>
 
 <body>
-  <div >
-    <form onsubmit="previewFile()">
+    
+   
+  <div id="teste">
+    <form id="form">
       <p>
         Video: <input type="file"
                       name="video"
-                      accept="video/mp4"><br>
+                      accept="video/*"
+                      id="file_here"><br>
+
         Audio: <input type="file" 
                       name="audio" 
-                      accept="audio/mp3, audio/wav"><br>
-        
-        <input type="submit" value="Submit">
+                      accept="audio/*"
+                      id="file_here"><br>
       </p>
+      <input type="button" value="Submit" onclick="loadFile()">
+      
     </form>
   </div>
 
-  <div class="flex-item flex-item-stretch flex-column">
-      <video preload controls autoplay loop muted playsinline class="image">
+  <div >
+    <video width="320" height="240" id="myvideo">
         <source src="unknown" type="file" alt="Video preview...">
-        Your browser does not support the video tag.
-      </video>
+    </video>
+
+    <audio width="320" height="240" controls id="myaudio">
+      <source src="unknown" type="file">
+    </audio>
+
   </div>
+
   
-  <script>
-      
-      function previewFile(){
-        var file    = document.querySelector('input[type=file]').files[0];
-        var preview = document.querySelector('video');
-        var reader  = new FileReader();
-        //alert('teste')
-
-        reader.addEventListener("load", function(){
-          preview.src = reader.result;
-        }, false);
-
-        if (file) {
-          console.log(file.type);
-          reader.readAsDataURL(file)
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.js"
+    integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
+    crossorigin="anonymous"></script>
+    
+    <script>
+      function loadFile(){
+        
+        var video = document.querySelector('video');
+        var audio = document.querySelector('audio');
+        var file = document.getElementById('file_here').files;
+        //var inputs = document.querySelectorAll('.file_here')
+        //var file = document.getElementsByClassName('file_here').files
+        console.log(file[0])
+        console.log(video)
+        
+        reader = new FileReader();
+        reader.onloadend = function() {
+          video.src = reader.result;
+          video.play();
+          
+          
         }
+        
+        if (file){
+          console.log(file.type)
+          reader.readAsDataURL(file[0]);
+          
+        }
+        else{
+          video.src="";
+        }
+        
       }
-      
-  </script>
-
-  
-
- 
+    </script>
 
 </body>
 

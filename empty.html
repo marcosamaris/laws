@@ -47,17 +47,24 @@
           <div class="flex-item flex-column">
           </div>
           <div class="flex-item flex-column">
-<form action="/action_page.php">
+<form >
 <div class="flex-row">
-          <div class="flex-item flex-column">
-            <img class="image" src="img/dummay-img.png">
+  <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <video height="270" width="430" poster="img/dummay-img.png" class="image">
+              <source src="unknown" type="video/*">
+            </video>
+
+            <audio height="270" width="430" controls class="image">
+                <source src="unknown" type="audio/*">
+            </audio>
           </div>
           <div class="flex-item flex-column">
 
             <p class="text text-large">
-                Audio: <input type="file" onchange="previewFile()"><br>
-              	Video: <input type="file" name="video"><br>
-		<input type="submit" value="Submit">
+              Video: <input type="file" accept="video/*" name="video" class="file_here"><br>  
+              Audio: <input type="file" accept="audio/*" name="audio" class="file_here"><br>                
+              <input type="button" value="Submit" onclick="loadFile()">
             </p>
           </div>
         </div>
@@ -73,18 +80,43 @@
     </div>
   </div>
 
-  <script>
-    function previewFile(){
-      var preview = document.querySelector('video');
-      var file    = document.querySelector('input[type=file]').files[0];
-      var reader  = new FileReader();
+  
 
-      reader.addEventListener("load", function(){
-        preview.src = reader.result;
-      }, false);
-      if (file) {
-        reader.readAsDataURL(file);
+  <script>
+    function loadFile(){
+      
+      var video = document.querySelector('video');
+      var audio = document.querySelector('audio');
+      var file = document.getElementsByClassName('file_here');
+      //var inputs = document.querySelectorAll('.file_here')
+      //var file = document.getElementsByClassName('file_here').files
+      
+      
+      reader = new FileReader();
+      reader.onloadend = function() {
+        if(file[0].files.length == 1){
+          video.src = reader.result;
+          video.play();
+        }
+        else if(file[1].files.length == 1){
+          audio.src = reader.result;
+          audio.play();
+        }
+        
       }
+      
+      if (file[0].files[0]){
+        console.log("video: " + file[0].files[0])
+        reader.readAsDataURL(file[0].files[0]);
+      }
+      else if (file[1].files[0]){
+        console.log("audio: " + file[1].files[0])
+        reader.readAsDataURL(file[1].files[0]);
+      }
+      else{
+        video.src="";
+      }
+      
     }
   </script>
 </body>
