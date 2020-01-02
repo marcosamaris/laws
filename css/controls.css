@@ -114,7 +114,7 @@
   font-size: 16px;
   line-height: 16px;
   outline: none;
-  border-radius: 48px;
+  border-radius: 5px;
   cursor: pointer;
   box-shadow: none;
   transition: background-color 0.1s, box-shadow 0.1s, border 0.1s;
@@ -122,7 +122,7 @@
   color: black;
   border: 1px solid #777777;
   background-color: white;
-  padding: 13px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -158,8 +158,8 @@
 }
 
 .custom-button-flat img {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 .custom-button-flat.small img {
@@ -235,11 +235,11 @@ input[readonly].custom-textbox {
 }
 
 .control-group .custom-button-flat {
-  margin: 10px 0 10px 0;
+  margin: 5px 0 5px 0;
 }
 
 .control-group .custom-button-flat:not(:last-child) {
-  margin-right: 15px;
+  margin-right: 2px;
 }
 
 .control-group .custom-textbox {

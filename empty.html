@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  
   <style>
     .menu-index {
       color: rgb(255, 255, 255) !important;
@@ -58,7 +60,23 @@
             <audio height="270" width="430" controls class="image">
                 <source src="unknown" type="audio/*">
             </audio>
+            <div class="control-group">
+  
+              <button type="button" class="custom-button-flat" onclick="fileStop()"><img src="img/previous_final.png"></button>
+              <button type="button" class="custom-button-flat" onclick="fileBack()"><img src="img/previous_enquedrament.png"></button>
+              <button type="button" class="custom-button-flat" onclick="fileNext()"><img src="img/previous_1_second.png"></button>
+              <button type="button" class="custom-button-flat" onclick="filePlay()"><img src="img/previous_frame.png"></button>
+              <button type="button" class="custom-button-flat" onclick="filePause()"><img src="img/previous_pixel.png"></button>
+              <button type="button" class="custom-button-flat" onclick="fileStop()"><img src="img/play_.png"></button>
+              <button type="button" class="custom-button-flat" onclick="fileBack()"><img src="img/next_pixel.png"></button>
+              <button type="button" class="custom-button-flat" onclick="fileNext()"><img src="img/next_frame.png"></button>
+              <button type="button" class="custom-button-flat" onclick="fileBack()"><img src="img/next_1_second.png"></button>
+              <button type="button" class="custom-button-flat" onclick="fileNext()"><img src="img/next_enquedrament.png"></button>
+              <button type="button" class="custom-button-flat" onclick="fileNext()"><img src="img/next_final.png"></button>
+            </div>
+            
           </div>
+          
           <div class="flex-item flex-column">
 
             <p class="text text-large">
@@ -74,15 +92,28 @@
 
 
 </form>
+
+
+
+
+
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div id="waveform"></div>
 
   
-
+  
   <script>
+
+  var wavesurfer = WaveSurfer.create({
+          container: '#waveform',
+          scrollParent: true,
+          });
+    
+
     function loadFile(){
       
       var video = document.querySelector('video');
@@ -97,10 +128,13 @@
         if(file[0].files.length == 1){
           video.src = reader.result;
           video.play();
+          
+          
         }
         else if(file[1].files.length == 1){
           audio.src = reader.result;
           audio.play();
+          wavesurfer.load(audio);
         }
         
       }
@@ -118,6 +152,47 @@
       }
       
     }
+
+    function filePause(){
+      video = document.querySelector('video');
+      if(video.src){
+        video.pause();
+        console.log(video.controller);
+      }
+    }
+
+    function filePlay(){
+      video = document.querySelector('video');
+      if(video.src){
+        video.play();
+      }
+    }
+
+    function fileStop(){
+      video = document.querySelector('video');
+      if(video.src){
+        video.currentTime = 0;
+        video.pause();
+      }
+    }
+
+    function fileBack(){
+      video = document.querySelector('video');
+      if(video.src){
+        tempo = video.currentTime;
+        video.currentTime = tempo-5;
+      }
+    }
+
+    function fileNext(){
+      video = document.querySelector('video');
+      if(video.src){
+        tempo = video.currentTime;
+        video.currentTime = tempo+5;
+      }
+
+    }
+
   </script>
 </body>
 
