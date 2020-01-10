@@ -73,6 +73,11 @@ hr {
   margin: 0 0 10px 0;
 }
 
+li{
+  list-style-type: none;
+}
+
+
 .menu-container {
   z-index: 2;
   position: relative;
@@ -740,5 +745,36 @@ ol.nested>li:before {
   .gallery a {
     flex: 1 0 100%;
     max-width: 100%;
+  }
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.column.column-one{
+  width: 15%;
+}
+
+.column.column-two{
+  width: 85%;
+}
+
+.column.column-two input{
+  width: 100%;
+  
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin: 10px 10px 20px 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
   }
 }
