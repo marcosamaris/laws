@@ -74,8 +74,10 @@
             <form>          
               <div class="flex-item flex-column">
                 <p class="text text-large" id="inputs">
+                  
                   Video: <input type="file" accept="video/*" name="video" class="file_here"><br>  
                   Audio: <input type="file" accept="audio/*" name="audio" class="file_here"><br>                
+                  Open: <input type="file" accept=".eaf" name="file" class="file_here"><br>  
                   <input type="button" value="Submit" onclick="loadFile()">
                 </p>
               </div>
@@ -159,9 +161,19 @@
           
           wavesurfer.load(audio);
           wavesurfer.play();
-          document.querySelector("video").style.display = "none";
+          //document.querySelector("video").style.display = "none";
           element_Li.textContent=file[1].files[0].name
           
+        }
+        else if(file[2].files.length == 1){
+          var texto = reader.result.split('\n')
+          var linhas = texto[3].split('=')[1]
+          video.src=linhas.split('"', 2)[1]
+          video.play()
+          wavesurfer.load(video);
+          wavesurfer.play();
+          element_Li.textContent=texto[3].split('=')[3].split('/')[1].split('"')[0]
+          console.log(texto[3].split('=')[3].split('/')[1].split('"')[0])
         }
         
       }
@@ -171,6 +183,9 @@
       }
       else if (file[1].files[0]){
         reader.readAsDataURL(file[1].files[0]);
+      }
+      else if (file[2].files[0]){
+        reader.readAsText(file[2].files[0]);        
       }
       else{
         video.src="";
