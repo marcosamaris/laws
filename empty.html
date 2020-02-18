@@ -210,12 +210,18 @@
     
     function fileNextPixel(){    }
     function fileNextFrame(){    }
-    function fileNextSecond(){    }
+    function fileNextSecond(){
+      wavesurfer.setCurrentTime(wavesurfer.getCurrentTime()+1);
+    }
     function fileNextEnquadrament(){    }
     function fileNextFinal(){    }
-    function filePreviousPixel(){    }
+    function filePreviousPixel(){
+      
+    }
     function filePreviousFrame(){    }
-    function filePreviousSecond(){    }
+    function filePreviousSecond(){
+      wavesurfer.setCurrentTime(wavesurfer.getCurrentTime()-1);
+    }
     function filePreviousEnquadrament(){    }
     function filePreviousFinal(){    }
 
