@@ -166,14 +166,16 @@
           
         }
         else if(file[2].files.length == 1){
-          var texto = reader.result.split('\n')
-          var linhas = texto[3].split('=')[1]
-          video.src=linhas.split('"', 2)[1]
-          video.play()
-          wavesurfer.load(video);
-          wavesurfer.play();
-          element_Li.textContent=texto[3].split('=')[3].split('/')[1].split('"')[0]
-          console.log(texto[3].split('=')[3].split('/')[1].split('"')[0])
+          var urlVideo;
+          getXmlFile(reader.result, function(xml){
+            urlVideo=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[0].value;
+            video.src=urlVideo;
+            video.play();
+            wavesurfer.load(video);
+            wavesurfer.play();
+            console.log(urlVideo);
+          })
+          
         }
         
       }
@@ -185,7 +187,7 @@
         reader.readAsDataURL(file[1].files[0]);
       }
       else if (file[2].files[0]){
-        reader.readAsText(file[2].files[0]);        
+        reader.readAsDataURL(file[2].files[0]);
       }
       else{
         video.src="";
@@ -224,6 +226,18 @@
     }
     function filePreviousEnquadrament(){    }
     function filePreviousFinal(){    }
+
+    let getXmlFile = function(path, callback) {
+      let request = new XMLHttpRequest();
+      request.open("GET", path);
+      request.setRequestHeader("Content-Type", "text/xml");
+      request.onreadystatechange = function(){
+        if(request.readyState == 4 && request.status ===200){
+          callback(request.responseXML);
+        }
+      };
+      request.send();
+    };
 
   </script>
 </body>
