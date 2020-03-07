@@ -106,7 +106,7 @@
           <li>Participant-note-en</li>
     </div>
     <div class="column column-two">
-          <li><input type="text"></li>
+          <li><input type="text" id="transcription"></li>
           <li><input type="text"></li>
           <li><input type="text"></li>
           <li><input type="text"></li>
@@ -166,14 +166,52 @@
           
         }
         else if(file[2].files.length == 1){
-          var urlVideo;
           getXmlFile(reader.result, function(xml){
-            urlVideo=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[0].value;
+            var urlVideo;
+            var urlAudio;
+            var time_slot_id=[]
+            var time_value=[]
+            
+            //extrair url do video
+            if(xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[0].name=="MEDIA_URL")
+              urlVideo=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[0].value;
+
+            if(xml.getElementsByTagName("MEDIA_DESCRIPTOR")[1].attributes[1].name=="MEDIA_URL")
+              urlAudio=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[1].attributes[1].value;
+            
+            console.log(urlAudio);
+
+            
+            for (const i of xml.getElementsByTagName("TIME_SLOT")) {
+              time_slot_id.push(i.attributes[0].value)
+              time_value.push(i.attributes[1].value)              
+            }
+
+            
+            
+            var trilhas=xml.getElementsByTagName("TIER");         
+            var participant;
+            var type_ref;
+            for (const i of trilhas) {
+              if(i.attributes[0].name == "LINGUISTIC_TYPE_REF" && i.attributes[1].name=="PARTICIPANT"){
+                participant = i.attributes[1].value;
+                type_ref = i.attributes[0].value
+                console.log(type_ref)
+                if(type_ref == "Phrases"){
+                  var annotation = i.getElementsByTagName("ANNOTATION_VALUE")[0].innerHTML;
+                  var input = document.getElementById("transcription");
+                  input.textContent=annotation
+                }
+              }  
+            }
+
+            
+                     
+
             video.src=urlVideo;
             video.play();
             wavesurfer.load(video);
             wavesurfer.play();
-            console.log(urlVideo);
           })
           
         }
