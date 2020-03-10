@@ -169,12 +169,17 @@
           getXmlFile(reader.result, function(xml){
             var urlVideo;
             var urlAudio;
+            var element_LiText;
             var time_slot_id=[]
             var time_value=[]
             
             //extrair url do video
-            if(xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[0].name=="MEDIA_URL")
+            if(xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[0].name=="MEDIA_URL"){
               urlVideo=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[0].value;
+              element_LiText=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[2].value;
+              element_Li.textContent = String(element_LiText).replace("./", "");
+
+            }
 
             if(xml.getElementsByTagName("MEDIA_DESCRIPTOR")[1].attributes[1].name=="MEDIA_URL")
               urlAudio=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[1].attributes[1].value;
@@ -200,7 +205,7 @@
                 if(type_ref == "Phrases"){
                   var annotation = i.getElementsByTagName("ANNOTATION_VALUE")[0].innerHTML;
                   var input = document.getElementById("transcription");
-                  input.textContent=annotation
+                  input.text=annotation
                 }
               }  
             }
