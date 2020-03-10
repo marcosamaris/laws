@@ -107,9 +107,9 @@
     </div>
     <div class="column column-two">
           <li><input type="text" id="transcription"></li>
-          <li><input type="text"></li>
-          <li><input type="text"></li>
-          <li><input type="text"></li>
+          <li><input type="text" id="words"></li>
+          <li><input type="text" id="translation"></li>
+          <li><input type="text" id="participant"></li>
     </div>
   </div>
 
@@ -173,20 +173,21 @@
             var time_slot_id=[]
             var time_value=[]
             
-            //extrair url do video
+            //extrai url do video
             if(xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[0].name=="MEDIA_URL"){
               urlVideo=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[0].value;
+              //title the video
               element_LiText=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[0].attributes[2].value;
               element_Li.textContent = String(element_LiText).replace("./", "");
 
             }
-
+            //extrai url do audio
             if(xml.getElementsByTagName("MEDIA_DESCRIPTOR")[1].attributes[1].name=="MEDIA_URL")
               urlAudio=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[1].attributes[1].value;
             
             console.log(urlAudio);
 
-            
+            //extrai as marcações dos tempos
             for (const i of xml.getElementsByTagName("TIME_SLOT")) {
               time_slot_id.push(i.attributes[0].value)
               time_value.push(i.attributes[1].value)              
@@ -197,17 +198,61 @@
             var trilhas=xml.getElementsByTagName("TIER");         
             var participant;
             var type_ref;
+            var tier_id;
+            var parent_ref;
+            //extrai as trilhas
             for (const i of trilhas) {
-              if(i.attributes[0].name == "LINGUISTIC_TYPE_REF" && i.attributes[1].name=="PARTICIPANT"){
-                participant = i.attributes[1].value;
-                type_ref = i.attributes[0].value
-                console.log(type_ref)
-                if(type_ref == "Phrases"){
-                  var annotation = i.getElementsByTagName("ANNOTATION_VALUE")[0].innerHTML;
-                  var input = document.getElementById("transcription");
-                  input.text=annotation
+              for (const j of i.attributes) {
+                switch(String(j.name)){
+                  case "LINGUISTIC_TYPE_REF":
+                    type_ref=j.value;
+                    break;
+                  case "PARTICIPANT":
+                    participant=new String(j.value);
+                    break;
+                  case "TIER_ID":
+                    tier_id=new String(j.value);
+                    break;
+                  case "PARENT_REF":
+                    parent_ref=new String(j.value);
+                    break;
                 }
-              }  
+                //break;
+              }
+              //console.log(type_ref + "  " + participant);
+              if(type_ref == "Phrases"){
+                var transcription= document.getElementById("transcription");
+                var annotation = i.getElementsByTagName("ANNOTATION_VALUE");
+                for (const phrases_annotation of annotation) {
+                  transcription.value = phrases_annotation.innerHTML;
+                }
+              }
+
+              if(type_ref=="Words"){
+                var words = document.getElementById("words");
+                var annotationWords = i.getElementsByTagName("ANNOTATION_VALUE")
+                var wordsConcat = new String();
+                for (const words_annotation of annotationWords) {
+                  wordsConcat += words_annotation.innerHTML + " | "
+                  words.value=wordsConcat
+                }
+              }
+
+              if(type_ref=="Note" && tier_id.search("Translation") != -1){
+                var note = document.getElementById("translation");
+                var annotationNote = i.getElementsByTagName("ANNOTATION_VALUE")
+                for (const note_annotation of annotationNote) {
+                  note.value = note_annotation.innerHTML;
+                }
+              }
+
+              if(type_ref=="Note" && tier_id.search("Participant-note")!=-1){
+                var noteParticipant = document.getElementById("participant");
+                var annotationnoteParticipant = i.getElementsByTagName("ANNOTATION_VALUE")
+                for (const noteParticipant_annotation of annotationnoteParticipant) {
+                  noteParticipant.value = noteParticipant_annotation.innerHTML;
+                }
+              }
             }
 
             
