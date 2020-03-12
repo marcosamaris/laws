@@ -778,3 +778,7 @@ ol.nested>li:before {
     width: 100%;
   }
 }
+#iframe {
+  width: 84%;
+  float: right;
+}

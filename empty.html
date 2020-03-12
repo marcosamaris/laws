@@ -63,7 +63,7 @@
                 <button type="button" class="custom-button-flat" onclick="filePreviousSecond()"><img src="img/previous_1_second.png"></button>
                 <button type="button" class="custom-button-flat" onclick="filePreviousFrame()"><img src="img/previous_frame.png"></button>
                 <button type="button" class="custom-button-flat" onclick="filePreviousPixel()"><img src="img/previous_pixel.png"></button>
-                <button type="button" class="custom-button-flat" onclick="filePlay()"><img src="img/play_.png"></button>
+                <button type="button" class="custom-button-flat" onclick="filePlayPause()" id="play_pause"><img src="img/play_.png"></button>
                 <button type="button" class="custom-button-flat" onclick="fileNextPixel()"><img src="img/next_pixel.png"></button>
                 <button type="button" class="custom-button-flat" onclick="fileNextFrame()"><img src="img/next_frame.png"></button>
                 <button type="button" class="custom-button-flat" onclick="fileNextSecond()"><img src="img/next_1_second.png"></button>
@@ -98,18 +98,14 @@
     </div>
   </div>
 
+  <iframe src="frame.html" id="iframe"></iframe>
+
   <div class="row">
-    <div class="column column-one">
-          <li>Transcription</li>
-          <li>Words</li>
-          <li>Trasnlation</li>
-          <li>Participant-note-en</li>
+    <div class="column column-one" id = "divrow1">
+         
     </div>
-    <div class="column column-two">
-          <li><input type="text" id="transcription"></li>
-          <li><input type="text" id="words"></li>
-          <li><input type="text" id="translation"></li>
-          <li><input type="text" id="participant"></li>
+    <div class="column column-two" id = "divrow2">
+         
     </div>
   </div>
 
@@ -185,7 +181,6 @@
             if(xml.getElementsByTagName("MEDIA_DESCRIPTOR")[1].attributes[1].name=="MEDIA_URL")
               urlAudio=xml.getElementsByTagName("MEDIA_DESCRIPTOR")[1].attributes[1].value;
             
-            console.log(urlAudio);
 
             //extrai as marcações dos tempos
             for (const i of xml.getElementsByTagName("TIME_SLOT")) {
@@ -193,13 +188,21 @@
               time_value.push(i.attributes[1].value)              
             }
 
-            
-            
             var trilhas=xml.getElementsByTagName("TIER");         
             var participant;
             var type_ref;
             var tier_id;
             var parent_ref;
+            var column_one = document.getElementById("divrow1");
+            var column_two = document.getElementById("divrow2");
+            var labeltransc;
+            var labelwords;
+            var labeltransl;
+            var labelpartic;
+            
+            
+
+            console.log(column_one)
             //extrai as trilhas
             for (const i of trilhas) {
               for (const j of i.attributes) {
@@ -217,46 +220,57 @@
                     parent_ref=new String(j.value);
                     break;
                 }
-                //break;
+                
               }
-              //console.log(type_ref + "  " + participant);
+              
               if(type_ref == "Phrases"){
-                var transcription= document.getElementById("transcription");
+                //var transcription= document.getElementById("transcription");
+                labeltransc = `<li>${tier_id}</li>`;
                 var annotation = i.getElementsByTagName("ANNOTATION_VALUE");
+                console.log(type_ref + " " + tier_id)
                 for (const phrases_annotation of annotation) {
-                  transcription.value = phrases_annotation.innerHTML;
+                  //transcription.value = phrases_annotation.innerHTML;
                 }
               }
 
               if(type_ref=="Words"){
-                var words = document.getElementById("words");
+                //var words = document.getElementById("words");
+                labelwords = `<li>${tier_id}</li>`;
                 var annotationWords = i.getElementsByTagName("ANNOTATION_VALUE")
                 var wordsConcat = new String();
                 for (const words_annotation of annotationWords) {
                   wordsConcat += words_annotation.innerHTML + " | "
-                  words.value=wordsConcat
+                  //words.value=wordsConcat
                 }
               }
 
               if(type_ref=="Note" && tier_id.search("Translation") != -1){
-                var note = document.getElementById("translation");
+                //var note = document.getElementById("translation");
+                labeltransl = `<li>${tier_id}</li>`;
                 var annotationNote = i.getElementsByTagName("ANNOTATION_VALUE")
                 for (const note_annotation of annotationNote) {
-                  note.value = note_annotation.innerHTML;
+                  //note.value = note_annotation.innerHTML;
                 }
               }
 
               if(type_ref=="Note" && tier_id.search("Participant-note")!=-1){
-                var noteParticipant = document.getElementById("participant");
+                //var noteParticipant = document.getElementById("participant");
+                labelpartic = `<li>${tier_id}</li>`;
                 var annotationnoteParticipant = i.getElementsByTagName("ANNOTATION_VALUE")
                 for (const noteParticipant_annotation of annotationnoteParticipant) {
-                  noteParticipant.value = noteParticipant_annotation.innerHTML;
+                  //noteParticipant.value = noteParticipant_annotation.innerHTML;
                 }
               }
             }
+            column_one.innerHTML = labeltransc+
+                                    labelwords+
+                                    labeltransl+
+                                    labelpartic;
+            console.log(column_one)
 
-            
-                     
+            var element_frame = document.getElementById("iframe");
+           
+            console.log(element_frame)
 
             video.src=urlVideo;
             video.play();
@@ -291,10 +305,13 @@
       }
     }
 
-    function filePlay(){
+    function filePlayPause(){
+      var play = false;
+      var img = document.getElementById("play_pause");
       video = document.querySelector('video');
       if(video.src){
         video.play();
+        img.innerHTML = `<img src="img/pause.png">`
       }
     }
     
