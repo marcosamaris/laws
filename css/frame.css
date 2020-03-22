@@ -758,7 +758,7 @@ ol.nested>li:before {
 }
 
 .column.column-two{
-  width: 85%;
+  width: 100%;
 }
 
 .column.column-two input{
