@@ -134,7 +134,7 @@
           video.src = reader.result;
           video.play();
           wavesurfer.load(video);
-          wavesurfer.play();
+          //wavesurfer.play();
           document.querySelector("audio").style.display = "none";
           element_Li.textContent=file[0].files[0].name
 
@@ -145,7 +145,7 @@
           audio.play();
           
           wavesurfer.load(audio);
-          wavesurfer.play();
+          //wavesurfer.play();
           //document.querySelector("video").style.display = "none";
           element_Li.textContent=file[1].files[0].name
           
@@ -262,8 +262,9 @@
             
             video.src=urlVideo;
             wavesurfer.load(video);
-            wavesurfer.play();
-            video.play();
+            //wavesurfer.play();
+            //video.play();
+            
             
             
           });
