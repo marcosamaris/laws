@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <script src="/js/controlls_media.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="content-container">
+        <div class="content">
+          <div class="content-table flex-column">
+            <div class="flex-item flex-column"> 
+              <div class="flex-row">
+                <div class="flex-item flex-item-stretch flex-column">
+                  <video id="video" height="270" width="430" poster="/img/dummay-img.png" class="image">
+                    <source src="unknown" type="video/*">
+                  </video>
+    
+                  <audio id="audio" height="270" width="430" controls class="image">
+                      <source src="unknown" type="audio/*">
+                  </audio>
+            
+                  <div class="control-group">
+                    <button type="button" class="custom-button-flat" onclick="filePreviousFinal()"><img src="/img/previous_final.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="filePreviousEnquadrament()"><img src="/img/previous_enquedrament.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="filePreviousSecond()"><img src="/img/previous_1_second.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="filePreviousFrame()"><img src="/img/previous_frame.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="filePreviousPixel()"><img src="/img/previous_pixel.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="filePlayPause()" id="play_pause"><img src="/img/play_.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="fileNextPixel()"><img src="/img/next_pixel.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="fileNextFrame()"><img src="/img/next_frame.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="fileNextSecond()"><img src="/img/next_1_second.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="fileNextEnquadrament()"><img src="/img/next_enquedrament.png"></button>
+                    <button type="button" class="custom-button-flat" onclick="fileNextFinal()"><img src="/img/next_final.png"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

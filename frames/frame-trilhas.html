@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link href="/css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+        <div class="column column-two" id = "divrow2">
+            <input wm-inpt value="1" disabled id="transcription" type="text">
+            <input wm-inpt value="2" disabled id="words" type="text">
+            <input wm-inpt value="3" disabled id="translations" type="text">
+            <input wm-inpt value="4" disabled id="" type="text">
+        </div>
+    </body>
+
+    <script>
+        document.querySelectorAll('[wm-inpt]').forEach(inpt =>{
+            
+            inpt.addEventListener("dblclick", function(e){
+                //inpt.disabled = false;
+                console.log(inpt);
+            });
+        })
+    </script>
+
+</html>

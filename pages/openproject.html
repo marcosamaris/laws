@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <script data-main="/js/main.js" src="/js/require.js"></script>
+    <title>Open Project</title>
+</head>
+<body>
+    <div class="menu-container"><div class="menu">
+        <div class="menu-table flex-row-space-between">
+          <div class="logo flex-row-center">
+            <a href="index.html">Language Annotation Web System - LAWS</a>
+          </div>
+          
+          <div class="menu-items flex-row-center flex-item">
+            <a href="/index.html">Home </a>
+            <a href="/pages/openproject.html">Open Project</a>
+            <a href="/pages/newproject.html">New Project</a>
+            <a href="http://www.linkedin.com/pub/yen-chia-hsu/58/a26/716">Save Project</a>
+            <a href="https://twitter.com/yenchiah">Export Liers</a>
+          </div>
+        </div>
+      </div></div>
+
+      <div class="content-container">
+        <div class="content">
+          <iframe id="iframe-controls-media" src="/frames/frame-controls-media.html" frameborder="0"></iframe>
+            <form>          
+              <div class="flex-item flex-column">
+                <p class="text text-large" id="inputs">                  
+                  Open: <input type="file" accept=".eaf" name="file" id="open_here"><br>  
+                  <input type="button" value="Submit" onclick="function_open_project()">
+                </p>
+              </div>
+            </form>
+        </div>
+      </div>
+      
+     
+      
+      <iframe src="/frames/frame-ondas-and-li.html" id="iframe-ondas-and-li" frameborder="0"></iframe>
+
+      <iframe src="/frames/frame-trilhas.html" frameborder="1" id="iframe-trilhas"></iframe>
+
+      <div class="row">
+        <div class="column column-one" id = "divrow1">
+          
+        </div>  
+      </div>
+
+
+      
+</body>
+</html>

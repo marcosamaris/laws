@@ -10,8 +10,9 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
   <!-- <script src="js/menu.js"></script> -->
+  
   
 
 </head>
@@ -25,9 +26,9 @@
       </div>
       
       <div class="menu-items flex-row-center flex-item">
-        <a href="empty.html"> Home </a>
-        <a href="http://yenchiah.wordpress.com/">Open Project</a>
-        <a href="file/CV.pdf">New Project</a>
+        <a href="/index.html"> Home </a>
+        <a href="/pages/openproject.html">Open Project</a>
+        <a href="/pages/newproject.html">New Project</a>
         <a href="http://www.linkedin.com/pub/yen-chia-hsu/58/a26/716">Save Project</a>
         <a href="https://twitter.com/yenchiah">Export Liers</a>
       </div>
@@ -90,7 +91,7 @@
     </div>
   </div>
 
-  <iframe src="frame.html" frameborder="1" id="iframe"></iframe>
+  <iframe src="/frames/frame-trilhas.html" frameborder="1" id="iframe-trilhas"></iframe>
   
   <div class="row">
     <div class="column column-one" id = "divrow1">
@@ -98,9 +99,6 @@
     </div>  
   </div>
 
-  <script src="https://unpkg.com/wavesurfer.js" type="text/javascript"></script>
-  <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.timeline.min.js" type="text/javascript"></script>
-  <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.timeline.js"></script>
   
   <script>
 
@@ -257,7 +255,7 @@
                                     labelpartic;
             
             console.log(column_one)
-            var iframe = document.getElementById("iframe");
+            var iframe = document.getElementById("iframe-trilhas");
             console.log(iframe.contentWindow.document)
             
             video.src=urlVideo;

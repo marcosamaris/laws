@@ -778,7 +778,17 @@ ol.nested>li:before {
     width: 100%;
   }
 }
-#iframe {
-  width: 84%;
+
+
+
+#iframe-controls-media {
+  width: 70%;
+  height: 500px;
+  float: left;
+  
+}
+
+#iframe-trilhas{
+  width: 80%;
   float: right;
 }
