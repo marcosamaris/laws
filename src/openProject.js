@@ -1,33 +1,58 @@
+const extractMedia = (xml) => xml.getElementsByTagName("MEDIA_DESCRIPTOR");
+const extractURL = (line) => line.getAttribute('MEDIA_URL');
+const extractDescriptor = (line) => line.getAttribute('RELATIVE_MEDIA_URL');
+const isAudio = (line) => line.getAttribute('MIME_TYPE').search("audio") != -1;
+const isVideo = (line) => line.getAttribute('MIME_TYPE').search("video") != -1;
+const extractParticipant = (xml) => [].map.call( xml.getElementsByTagName('TIER'), function(value){
+  console.log(value.getAttribute('PARTICIPANT') && value.getAttribute('LINGUISTIC_TYPE_REF')=='Phrases' ?  value.getAttribute('PARTICIPANT'):'')
+
+});
+
+const extractPhrasesParticipat = (xml) => 
+                  Array.of(xml)
+                  .forEach(function(){
+                    var thisp = arguments[0]
+                    var obj={};
+                    for (const item of thisp) {
+                      if(item.getAttribute('PARTICIPANT') != null && item.getAttribute('LINGUISTIC_TYPE_REF') == 'Phrases'){
+                        obj[item.getAttribute('PARTICIPANT')] = {[item.getAttribute('LINGUISTIC_TYPE_REF')] : item.getElementsByTagName('ANNOTATION_VALUE')[0].innerHTML}
+                      }
+                      //console.log(item.getAttribute('PARTICIPANT') + item.getAttribute('LINGUISTIC_TYPE_REF'))
+                    }
+                    
+                    console.log(obj)
+                  });
+                  
+                  //.filter(value => value.getAttribute('LINGUISTIC_TYPE_REF') == 'Phrases')
+
+
 function function_open_project(){ 
   var file = document.getElementById('open_here');
   var reader = new FileReader();
   reader.onloadend = function() {
     if(file.files.length == 1){
 
-    const object = {length:0};
+    const object = {};
     
     getXmlFile(reader.result, function(xml, object){
       
-      var urlVideo;
-      var urlAudio;
-      var media_video;
-      var media_audio;
-      var time_slot_id=[]
-      var time_value=[]
+      var urlVideo, urlAudio;
+      var media_video, media_audio;
+      var time_slot_id=[], time_value=[]
       
-      var participant;
-      var type_ref;
-      var tier_id;
-      var parent_ref;
+      var participant, type_ref, tier_id, parent_ref;
+      //extractParticipant(xml)
+      
+      extractPhrasesParticipat(xml.getElementsByTagName('TIER'))
 
-      for (const element of xml.getElementsByTagName("MEDIA_DESCRIPTOR")){
-        if(element.getAttribute('MIME_TYPE') == "video/mp4"){
-          urlVideo = element.getAttribute('MEDIA_URL');
-          media_video = element.getAttribute('RELATIVE_MEDIA_URL')
+      for (const element of extractMedia(xml)){
+        if(isVideo(element)){
+          urlVideo = extractURL(element)
+          media_video = extractDescriptor(element)
         }
-        else if(element.getAttribute('MIME_TYPE') == "audio/x-wav"){
-          urlAudio = element.getAttribute('MEDIA_URL');
-          media_audio = element.getAttribute('RELATIVE_MEDIA_URL')
+        if(isAudio(element)){
+          urlAudio = extractURL(element)
+          media_audio = extractDescriptor(element)
         }
         
       }
@@ -49,38 +74,41 @@ function function_open_project(){
       //extrai as trilhas
       var trilhas=xml.getElementsByTagName("TIER");   
       for (const i of trilhas) {
+        participant = i.getAttribute('PARTICIPANT');
         for (const j of i.attributes) {
           switch(String(j.name)){
             case "LINGUISTIC_TYPE_REF":
               type_ref=j.value;
-              //object[i.getAttribute('PARTICIPANT')]={length:0, [j.name]:[].push.apply(this, [j.value])}
               break;
               
             case "TIER_ID":
-              tier_id=new String(j.value);
+              tier_id=j.value;
               
               break;
             case "PARENT_REF":
-              parent_ref=new String(j.value);
+              parent_ref=j.value;
 
               break;
         }
         
       }
       
-      
+
+      //object[participant]={}
       if(type_ref == "Phrases"){
         var annotation = i.getElementsByTagName("ANNOTATION_VALUE");
-        
+
+        object[participant]={'Phrases': []}
         for (const phrases_annotation of annotation) {
-          
+          object[participant][type_ref].push(phrases_annotation.innerHTML);
+          console.log("Participant: "+ i.getAttribute('PARTICIPANT') + " !" +  phrases_annotation.innerHTML)
         }
       }
-      
       if(type_ref=="Words"){
         var annotationWords = i.getElementsByTagName("ANNOTATION_VALUE")
+        object[participant]={'Words': []}
         for (const words_annotation of annotationWords) {
-          
+          object[participant][type_ref].push(words_annotation.innerHTML);
         }
       }
       
