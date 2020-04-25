@@ -30,7 +30,7 @@
         <a href wm-nav="/dist/home.html"> Home </a>
         <a href wm-nav="dist/openproject.html">Open Project</a>
         <a href wm-nav="/dist/newproject.html">New Project</a>
-        <a wm-nav>About Laws</a>
+        <a href wm-nav="/dist/about.html">About Laws</a>
       </div>
     </div>
   </div></div>
@@ -43,9 +43,10 @@
         
         link.onclick = function(e){
             e.preventDefault()    
-            fetch(link.getAttribute("wm-nav"))
-                .then(html => conteudo.src = html.url)
-                .then(value => console.log(value.url))
+            conteudo.src = link.getAttribute("wm-nav");
+            // fetch(link.getAttribute("wm-nav"))
+            //     .then(html => conteudo.src = html.url)
+            //     .then(value => console.log(value.url))
         }
     })
 </script>
