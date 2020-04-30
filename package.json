@@ -1,0 +1,19 @@
+{
+  "name": "laws",
+  "version": "1.0.0",
+  "private":true,
+  "repository": "https://github.com/marcosamaris/laws.git",
+  "author": "jkalebe <jeremiaskalebe@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "wavesurfer": "^1.3.4"
+  }
+}
