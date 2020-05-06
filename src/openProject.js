@@ -3,13 +3,11 @@ function function_open_project(){
   var reader = new FileReader();
   reader.onloadend = function() {
     if(file.files.length == 1){
-      
+      document.querySelector('[wm-frame=trilhas]').scrollIntoView();
       getXmlFile(reader.result, (xml)=> {
         //new ExtractXml(xml);
         new CreateElements(xml)
       })
-      
-      new SubmitDatasFrame()
       
     }
   }
@@ -52,9 +50,8 @@ class ExtractXml{
   
   this.extractTimeAttributes();
   this.extractTierPhrases();
-  console.log(this.object)
   this.extractTIER_ID()
-  
+  console.log(this.object)
   
   }
   
@@ -97,42 +94,16 @@ class ExtractXml{
   
 }
 
-class SubmitDatasFrame{
-  constructor(){
-    this.input = null
-    this.inputDatasTrilhas()
-  }
-
-  getFrame(){
-    return document.querySelector('[wm-frame=trilhas]')
-  }
-
-  getDocument(){
-    let D = this.getFrame();
-    return (D.contentWindow || D.contentDocument).document;
-  }
-
-  setInputs(){
-    this.input = this.getDocument().querySelectorAll('[wm-inpt]')
-  }
-
-  inputDatasTrilhas(){
-    this.setInputs()
-    this.input.forEach(ipt =>{
-      console.log(ipt.getAttribute('wm-inpt'))
-    })
-    console.log(this.getDocument())
-  }
-}
-
 class CreateElements{
   constructor(xml){
     this.frame=document.querySelector('[wm-frame=trilhas]')
+    console.log(this.frame)
     this.framDoc = (this.frame.contentWindow || this.frame.contentDocument).document
     this.ExtractXml = new ExtractXml(xml)
     this.divs = this.createDivs()
     this.submitDivsTIER_ID()
     this.createInputs()
+    this.adjustInputs()
   }
 
   createDivs(){
@@ -148,17 +119,31 @@ class CreateElements{
     D.innerHTML = this.divs
   }
 
+
   createInputs(){
     let elements = [""]
     this.ExtractXml.object['phrases'].forEach(v => {
-       for (const i of v.getElementsByTagName('ANNOTATION_VALUE')) {
-        this.framDoc.querySelector(`[wm-input=${v.getAttribute('TIER_ID')}]`).innerHTML +=`<input value="${i.innerHTML}" type="text">`
+       for (const i of v.getElementsByTagName('ANNOTATION')) {
+         let firstElement = i.firstElementChild;
+         let divSelected = this.framDoc.querySelector(`[wm-input=${v.getAttribute('TIER_ID')}]`);
+         divSelected.innerHTML +=`<input value="${firstElement.firstElementChild.innerHTML}"
+                                   wm-annotation-id=${firstElement.getAttribute('ANNOTATION_ID')}
+                                   wm-annotation-ref=${firstElement.getAttribute('ANNOTATION_REF')}
+                                   wm-annotation-previous=${firstElement.getAttribute('PREVIOUS_ANNOTATION')} type="text"
+                                   onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';">`
        }
     })
     //console.log(elements.join('\n'))
     return elements.join('\n')
   }
 
+  adjustInputs(){
+    this.framDoc.querySelectorAll('input').forEach(input =>{
+      input.style.width = (input.value.length + 1)*8 + 'px';
+    })
+  }
+
+  
 
 
 }
