@@ -1,18 +1,23 @@
-function function_open_project(){ 
-  var file = document.getElementById('open_here');
-  var reader = new FileReader();
-  reader.onloadend = function() {
-    if(file.files.length == 1){
-      document.querySelector('[wm-frame=trilhas]').scrollIntoView();
-      getXmlFile(reader.result, (xml)=> {
-        //new ExtractXml(xml);
-        new CreateElements(xml)
-      })
-      
+import WaveSurfer from 'wavesurfer.js'
+//import TimelinePlugin from 'wavesurfer.js/src/plugin/timeline'
+
+  window.function_open_project = function function_open_project(){ 
+    var file = document.getElementById('open_here');
+    var reader = new FileReader();
+    reader.onloadend = function() {
+      if(file.files.length == 1){
+        document.querySelector('[wm-frame=trilhas]').scrollIntoView();
+        getXmlFile(reader.result, (xml)=> {
+          //new ExtractXml(xml);
+          new CreateElements(xml)
+        })      
+      }
     }
+    reader.readAsDataURL(file.files[0])
   }
-  reader.readAsDataURL(file.files[0])
-}
+  
+
+  
 
 function getXmlFile(path, callback) {
   let request = new XMLHttpRequest();
@@ -36,8 +41,45 @@ class ExtractXml{
     this.extractDatasOfXML();
   }
   
+  extractMedia() {return this.xml.getElementsByTagName("MEDIA_DESCRIPTOR");}
+  
+  extractURL (line) { return line.getAttribute('MEDIA_URL').replace("file://", "").replace("%20", " "); }
+  
+  extractDescriptor  (line) { return line.getAttribute('RELATIVE_MEDIA_URL').replace("./", "");}
+  
+  extractTimeAttributes  ()  {
+    let time_slot_id = [], time_value = [];
+    for (const i of this.xml.getElementsByTagName("TIME_SLOT")) {
+      time_slot_id.push(i.getAttribute('TIME_SLOT_ID'))
+      time_value.push(i.getAttribute('TIME_VALUE'))              
+    }
+    this.object['time_slot_id'] = time_slot_id;
+    this.object['time_value'] = time_value;
+  }
+  
+  isAudio(line){ return line.getAttribute('MIME_TYPE').search("audio") != -1;}
+  
+  isVideo(line){ return line.getAttribute('MIME_TYPE').search("video") != -1;}
+  
+  extractTierPhrases  () {
+    let phrases = []
+    for(const i of this.xml.getElementsByTagName('TIER')){
+      if(i.getAttribute('LINGUISTIC_TYPE_REF'))
+        phrases.push(i)
+    }
+    this.object['phrases'] = phrases
+  }
+  
+  extractTIER_ID(){
+    let array=[]
+    for (const i of this.xml.getElementsByTagName('TIER')) {
+      array.push(i.getAttribute('TIER_ID'))
+    }
+    this.object['TIER_ID'] = array;
+  }
+
   extractDatasOfXML(){
-    for (const element of this.extractMedia(this.xml)){
+    for (const element of this.extractMedia()){
       if(this.isVideo(element)){
         this.object['urlVideo'] = this.extractURL(element)
         this.object['media_url_video'] = this.extractDescriptor(element)
@@ -55,47 +97,11 @@ class ExtractXml{
   
   }
   
-  extractMedia = () => this.xml.getElementsByTagName("MEDIA_DESCRIPTOR");
-  
-  extractURL = (line) => line.getAttribute('MEDIA_URL');
-  
-  extractDescriptor = (line) => line.getAttribute('RELATIVE_MEDIA_URL').replace("./", "");
-  
-  extractTimeAttributes = () => {
-    let time_slot_id = [], time_value = [];
-    for (const i of this.xml.getElementsByTagName("TIME_SLOT")) {
-      time_slot_id.push(i.getAttribute('TIME_SLOT_ID'))
-      time_value.push(i.getAttribute('TIME_VALUE'))              
-    }
-    this.object['time_slot_id'] = time_slot_id;
-    this.object['time_value'] = time_value;
-  }
-  
-  isAudio = (line) => line.getAttribute('MIME_TYPE').search("audio") != -1;
-  
-  isVideo = (line) => line.getAttribute('MIME_TYPE').search("video") != -1;
-
-  extractTierPhrases = () =>{
-    let phrases = []
-    for(const i of this.xml.getElementsByTagName('TIER')){
-      if(i.getAttribute('LINGUISTIC_TYPE_REF'))
-        phrases.push(i)
-    }
-    this.object['phrases'] = phrases
-  }
-
-  extractTIER_ID(){
-    let array=[]
-    for (const i of this.xml.getElementsByTagName('TIER')) {
-      array.push(i.getAttribute('TIER_ID'))
-    }
-    this.object['TIER_ID'] = array;
-  }
-  
 }
 
 class CreateElements{
   constructor(xml){
+    this.wavesurfer = null;
     this.frame=document.querySelector('[wm-frame=trilhas]')
     console.log(this.frame)
     this.framDoc = (this.frame.contentWindow || this.frame.contentDocument).document
@@ -104,6 +110,8 @@ class CreateElements{
     this.submitDivsTIER_ID()
     this.createInputs()
     this.adjustInputs()
+    this.createWavesufer()
+    this.loadMedia()
   }
 
   createDivs(){
@@ -143,7 +151,32 @@ class CreateElements{
     })
   }
 
-  
+  createWavesufer(){
 
+    var wmframeondas = document.querySelector('[wm-frame=ondas]')
+    var framedocument = (wmframeondas.contentWindow || wmframeondas.contentDocument).document.querySelector('#waveform')
+    this.wavesurfer = WaveSurfer.create({
+      container: framedocument,
+      waveColor: '#000000',
+      progressColor: '#f1f1f1',
+      // plugins: [
+      //   TimelinePlugin.create({
+      //       container: "#wave-timeline",
+            
+      //   })
+      // ],
+      backend: 'MediaElement'
+    });
+  }
+  loadMedia(){
+    var wmframeondas = document.querySelector('[wm-frame=controls]')
+    var video = (wmframeondas.contentWindow || wmframeondas.contentDocument).document.querySelector('#video')
+    console.log(video)
+    video.firstElementChild.src = this.ExtractXml.object['urlVideo']
+    video.poster = this.ExtractXml.object['urlVideo']
+    video.play()
+    //this.wavesurfer.load(video);
+    //this.wavesurfer.play()
 
+  }
 }

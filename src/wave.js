@@ -1,18 +1,18 @@
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js';
 import TimelinePlugin from 'wavesurfer.js/src/plugin/timeline.js'
 
-    var wavesurfer = WaveSurfer.create({
-        container: document.querySelector('#waveform'),
-        waveColor: '#000000',
-        progressColor: '#f1f1f1',
-        plugins: [
-          TimelinePlugin.create({
-              container: "#wave-timeline",
-              
-          })
-        ],
-        backend: 'MediaElement'
-    });
+var wavesurfer = WaveSurfer.create({
+    container: document.querySelector('#waveform'),
+    waveColor: '#000000',
+    progressColor: '#f1f1f1',
+    plugins: [
+      TimelinePlugin.create({
+          container: "#wave-timeline",
+          
+      })
+    ],
+    backend: 'MediaElement'
+});
 
     function loadFile(){
       
