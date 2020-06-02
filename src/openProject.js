@@ -29,9 +29,7 @@ function getXmlFile(path, callback) {
       callback(request.responseXML);
     }
   };
-  
   request.send();
-  
 }
 
 class ExtractXml{
@@ -43,7 +41,7 @@ class ExtractXml{
   
   extractMedia() {return this.xml.getElementsByTagName("MEDIA_DESCRIPTOR");}
   
-  extractURL (line) { return line.getAttribute('MEDIA_URL').replace("file://", "").replace("%20", " "); }
+  extractURL (line) { return  line.getAttribute('MEDIA_URL').replace("file://", ""); }
   
   extractDescriptor  (line) { return line.getAttribute('RELATIVE_MEDIA_URL').replace("./", "");}
   
@@ -95,14 +93,15 @@ class ExtractXml{
   this.extractTIER_ID()
   console.log(this.object)
   
-  }
-  
+}
+
 }
 
 class CreateElements{
   constructor(xml){
     this.wavesurfer = null;
     this.frame=document.querySelector('[wm-frame=trilhas]')
+    this.wmframeondas = document.querySelector('[wm-frame=ondas]')
     console.log(this.frame)
     this.framDoc = (this.frame.contentWindow || this.frame.contentDocument).document
     this.ExtractXml = new ExtractXml(xml)
@@ -110,10 +109,10 @@ class CreateElements{
     this.submitDivsTIER_ID()
     this.createInputs()
     this.adjustInputs()
-    this.createWavesufer()
+    this.createWavesuferAndLoadLI()
     this.loadMedia()
   }
-
+  
   createDivs(){
     let  elements  = [""]
     for (const item of this.ExtractXml.object['TIER_ID']) {
@@ -126,57 +125,68 @@ class CreateElements{
     const D = this.framDoc.querySelector('[wm-div]')
     D.innerHTML = this.divs
   }
-
-
+  
+  
   createInputs(){
     let elements = [""]
     this.ExtractXml.object['phrases'].forEach(v => {
-       for (const i of v.getElementsByTagName('ANNOTATION')) {
-         let firstElement = i.firstElementChild;
-         let divSelected = this.framDoc.querySelector(`[wm-input=${v.getAttribute('TIER_ID')}]`);
-         divSelected.innerHTML +=`<input value="${firstElement.firstElementChild.innerHTML}"
-                                   wm-annotation-id=${firstElement.getAttribute('ANNOTATION_ID')}
-                                   wm-annotation-ref=${firstElement.getAttribute('ANNOTATION_REF')}
-                                   wm-annotation-previous=${firstElement.getAttribute('PREVIOUS_ANNOTATION')} type="text"
-                                   onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';">`
-       }
+      for (const i of v.getElementsByTagName('ANNOTATION')) {
+        let firstElement = i.firstElementChild;
+        let divSelected = this.framDoc.querySelector(`[wm-input=${v.getAttribute('TIER_ID')}]`);
+        divSelected.innerHTML +=`<input value="${firstElement.firstElementChild.innerHTML}"
+        wm-annotation-id=${firstElement.getAttribute('ANNOTATION_ID')}
+        wm-annotation-ref=${firstElement.getAttribute('ANNOTATION_REF')}
+        wm-annotation-previous=${firstElement.getAttribute('PREVIOUS_ANNOTATION')} type="text"
+        onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';">`
+      }
     })
     //console.log(elements.join('\n'))
     return elements.join('\n')
   }
-
+  
   adjustInputs(){
     this.framDoc.querySelectorAll('input').forEach(input =>{
       input.style.width = (input.value.length + 1)*8 + 'px';
     })
   }
+  
+  createWavesuferAndLoadLI(){
+    
+    var framedocument = (this.wmframeondas.contentWindow || this.wmframeondas.contentDocument).document.querySelector('#waveform')
+    var tag_li_media = (this.wmframeondas.contentWindow || this.wmframeondas.contentDocument).document.querySelector("#tag-li-media") 
+    tag_li_media.innerHTML = this.ExtractXml.object["media_url_video"];
+    var frameTimeline = (this.wmframeondas.contentWindow || this.wmframeondas.contentDocument).document.querySelector('#wave-timeline')
+    
+    console.log(tag_li_media);
+    console.log(framedocument);
 
-  createWavesufer(){
-
-    var wmframeondas = document.querySelector('[wm-frame=ondas]')
-    var framedocument = (wmframeondas.contentWindow || wmframeondas.contentDocument).document.querySelector('#waveform')
     this.wavesurfer = WaveSurfer.create({
       container: framedocument,
       waveColor: '#000000',
       progressColor: '#f1f1f1',
       // plugins: [
-      //   TimelinePlugin.create({
-      //       container: "#wave-timeline",
-            
-      //   })
-      // ],
-      backend: 'MediaElement'
-    });
-  }
-  loadMedia(){
-    var wmframeondas = document.querySelector('[wm-frame=controls]')
-    var video = (wmframeondas.contentWindow || wmframeondas.contentDocument).document.querySelector('#video')
-    console.log(video)
-    video.firstElementChild.src = this.ExtractXml.object['urlVideo']
-    video.poster = this.ExtractXml.object['urlVideo']
-    video.play()
-    //this.wavesurfer.load(video);
-    //this.wavesurfer.play()
+      //     TimelinePlugin.create({
+      //           container: frameTimeline,
+          
+      //       })
+      //     ],
+      //backend: 'MediaElement',
+        });
+    }
+    
 
-  }
-}
+      loadMedia(){
+        var wmframeondas = document.querySelector('[wm-frame=controls]')
+        var video = (wmframeondas.contentWindow || wmframeondas.contentDocument).document.querySelector('#video')
+        //console.log(video)
+        
+        
+        video.firstElementChild.src = this.ExtractXml.object['urlVideo']
+        //video.poster = this.ExtractXml.object['urlVideo']
+        video.play()
+        this.wavesurfer.load(video);
+        this.wavesurfer.play()
+        
+      }
+    }
+    
