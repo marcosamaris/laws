@@ -754,10 +754,12 @@ ol.nested>li:before {
 }
 
 .column.column-one{
+  float: left;
   width: 15%;
 }
 
 .column.column-two{
+  float: right;
   width: 100%;
 }
 
@@ -786,4 +788,8 @@ ol.nested>li:before {
 #iframe-trilhas{
   width: 80%;
   float: right;
+}
+
+#iframe-ondas{
+  width: 100%;
 }

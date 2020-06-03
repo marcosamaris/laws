@@ -170,7 +170,7 @@ class CreateElements{
           
       //       })
       //     ],
-      //backend: 'MediaElement',
+      backend: 'MediaElement',
         });
     }
     
@@ -178,12 +178,12 @@ class CreateElements{
       loadMedia(){
         var wmframeondas = document.querySelector('[wm-frame=controls]')
         var video = (wmframeondas.contentWindow || wmframeondas.contentDocument).document.querySelector('#video')
-        //console.log(video)
+        console.log(video)
         
         
         video.firstElementChild.src = this.ExtractXml.object['urlVideo']
         //video.poster = this.ExtractXml.object['urlVideo']
-        video.play()
+        //video.play()
         this.wavesurfer.load(video);
         this.wavesurfer.play()
         
