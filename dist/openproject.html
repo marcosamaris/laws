@@ -24,37 +24,24 @@
 
   <body>
     
-
-      <div class="content-container">
-        <div class="content">
-          <iframe wm-frame='controls' id="iframe-controls-media" src="./../frames/frame-controls-media.html" frameborder="0"></iframe>
-            <form>          
-              <div class="flex-item flex-column">
-                <p class="text text-large" id="inputs">                  
-                  Open: <input type="file" accept=".eaf" name="file" id="open_here"><br>  
-                  <input type="button" value="Submit" onclick="function_open_project()">
-                </p>
-              </div>
-            </form>
-        </div>
+    <form>          
+      <div class="flex-item flex-column">
+        <p class="text text-large" id="inputs">                  
+          Open: <input type="file" accept=".eaf" name="file" id="open_here"><br>  
+          <input type="button" value="Submit" onclick="function_open_project()">
+        </p>
       </div>
+    </form>
+    
+    <div class="content-container">
+      <div class="content">
+        <iframe wm-frame='controls' src="./../frames/frame-controls-media.html" frameborder="0" id="iframe-controls-media"></iframe>
+        <iframe wm-frame='trilhas' src="./../frames/frame-trilhas.html" frameborder="1" id="iframe-trilhas"></iframe>
+
+      </div>
+    </div>
       
-      <iframe wm-frame='ondas' id="iframe-ondas" src="./../frames/frame-ondas-and-li.html" id="iframe-ondas-and-li" frameborder="0"></iframe>
-
-      <div class="content-container">
-        <div class="content">
-        </div>
-      </div>
      
-      <iframe wm-frame='trilhas' src="./../frames/frame-trilhas.html" frameborder="1" id="iframe-trilhas"></iframe>
-
-      <div class="row">
-        <div class="column column-one" id = "divrow1">
-          
-        </div>  
-      </div>
-
-
       
 </body>
 </html>
