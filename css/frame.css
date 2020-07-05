@@ -774,12 +774,20 @@ ol.nested>li:before {
   height: 400px;
 }
 
-[wm-annotation-id]{
 
-  margin: 5 50%;
-  color: #005cbf;
+ li{
+  display: inline;
+  padding: 1;
 }
 
-[wm-annotation-id] [wm-annotation-ref] [wm-annotation-previous] {
-  color: #dc3545;
+  .column > div{
+    padding: 5 0;
+  }
+  
+  li > input{
+  background: #000;
+  padding: 1 1;
+  margin: 1px;
+  color: #fff;
+  size: 50px;
 }

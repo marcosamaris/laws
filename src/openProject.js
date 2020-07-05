@@ -1,5 +1,7 @@
 //import TimelinePlugin from 'wavesurfer.js/src/plugin/timeline'
-
+import $ from 'jquery'
+import Path from 'path'
+import OS from 'os'
 
   window.function_open_project = function function_open_project(){ 
     var file = document.getElementById('open_here');
@@ -144,19 +146,30 @@ class CreateElements{
   
   adjustInputs(){
     this.framDoc.querySelectorAll('input').forEach(input =>{
-      input.style.width = (input.value.length + 1)*8 + 'px';
+      input.style.width = (input.value.length + 1)*7 + 'px';
     })
+
+    this.framDoc.querySelectorAll('[wm-input]').forEach(input =>{
+      if(input.getAttribute("wm-input") == "B_Transcription-txt-deu"){
+        console.log(input)
+      }
+    })
+
   }
     
   loadMedia(){
     
     var wmframeondas = document.querySelector('[wm-frame=controls]')
-    var video = (wmframeondas.contentWindow || wmframeondas.contentDocument).document.querySelector('#video')
     var path = String(this.ExtractXml.object['urlVideo'])//.replace("/home/kalebe/Projects/laws/dist", "");
-    video.src = path;
-    console.log(video)
-    video.play();
-        
+    var video = (wmframeondas.contentWindow || wmframeondas.contentDocument).document.querySelector('#video')
+    //video.src = path.replace("/home/kalebe/Projects/laws/", "/")
+    video.src = OS.tmpdir()+path
+   console.log(video)
+   //console.log(Path.toFileURI(path))
+   //console.log(OS.Constants.Path.tmpDir) 
+   console.log(OS.homedir())        
   }
+
+ 
     }
     
