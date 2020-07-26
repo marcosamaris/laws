@@ -1,5 +1,6 @@
 import rebuild from './rebuild_openproject';
 import XML2JS from 'xml2js';
+import Extract from './extract_eaf_data';
 
 
 
@@ -12,7 +13,10 @@ import XML2JS from 'xml2js';
         XML2JS.parseString(reader.result, function(err1, jsonData){
                 if(err1) throw err1;
                 const adoc = jsonData.ANNOTATION_DOCUMENT
-                rebuild.startVideo(adoc)
+                
+                rebuild.startPhrases(adoc)
+                //console.log(Extract.getPhrases(adoc))
+                //console.log(Extract.getNonemptyTiers(adoc))
                 //console.log(Extract.getVideoUrl(adoc))
               });
 

@@ -780,7 +780,7 @@ ol.nested>li:before {
   padding: 1;
 }
 
-  .column > div{
+  #timedTextDisplay > div{
     padding: 5 0;
   }
   
