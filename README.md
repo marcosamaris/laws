@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+# LingView
+A web interface for viewing glossed ELAN and FLEx files, optionally with time-synced video and audio. Developed at Brown University as part of the A'ingae Language Documentation initiative, this fork is a generalization of the A'ingae-specific website [here](https://github.com/Designist/Korpus).
 
-You can use the [editor on GitHub](https://github.com/marcosamaris/laws/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Front-end code written with [ReactJS](https://reactjs.org/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Update: FLEx-with-media support
+LingView now supports .flextext files as source documents. (Flextext is the format used for exporting a file from ELAN to FLEx or vice versa.) The new format can include timing information and can therefore be displayed with synced audio/video. To start using .flextext files, [update LingView](https://github.com/BrownCLPS/LingView/wiki/Update-LingView).
 
-### Markdown
+## Getting Started
+To begin using this site, you'll need to have NPM and Node.js installed. [Details can be found on the NPM website.](http://blog.npmjs.org/post/85484771375/how-to-install-npm) Then, clone this repository and run the command:
+    `npm install`
+    
+This will install all the node modules required by our program. After making changes to a file, you'll need to bundle the code with [Webpack](https://webpack.js.org/). To do so, simply type the command "webpack" in the repository's root directory.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+~~**WARNING: Current offline version not compatible with Chrome. See here:  https://stackoverflow.com/questions/20904098/react-js-example-in-tutorial-not-working**~~
 
-```markdown
-Syntax highlighted code block
+To view the website in Chrome:
+1. Run `webpack`.
+2. Open `index.html`.
 
-# Header 1
-## Header 2
-### Header 3
+## Resources
 
-- Bulleted
-- List
+For an overview of the software, its potential uses, and the circumstances and design principles of its creation, see our [paper](http://hdl.handle.net/10125/24916).
 
-1. Numbered
-2. List
+For how-to's and troubleshooting, check the [wiki](https://github.com/BrownCLPS/LingView/wiki). 
 
-**Bold** and _Italic_ and `Code` text
+Using LingView? We'd love to hear from you! You can reach us at [kalinda.pride@gmail.com](mailto:kalinda.pride@gmail.com). 
 
-[Link](url) and ![Image](src)
-```
+Stuck? Start by reading our paper, browsing the wiki, and playing around with the software for an hour or two. If those don't solve your problem, [contact us](mailto:kalinda.pride@gmail.com). 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/marcosamaris/laws/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Contributors welcome!

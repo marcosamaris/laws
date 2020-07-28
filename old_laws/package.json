@@ -1,0 +1,31 @@
+{
+  "name": "laws",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/marcosamaris/laws/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "webpack.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosamaris/laws.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcosamaris/laws/issues"
+  },
+  "homepage": "https://github.com/marcosamaris/laws#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "webpack": "4.43.0",
+    "fs-web": "1.0.1",
+    "webpack-cli": "3.3.11",
+    "xml2js": "0.4.23",
+    "jquery": "^3.5.1"
+  }
+}
