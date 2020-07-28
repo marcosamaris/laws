@@ -1,0 +1,1711 @@
+{
+  "metadata": {
+    "timed": true,
+    "story ID": "6901ff94-bbfa-4972-8eb4-9e7b51583506",
+    "title": {
+      "_default": "WYR-GW"
+    },
+    "media": {
+      "audio": "",
+      "video": "WYR-GW.mp4"
+    },
+    "languages": [],
+    "date_created": "",
+    "date_uploaded": "7/27/2020",
+    "source": {
+      "_default": ""
+    },
+    "description": "",
+    "genre": "",
+    "author": "",
+    "glosser": "",
+    "speakers": [],
+    "xml_file_name": "WYR-GW.eaf",
+    "source_filetype": "ELAN",
+    "tier IDs": {
+      "T1": {
+        "name": "Transcription-por",
+        "subdivided": false
+      },
+      "T2": {
+        "name": "Translation-en",
+        "subdivided": false
+      }
+    },
+    "speaker IDs": {
+      "S1": {
+        "tier": "T1"
+      },
+      "S2": {
+        "tier": "T2"
+      }
+    }
+  },
+  "sentences": [
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 24575,
+      "end_time_ms": 27725,
+      "num_slots": 1,
+      "text": "Meu nome é Gilson, é da etinia Wajuru Wassaká.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 28290,
+      "end_time_ms": 30560,
+      "num_slots": 1,
+      "text": "Pego duas etinias também.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 31040,
+      "end_time_ms": 33780,
+      "num_slots": 1,
+      "text": "Minha mãe é Wajuru, meu pai é Wassaká.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 34580,
+      "end_time_ms": 41310,
+      "num_slots": 1,
+      "text": "Éé.. eu procuro mais trabalhar com a etinia Wajuru, a gente tem mais contato, mais convívio.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 41780,
+      "end_time_ms": 44730,
+      "num_slots": 1,
+      "text": "Devido os familiares que ficam com a gente ali. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 45830,
+      "end_time_ms": 51990,
+      "num_slots": 1,
+      "text": "É, e meu pai fica mais difícil porque a gente não tem contato com o povo Wassaká.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 52240,
+      "end_time_ms": 56200,
+      "num_slots": 1,
+      "text": "Que era dessa região daqui, AIKANA essas coisas.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 56580,
+      "end_time_ms": 62800,
+      "num_slots": 1,
+      "text": "AIKANA o.. KASPAR, esses parentes ai.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 63037,
+      "end_time_ms": 63467,
+      "num_slots": 1,
+      "text": "Sei.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 63500,
+      "end_time_ms": 67940,
+      "num_slots": 1,
+      "text": "Ai eu procuro mais trabalhar com a questão da.. é da lingua Wajuru.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 68810,
+      "end_time_ms": 71790,
+      "num_slots": 1,
+      "text": "Fica mais próximo da nossa realidade.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 72240,
+      "end_time_ms": 81350,
+      "num_slots": 1,
+      "text": "Então minha mãe.. ela.. é filha do ??? Wajuru, um dos grandes pages lá, tio do meu primo Jeremias.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 81610,
+      "end_time_ms": 88220,
+      "num_slots": 1,
+      "text": "E a gente.. eu cheguei a conhecer meu avô, mas já na cadeira de rodas também, realmente infelizmente.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 88530,
+      "end_time_ms": 95740,
+      "num_slots": 1,
+      "text": "A gente não teve oportunidade de.. formar outro pajé como ele, estamos sem pajé tamabém, não temos pajé.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 96550,
+      "end_time_ms": 104610,
+      "num_slots": 1,
+      "text": "O nosso convívio lá é simples é.. união. A gente ta fazendo um trabalho de resgate da língua também que a gente ta perdendo, tinha perdido muito. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 105180,
+      "end_time_ms": 109310,
+      "num_slots": 1,
+      "text": "Mas existem quatro falantes, cinco falantes.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 109890,
+      "end_time_ms": 115540,
+      "num_slots": 1,
+      "text": "A gente está nessa luta de.. trabalhar na escola. Começamos a trabalhar na escola também.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 117510,
+      "end_time_ms": 123830,
+      "num_slots": 1,
+      "text": "E a gente faz alguns movimentos no Porto Rolin. Temos parentesco também lá com o povo.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 124470,
+      "end_time_ms": 132730,
+      "num_slots": 1,
+      "text": "Em 2002 foi um.. uma grande é.. organização que fizemos.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 132870,
+      "end_time_ms": 137470,
+      "num_slots": 1,
+      "text": "Passamos uma semana lá. Que é uma oportunidade de conhecer a terra tradicional. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 137920,
+      "end_time_ms": 145260,
+      "num_slots": 1,
+      "text": "E levamos algum conhecedor também que.. realmente falou que é lá mesmo.. e..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 146279,
+      "end_time_ms": 156169,
+      "num_slots": 1,
+      "text": "É isso, né? a gente passou a buscar mais novo conhecimento. A gente não tinha tantos conhecimentos. A partir do projeto açaí que a gente começou a buscar esse.. conhecimento.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 156630,
+      "end_time_ms": 160500,
+      "num_slots": 1,
+      "text": "A intercultural a gente, a intercultural a gente ta buscando mais.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 161518,
+      "end_time_ms": 172508,
+      "num_slots": 1,
+      "text": " Tá,  e lá, quando você foi lá em porto Rolin vocês conheceram aquele é.. a áreia então seria.. mais ou menos.. é.. aquela uma que você falou, a maloca?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 172515,
+      "end_time_ms": 173675,
+      "num_slots": 1,
+      "text": "A maloca.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 172610,
+      "end_time_ms": 174590,
+      "num_slots": 1,
+      "text": "O Cebito e o Terebito, né? ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 174600,
+      "end_time_ms": 176230,
+      "num_slots": 1,
+      "text": "O Cebito e o Terebito.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 176317,
+      "end_time_ms": 177117,
+      "num_slots": 1,
+      "text": "Terebito, né? ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 176695,
+      "end_time_ms": 183395,
+      "num_slots": 1,
+      "text": "Tem, tem mais um, um tal de Ururois, mas ninguém chega Ururois  nenhum. Fomos só no Cerito e no Terebito.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 183480,
+      "end_time_ms": 184680,
+      "num_slots": 1,
+      "text": "Ah vocês chegaram a ir?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 184740,
+      "end_time_ms": 185780,
+      "num_slots": 1,
+      "text": "Aham.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 185990,
+      "end_time_ms": 188490,
+      "num_slots": 1,
+      "text": "Ii.. onde estaria as malocas antigas?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 189000,
+      "end_time_ms": 197820,
+      "num_slots": 1,
+      "text": "É são terras tradicionais, onde.. tem cemiterios é.. é.. antigos, né? Do povo.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 198260,
+      "end_time_ms": 204250,
+      "num_slots": 1,
+      "text": "Mas a gente estava em uma luta boa. Ele.. Edmundo deu uma afastada e.. parou.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 205630,
+      "end_time_ms": 211460,
+      "num_slots": 1,
+      "text": "Mas assim na língua materna a gente está buscando, está buscando isso dai, um processo muito grande de...",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 213040,
+      "end_time_ms": 214310,
+      "num_slots": 1,
+      "text": "É de...",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 216650,
+      "end_time_ms": 221560,
+      "num_slots": 1,
+      "text": "De montar essas cartilhas de trabalhar.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 221720,
+      "end_time_ms": 223110,
+      "num_slots": 1,
+      "text": "Colocar como...",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 224770,
+      "end_time_ms": 230070,
+      "num_slots": 1,
+      "text": "Como matéria dentro da escola ee.. a gente ta conseguindo, graças a Deus.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 230790,
+      "end_time_ms": 238660,
+      "num_slots": 1,
+      "text": "Porque a gente já tinha perdido, geralmente tinha perdido, tinha perdido tudo. E acredito que hoje a gente tem várias coisas já.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 239770,
+      "end_time_ms": 245720,
+      "num_slots": 1,
+      "text": "Com a ajuda da Fernada, da Nicole ali, certo. São antropólogos, pesquisadores.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 246510,
+      "end_time_ms": 252870,
+      "num_slots": 1,
+      "text": "Ii.. você, lá onde.. é a maior parte dos Wajuru hoje vivem na Ricardo Franco.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 252705,
+      "end_time_ms": 257705,
+      "num_slots": 1,
+      "text": "Na Ricardo Franco. Existe espalhado, o Jeremias ele mora em Olinda.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 258700,
+      "end_time_ms": 263440,
+      "num_slots": 1,
+      "text": "E.. tem vários. tem Wajuru na Baía da Onça.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 264610,
+      "end_time_ms": 267320,
+      "num_slots": 1,
+      "text": "É um território de Ricardo Franco mais outra aldeia.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 268400,
+      "end_time_ms": 270690,
+      "num_slots": 1,
+      "text": "E mais ou menos quantos são ao todo? você sabe?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 270720,
+      "end_time_ms": 273320,
+      "num_slots": 1,
+      "text": "Não tenho ideia, mas são um...",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 273930,
+      "end_time_ms": 278450,
+      "num_slots": 1,
+      "text": "Um.. grande.. pouco grande né. Em torno de 100 pessoas.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 278700,
+      "end_time_ms": 279620,
+      "num_slots": 1,
+      "text": "Lá.. lá..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 279645,
+      "end_time_ms": 280545,
+      "num_slots": 1,
+      "text": "Na Ricardo Franco.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 280610,
+      "end_time_ms": 281610,
+      "num_slots": 1,
+      "text": "Umas cem pessoas?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 281620,
+      "end_time_ms": 282050,
+      "num_slots": 1,
+      "text": "Aham.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 282066,
+      "end_time_ms": 282886,
+      "num_slots": 1,
+      "text": "Na Ricardo?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 282890,
+      "end_time_ms": 283940,
+      "num_slots": 1,
+      "text": "Isso.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 284001,
+      "end_time_ms": 285261,
+      "num_slots": 1,
+      "text": "Tem várias casas. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 285340,
+      "end_time_ms": 288830,
+      "num_slots": 1,
+      "text": "Várias casas e ali a gente vive com várias etinias, né?",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 288870,
+      "end_time_ms": 289400,
+      "num_slots": 1,
+      "text": "Uhum.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 289420,
+      "end_time_ms": 292250,
+      "num_slots": 1,
+      "text": "Em torno lá tem doze etinias no mínimo.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 292510,
+      "end_time_ms": 293330,
+      "num_slots": 1,
+      "text": "Doze?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 293345,
+      "end_time_ms": 294025,
+      "num_slots": 1,
+      "text": "Doze.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 294400,
+      "end_time_ms": 295800,
+      "num_slots": 1,
+      "text": "Ah.. tá..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 295880,
+      "end_time_ms": 299420,
+      "num_slots": 1,
+      "text": "Ai tiveram várias etinias na aldeia Ricardo Franco.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 301295,
+      "end_time_ms": 302605,
+      "num_slots": 1,
+      "text": "Ii.. você é casado ?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 302710,
+      "end_time_ms": 303300,
+      "num_slots": 1,
+      "text": "Sim.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 303320,
+      "end_time_ms": 304260,
+      "num_slots": 1,
+      "text": "Com qual etinia?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 304340,
+      "end_time_ms": 305150,
+      "num_slots": 1,
+      "text": "Tupari.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 305190,
+      "end_time_ms": 305900,
+      "num_slots": 1,
+      "text": "Tupari?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 305900,
+      "end_time_ms": 306180,
+      "num_slots": 1,
+      "text": "Aham.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 306215,
+      "end_time_ms": 307215,
+      "num_slots": 1,
+      "text": "Ham.. olha só.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 308240,
+      "end_time_ms": 309880,
+      "num_slots": 1,
+      "text": "Estou trocando de...",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 309904,
+      "end_time_ms": 311294,
+      "num_slots": 1,
+      "text": "E tem mais Tupari, lá?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 311290,
+      "end_time_ms": 316200,
+      "num_slots": 1,
+      "text": "Tem, tem vários também. Tipo o mesmo processo acho que ocorreu também em todos os povos.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 316570,
+      "end_time_ms": 325090,
+      "num_slots": 1,
+      "text": "Ai.. lá geralmente cada.. cada etinia, cada povo geralmente são todos.. já misturados.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 325300,
+      "end_time_ms": 331100,
+      "num_slots": 1,
+      "text": "Na.. então quer dizer que na Ricardo Franco, é os mesmos que tem na Rio.. Branco tem na Ricardo Franco?",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 331205,
+      "end_time_ms": 331995,
+      "num_slots": 1,
+      "text": "Mais ou menos isso?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 332025,
+      "end_time_ms": 333515,
+      "num_slots": 1,
+      "text": "Mais ou menos isso aí.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 334625,
+      "end_time_ms": 337505,
+      "num_slots": 1,
+      "text": "E tem algum parente seu na Rio Branco?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 337720,
+      "end_time_ms": 344760,
+      "num_slots": 1,
+      "text": "Tem, tem. Sim, tem mais uns outros meninos, tem um primo lá que.. poucos tempos morou com um ????? por aí.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 344905,
+      "end_time_ms": 349905,
+      "num_slots": 1,
+      "text": "Você sabe fala alguma palavra em Wajuru? você conhece? você está estudando, né?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 349925,
+      "end_time_ms": 351705,
+      "num_slots": 1,
+      "text": "Estou estudando, pesquisando.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 351730,
+      "end_time_ms": 352160,
+      "num_slots": 1,
+      "text": "Hum..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 353210,
+      "end_time_ms": 359960,
+      "num_slots": 1,
+      "text": "Mas sei, muito não, mas.. um bocado assim tipo sei falar sim.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 360180,
+      "end_time_ms": 360730,
+      "num_slots": 1,
+      "text": "Uhum..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 361440,
+      "end_time_ms": 369010,
+      "num_slots": 1,
+      "text": "É até porque o processo de.. é muito.. é muito lento, pra aprender é muito difícil.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 369090,
+      "end_time_ms": 369580,
+      "num_slots": 1,
+      "text": "Éé..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 369600,
+      "end_time_ms": 377610,
+      "num_slots": 1,
+      "text": "Muito difícil para quem, a gente.. já é.. é alfabetizado em uma língua pra ir pra outra língua depois geralmente tem muita dificuldade.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 379517,
+      "end_time_ms": 382957,
+      "num_slots": 1,
+      "text": "Mas na escola vocês levam a sabedoria essas.. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 383000,
+      "end_time_ms": 384020,
+      "num_slots": 1,
+      "text": "É..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 384075,
+      "end_time_ms": 387235,
+      "num_slots": 1,
+      "text": "A gente faz, é.. o movimento. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 387300,
+      "end_time_ms": 392300,
+      "num_slots": 1,
+      "text": "Tá, geralmente, movimento de quinze, vin.. vinte dias.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 392550,
+      "end_time_ms": 396760,
+      "num_slots": 1,
+      "text": "Trabalho em grupo lá todo mundo participa.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 397250,
+      "end_time_ms": 402820,
+      "num_slots": 1,
+      "text": "Tem a nossa que sempre que faz, quem fazia era a Nicole depois passou para a Fernanda.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 403150,
+      "end_time_ms": 405150,
+      "num_slots": 1,
+      "text": "Estava nos orientando lá.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 405806,
+      "end_time_ms": 406266,
+      "num_slots": 1,
+      "text": "Ah, tá.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 406280,
+      "end_time_ms": 414710,
+      "num_slots": 1,
+      "text": "Ai.. quem toma de conta agora lá trabalhando, buscando mais pesquisas sou eu lá.. buscando mais histórias.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 415160,
+      "end_time_ms": 417880,
+      "num_slots": 1,
+      "text": "Trabalhamos com alfabeto.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 418325,
+      "end_time_ms": 419595,
+      "num_slots": 1,
+      "text": "Pares.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 420180,
+      "end_time_ms": 425260,
+      "num_slots": 1,
+      "text": "Nome dos animais é.. tem.. é eu que trabalho nessa parte aí.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 425300,
+      "end_time_ms": 426510,
+      "num_slots": 1,
+      "text": "Bacana!",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 426610,
+      "end_time_ms": 429500,
+      "num_slots": 1,
+      "text": "Ii.. vocês lá têm roça?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 429610,
+      "end_time_ms": 430710,
+      "num_slots": 1,
+      "text": "Sim!",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 430815,
+      "end_time_ms": 432475,
+      "num_slots": 1,
+      "text": "Como que é a roça de vocês?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 432520,
+      "end_time_ms": 435630,
+      "num_slots": 1,
+      "text": "A nossa roça a gente faz comunitária ainda um mutirão.. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 437090,
+      "end_time_ms": 442890,
+      "num_slots": 1,
+      "text": "Aí todo mundo.. quem tem família a gente marca.. e vai no mutirão e faz.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 444005,
+      "end_time_ms": 446025,
+      "num_slots": 1,
+      "text": "E vocês plantam o que lá?",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 446510,
+      "end_time_ms": 448830,
+      "num_slots": 1,
+      "text": "Ah.. explica um pouco.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 448830,
+      "end_time_ms": 459070,
+      "num_slots": 1,
+      "text": "O que mais dá lá é mandioca e arroz, porque lá a terra não é propícia para milho, nem para feijão. É muito difícil não é como a terra preta que dá de tudo, né?  ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 459390,
+      "end_time_ms": 461500,
+      "num_slots": 1,
+      "text": "Então geralmente a gente planta mais arroz e mandioca.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 462310,
+      "end_time_ms": 463360,
+      "num_slots": 1,
+      "text": "Vocês vendem?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 463410,
+      "end_time_ms": 464270,
+      "num_slots": 1,
+      "text": "Sim, a gente..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 465695,
+      "end_time_ms": 467145,
+      "num_slots": 1,
+      "text": "Éé.. faz para..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 467685,
+      "end_time_ms": 474755,
+      "num_slots": 1,
+      "text": "Para sua própria aliemtação e também.. como uma forma de.. uma fonte de renda do grupo lá. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 475815,
+      "end_time_ms": 479395,
+      "num_slots": 1,
+      "text": "Vende muito. para a Bolívia alí.. a Bolívia compra muito. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 479705,
+      "end_time_ms": 481035,
+      "num_slots": 1,
+      "text": "Ah vocês vão para a Bolívia vender?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 481095,
+      "end_time_ms": 482475,
+      "num_slots": 1,
+      "text": "Não, os bolivianos que vêm comprar aí.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 482510,
+      "end_time_ms": 483340,
+      "num_slots": 1,
+      "text": "Ah eles vêm?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 483400,
+      "end_time_ms": 483840,
+      "num_slots": 1,
+      "text": "Aham.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 483845,
+      "end_time_ms": 485485,
+      "num_slots": 1,
+      "text": "Os bolivianos vão lá na aldeia?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 485520,
+      "end_time_ms": 486680,
+      "num_slots": 1,
+      "text": "Vão. Comprar.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 486815,
+      "end_time_ms": 488715,
+      "num_slots": 1,
+      "text": "Olha, que interessante.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 489710,
+      "end_time_ms": 492070,
+      "num_slots": 1,
+      "text": "Eles vão comprar a mandioca?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 492115,
+      "end_time_ms": 493115,
+      "num_slots": 1,
+      "text": "E a farinha.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 493190,
+      "end_time_ms": 493990,
+      "num_slots": 1,
+      "text": "Farinha?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 493945,
+      "end_time_ms": 494495,
+      "num_slots": 1,
+      "text": "Aham.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 495410,
+      "end_time_ms": 497330,
+      "num_slots": 1,
+      "text": "Hum, ah vocês fazem farinha então?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 497410,
+      "end_time_ms": 504950,
+      "num_slots": 1,
+      "text": "Farinha.. é tapioca. Essas coisas, beijú tudo ainda a gente mantem essas tradições.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 504995,
+      "end_time_ms": 516825,
+      "num_slots": 1,
+      "text": "É.. dos antigos ainda. Beijú, tapioca, pamonha, amendoim torrado essas coisas, milho torrado esse movimento ainda é forte na nossa aldeia. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 517895,
+      "end_time_ms": 521575,
+      "num_slots": 1,
+      "text": "E aí os bolivianos vão é.. vocês estão na beira do rio, alí?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 521600,
+      "end_time_ms": 524770,
+      "num_slots": 1,
+      "text": "Estamos na beira do Rio Guaporé na divisa com a Bolívia.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 525020,
+      "end_time_ms": 525740,
+      "num_slots": 1,
+      "text": "Aí eles vão lá..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 525805,
+      "end_time_ms": 530065,
+      "num_slots": 1,
+      "text": "Vão lá procurar.. à venda.. compram.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 530210,
+      "end_time_ms": 531070,
+      "num_slots": 1,
+      "text": "Qualquer época?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 531155,
+      "end_time_ms": 532165,
+      "num_slots": 1,
+      "text": "Qualquer época.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 533625,
+      "end_time_ms": 534635,
+      "num_slots": 1,
+      "text": "Interessante!",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 535280,
+      "end_time_ms": 537220,
+      "num_slots": 1,
+      "text": "Ii.. o milho então é pouco?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 537315,
+      "end_time_ms": 544125,
+      "num_slots": 1,
+      "text": "Milho é muito pouco lá. Até porque não tem uma terra boa para.. produzir bastante.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 544810,
+      "end_time_ms": 548490,
+      "num_slots": 1,
+      "text": "E então a chicha de vocês era de milho ou de mandioca?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 548585,
+      "end_time_ms": 551305,
+      "num_slots": 1,
+      "text": "É de duas formas de milho e  mandioca.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 551550,
+      "end_time_ms": 553990,
+      "num_slots": 1,
+      "text": "Tem chicha de milho e tem de mandioca.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 554325,
+      "end_time_ms": 556125,
+      "num_slots": 1,
+      "text": "Mais hoje faz mais de mandioca, então?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 556290,
+      "end_time_ms": 571050,
+      "num_slots": 1,
+      "text": "Sim, mais mandioca devido.. o tempo lá, mas ainda a gente planta um pouco de milho que dar só para o sustento mesmo. Porque o milho que nós temos lá é esses milhos aqui que a gente usa da cidade, né? É um milho, chamamos de milho molhe.  ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 571580,
+      "end_time_ms": 579630,
+      "num_slots": 1,
+      "text": "Bem diferente.. com aquela a gente faz chicha, faz é.. bolo, faz várias coisas, pamonha ???????",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 579990,
+      "end_time_ms": 582340,
+      "num_slots": 1,
+      "text": "E quem que guarda as sementes do milho?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 582500,
+      "end_time_ms": 589490,
+      "num_slots": 1,
+      "text": "As sementes elas ficam por conta de cada.. família, né? Porque usa e já deixa para o outro ano. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 589600,
+      "end_time_ms": 592630,
+      "num_slots": 1,
+      "text": "E quem não tem a gente vai conseguindo de família por família.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 591820,
+      "end_time_ms": 592490,
+      "num_slots": 1,
+      "text": "Pouquinho.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 594610,
+      "end_time_ms": 604900,
+      "num_slots": 1,
+      "text": "As vezes um não tem uma semente de arroz e o outro tem.. e o quem não tem de arros tem de milho, quem não tem de milho tem de amendoim, de caráí, de batata. Assim a gente vai indo. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 604910,
+      "end_time_ms": 605990,
+      "num_slots": 1,
+      "text": "Tudo isso que dão.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 606405,
+      "end_time_ms": 610175,
+      "num_slots": 1,
+      "text": "Então o que vocês plantam que foi mais introduzido é arroz, né?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 610285,
+      "end_time_ms": 611375,
+      "num_slots": 1,
+      "text": "Arroz.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 611595,
+      "end_time_ms": 612915,
+      "num_slots": 1,
+      "text": "E a mandioca mesmo.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 612900,
+      "end_time_ms": 616900,
+      "num_slots": 1,
+      "text": "Mandioca.. batata cará, mas isso é só para o consumo mesmo. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 617190,
+      "end_time_ms": 622340,
+      "num_slots": 1,
+      "text": "Isso daí que vocês têm já de vocês mesmos, né?.. semente.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 622400,
+      "end_time_ms": 623290,
+      "num_slots": 1,
+      "text": "Consumo.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 623510,
+      "end_time_ms": 628380,
+      "num_slots": 1,
+      "text": "Aham, entendi. Lá na.. Ricardo Franco tem quantas escolas?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 628600,
+      "end_time_ms": 633090,
+      "num_slots": 1,
+      "text": "No momento têm duas, uma mais antiga, professor ????? conhece lá e tem uma nova.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 633750,
+      "end_time_ms": 637440,
+      "num_slots": 1,
+      "text": "Bem nova mesmo que ainda nem abriram para trabalhar, né?",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 638210,
+      "end_time_ms": 643040,
+      "num_slots": 1,
+      "text": "Enta.. mas aí quando você vai trabalhar, você trabalha só com os Wajuru? ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 643100,
+      "end_time_ms": 643760,
+      "num_slots": 1,
+      "text": "Não.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 643925,
+      "end_time_ms": 644665,
+      "num_slots": 1,
+      "text": "Como faz daí?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 644660,
+      "end_time_ms": 649660,
+      "num_slots": 1,
+      "text": "Eu trabalho é.. na língua portuguesa, trabalho no geral, né? Pego os meninos todos e marco um horário.   ",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 650280,
+      "end_time_ms": 650770,
+      "num_slots": 1,
+      "text": "Ah tá.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 650800,
+      "end_time_ms": 651870,
+      "num_slots": 1,
+      "text": "Só para língua Wajuru. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 651992,
+      "end_time_ms": 653212,
+      "num_slots": 1,
+      "text": "Daí só vai os Wajuru?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 653127,
+      "end_time_ms": 654177,
+      "num_slots": 1,
+      "text": "Só vai dos Wajuru.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 654567,
+      "end_time_ms": 659727,
+      "num_slots": 1,
+      "text": "Agora lá onde vocês moram, você acha que a situação da pesca está boa? ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 659955,
+      "end_time_ms": 660635,
+      "num_slots": 1,
+      "text": "Sim.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 660710,
+      "end_time_ms": 662280,
+      "num_slots": 1,
+      "text": "Tem bastante? Como é que está?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 662390,
+      "end_time_ms": 665420,
+      "num_slots": 1,
+      "text": "Sim, no momento lá tem muita fartura ainda. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 666203,
+      "end_time_ms": 676183,
+      "num_slots": 1,
+      "text": "Acho que devido o rio estar grande.. tem sim reunião de pescadores lá, mas..  tem mais peixe grande. E geralmente a pesca lá ainda é boa. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 676600,
+      "end_time_ms": 679480,
+      "num_slots": 1,
+      "text": "Ii.. artesanato? Vocês tem o artesanato?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 679500,
+      "end_time_ms": 691180,
+      "num_slots": 1,
+      "text": "Sim, artesanato tem.. vários artesanatos marigua.. colar.. pulseira.. tudo isso aí.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 691490,
+      "end_time_ms": 697370,
+      "num_slots": 1,
+      "text": "E vocês aprenderam.. vocês também fazem arco e flecha essas coisas assim?",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 697400,
+      "end_time_ms": 701700,
+      "num_slots": 1,
+      "text": "A gente ultiliza ainda na pescaria, né? Arco.. flecha.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 701825,
+      "end_time_ms": 704395,
+      "num_slots": 1,
+      "text": "Mas não é mais o metodo tradicional.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 704590,
+      "end_time_ms": 709590,
+      "num_slots": 1,
+      "text": "A gente ultiliza mais, ????? linha de nailon.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 711210,
+      "end_time_ms": 715300,
+      "num_slots": 1,
+      "text": "Isso aí a gente.. usa, mas não é mais o tradicinal mais.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 717000,
+      "end_time_ms": 729000,
+      "num_slots": 1,
+      "text": "E aqui no intercutural? Agora falando da escola e do intercutural como que você está.. achando assim.. do que você está.. aprendendo até agora, do que você fez nesse tempo.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 729885,
+      "end_time_ms": 732945,
+      "num_slots": 1,
+      "text": "O curso está ajudando muito a gente pensar, refletir melhor. ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 733500,
+      "end_time_ms": 741090,
+      "num_slots": 1,
+      "text": "Até porque antes de entrar nesse curso a gente não tinha essa visão de.. poder manter.. nossas culturas, nossas línguas.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 741210,
+      "end_time_ms": 749420,
+      "num_slots": 1,
+      "text": "E.. manter viva, né? E.. a partir do momento que a gente entra aqui a gente sabe que perdeu mesmo.. vê a realidade.  ",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 751000,
+      "end_time_ms": 754430,
+      "num_slots": 1,
+      "text": "E  a realidade também que nós não tivemos culpa de ter perdido isso.",
+      "dependents": []
+    },
+    {
+      "speaker": "S2",
+      "tier": "T2",
+      "start_time_ms": 754630,
+      "end_time_ms": 755000,
+      "num_slots": 1,
+      "text": "Éé..",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 755100,
+      "end_time_ms": 759280,
+      "num_slots": 1,
+      "text": "E se fosse pela nossa vontade. Acredito que não teria acontecido isso.",
+      "dependents": []
+    },
+    {
+      "speaker": "S1",
+      "tier": "T1",
+      "start_time_ms": 761400,
+      "end_time_ms": 768110,
+      "num_slots": 1,
+      "text": "Chega lá e reflete.. e através disso a gente busca o máximo de conhecimento e.. tenta aplicar melhor dentro da comunidade. ",
+      "dependents": []
+    }
+  ]
+}
