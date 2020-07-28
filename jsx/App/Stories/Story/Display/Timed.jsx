@@ -61,6 +61,9 @@ function LabeledTimeBlock({ sentences, timestamp }) {
 				<a href="javascript:void(0)" data-start_time={minStart} className="timeStamp">
 					{timestamp}
 				</a>
+				<a href="javascript:void(0)" >
+					Apagar
+				</a>
 			</span>
 			<TimeBlock sentences={sentences} />
 		</div>

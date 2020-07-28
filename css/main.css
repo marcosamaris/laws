@@ -7,8 +7,8 @@ body {
 }
 
 #navbar {
-	height: 48px;
-	background-color: rgb(150,200,255);
+	height: 80px;
+	background-color: rgb(21,21,21);
 }
 
 #navbar li {
@@ -25,7 +25,8 @@ body {
 }
 
 #navbar a {
-    display: block;
+	display: block;
+	margin-left: 80px;
     padding: 12.5px 20px;
     /*border: 1px solid rgb(151,151,151);*/
     color: white;
@@ -286,14 +287,10 @@ video {
 
 #navTitle {
 	float: left;
-	margin: 7px 0px;
+	margin-left: 7px 0px;
 	color: white;
 	padding-left: 20px;
 	padding-right: 20px;
 	font-weight: 700;
 	font-size: 1.7em;
-}
-
-#navbar a:hover {
-	background-color: rgb(119,156,200);
 }
