@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'js'),
     publicPath: './js/'
   },
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [{
       test: /\.jsx$/,

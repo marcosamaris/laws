@@ -15,7 +15,7 @@ export function App({ data }) {
             <Route exact path="/" render={props => <LandingPage/>} />
             <Route exact path="/index" render={props => <StoryIndex index={data.index} />} />
             <Route path="/story" render={props => <Stories stories={data.stories} />} />
-            <Route exact path="/openproject" render={props => <OpenProject/>}/>
+            <Route path="/openproject" render={props => <OpenProject/>}/>
             <Route exact path="/newproject" render={props => <NewProject/>}/>
             <Route exact path="/about" render={props => <About/>}/>
             <Route exact path="/home" render={props => <Home/>}/>
