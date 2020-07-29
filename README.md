@@ -1,1 +1,1 @@
-# LAWS Language Annotation Web System
+# LAWS - Language Annotation Web System
