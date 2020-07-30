@@ -1,4 +1,6 @@
 import React from 'react';
+import * as preprocess from '../../preprocessing/partial_rebuild.js';
+
 
 export class OpenProject extends React.Component {
     constructor(props){
@@ -10,7 +12,8 @@ export class OpenProject extends React.Component {
     open_file(){
         
         //console.log(document.getElementById("file-here"))
-        console.log(this.fileInput.current.files[0])
+        console.log(this.fileInput.current.files[0]);
+        
     }
   
     render() {

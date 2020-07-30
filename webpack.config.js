@@ -8,6 +8,9 @@ module.exports = {
     path: path.resolve(__dirname, 'js'),
     publicPath: './js/'
   },
+  node: {
+    fs: 'empty'
+  },
   mode: 'development',
   module: {
     rules: [{
