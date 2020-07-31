@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('bro-fs');
 const parseXml = require('xml2js').parseString;
 const eafUtils = require('./eaf_utils');
 const pfsxUtils = require('./pfsx_utils');
