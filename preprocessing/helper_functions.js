@@ -1,4 +1,4 @@
-const fs = require('bro-fs');
+const fs = require('fs');
 const flexUtils = require('./flex_utils'); // TODO use me more, and use eafUtils too, for stylistic consistency
 
 function getMetadataFromIndex(filename) {
