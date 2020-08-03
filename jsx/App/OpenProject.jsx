@@ -16,40 +16,40 @@ export class OpenProject extends React.Component {
         super(props);
         this.fileInput = React.createRef();
         this.open_file = this.open_file.bind(this);
-    }
-    
-    open_file(){
-           
-      console.log(fs.readString("/home/kalebe/reads/teste.fastq"))
+      }
       
-      fs.writeFile('some-file.txt', 'foo')
-      .then(function(){
-        return fs.readdir('foo');
-      })
-      .then(function(files){
-        console.log(files) // -> [ {some-file.txt} ]
-      });
+      open_file(){
+        fs.mkdir("data")
+        fs.mkdir("data/elan_files")
+        fs.mkdir("data/json_files/")
+        fs.writeFile("data/database.json")
+        fs.writeFile("data/index.json")
 
-        // var reader = new FileReader();
-        // reader.readAsText(this.fileInput.current.files[0]);
-        
-        // const nameFile = this.fileInput.current.files[0].name;
-        // const whenDone = function(){
-        //   db.build(jsonFilesDir, indexFileName, dbFileName)
-        // }
-        // reader.onload = function(){
-        //   parseXml(reader.result, function(err2, jsonData){
-        //     if (err2) throw err2;
-        //     const adoc = jsonData.ANNOTATION_DOCUMENT
-        //     console.log(adoc)
-        //     elan.preprocess(adoc, jsonFilesDir, nameFile, whenDone);
-        //     console.log("sucesso")
-        //   });
-        // }
+        var reader = new FileReader();
+        reader.readAsText(this.fileInput.current.files[0])
+        reader.onload = function(){
+          fs.writeFile("data/elan_files/eaftemp.eaf", reader.result);
+          
+        }
+        const nameFile = this.fileInput.current.files[0].name;
+        const whenDone = function(){
+          db.build(jsonFilesDir, indexFileName, dbFileName)
+        }
+    
+        fs.readString("data/elan_files/eaftemp.eaf")
+          .then(function(res){
+            parseXml(res, function(err2, jsonData){
+              if (err2) throw err2;
+              const adoc = jsonData.ANNOTATION_DOCUMENT
+              console.log(adoc)
+              elan.preprocess(adoc, jsonFilesDir, nameFile, whenDone);
+              console.log("sucesso")
+            });
+            
+          })          
+
     }
 
-    
-  
     render() {
       return (
           <div>
