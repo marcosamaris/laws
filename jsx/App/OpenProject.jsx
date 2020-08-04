@@ -28,28 +28,28 @@ export class OpenProject extends React.Component {
         var reader = new FileReader();
         reader.readAsText(this.fileInput.current.files[0])
         reader.onload = function(){
-          fs.writeFile("data/elan_files/eaftemp.eaf", reader.result);
-          
+          fs.writeFile("data/elan_files/eaftemp.eaf", reader.result);      
         }
         const nameFile = this.fileInput.current.files[0].name;
         const whenDone = function(){
           db.build(jsonFilesDir, indexFileName, dbFileName)
         }
-    
+        
         fs.readString("data/elan_files/eaftemp.eaf")
           .then(function(res){
-            parseXml(res, function(err2, jsonData){
-              if (err2) throw err2;
-              const adoc = jsonData.ANNOTATION_DOCUMENT
-              console.log(adoc)
-              elan.preprocess(adoc, jsonFilesDir, nameFile, whenDone);
-              console.log("sucesso")
-            });
+              parseXml(res, function(err2, jsonData){
+                  if (err2) throw err2;
+                  const adoc = jsonData.ANNOTATION_DOCUMENT
+                  console.log(adoc)
+                  elan.preprocess(adoc, jsonFilesDir, nameFile, whenDone);
+                  console.log("sucesso")
+                });
             
-          })          
-
-    }
-
+              })
+            
+        
+      }
+          
     render() {
       return (
           <div>

@@ -18,8 +18,8 @@ function getFilenameFromPath(path) {
   // I/P: path, a string
   // O/P: the filename which occurs at the end of the path
   // Status: untested
-  const begin = path.lastIndexOf("/") + 1; // @Kalinda, this might fail on windows.
-  return path.substring(begin, path.length);
+  const begin = String(path).lastIndexOf("/") + 1; // @Kalinda, this might fail on windows.
+  return String(path).substring(begin, path.length);
 }
 
 function getFlexMediaFilenames(itext) {
@@ -60,8 +60,8 @@ function mediaSearch(filename, mediaType, mediaFiles, extension) {
   // I/P: extension, file extension for media files, including the leading period
   // O/P: the filename of the first valid media that was found, or null if none exists
   console.log("🚨  WARN: " + filename + " is missing correctly linked " + mediaType + ". Attemping to find link...");
-  const shortFilename = filename.substring(0, filename.lastIndexOf('.'));
-  const shortestFilename = filename.substring(0, filename.indexOf('.')); // more possible matches for .postflex.flextext files
+  const shortFilename = String(filename).substring(0, String(filename).lastIndexOf('.'));
+  const shortestFilename = String(filename).substring(0, filename.indexOf('.')); // more possible matches for .postflex.flextext files
   const filenamesToTry = mediaFiles.concat([shortFilename + extension, shortestFilename + extension]);
   const mediaFile = findValidMedia(filenamesToTry);
   if (mediaFile != null) {
@@ -104,7 +104,7 @@ function updateMediaMetadata(filename, storyID, metadata, linkedMediaPaths) {
   let videoFiles = [];
   for (const mediaPath of linkedMediaPaths) {
     const mediaFilename = getFilenameFromPath(mediaPath);
-    const fileExtension = mediaFilename.substring(mediaFilename.lastIndexOf('.')).toLowerCase();
+    const fileExtension = String(mediaFilename).substring(String(mediaFilename).lastIndexOf('.')).toLowerCase();
     if (fileExtension === '.mp3' || fileExtension === '.wav') {
       audioFiles.push(mediaFilename);
       needsAudio = true;
@@ -138,7 +138,7 @@ function updateMediaMetadata(filename, storyID, metadata, linkedMediaPaths) {
 }
 
 function getTitleFromFilename(filename) {
-  return filename.substring(0, filename.lastIndexOf('.'));
+  return String(filename).substring(0, String(filename).lastIndexOf('.'));
 }
 
 function improveFLExIndexData(path, storyID, itext) {
