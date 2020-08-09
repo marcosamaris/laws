@@ -1,14 +1,14 @@
-const fs = require('fs');
+const fs = require('fs-web');
 const parseXml = require('xml2js').parseString;
 const eafUtils = require('./eaf_utils');
 const pfsxUtils = require('./pfsx_utils');
 const helper = require('./helper_functions');
 
-function updateIndex(indexMetadata, indexFileName, storyID) {
-  let index = JSON.parse(fs.readFileSync(indexFileName, "utf8"));
-  index[storyID] = indexMetadata;
-  fs.writeFileSync(indexFileName, JSON.stringify(index, null, 2));
-}
+// function updateIndex(indexMetadata, indexFileName, storyID) {
+//   let index = JSON.parse(fs.readFileSync(indexFileName, "utf8"));
+//   index[storyID] = indexMetadata;
+//   fs.writeFileSync(indexFileName, JSON.stringify(index, null, 2));
+// }
 
 // Stretch children to fill full duration of parent.
 // Specifically, if parent has P slots and child has C slots (incl gaps except final gap),
@@ -94,11 +94,11 @@ function stretchSlots(anotID, prevStretch, tiersToConstraints,
   }
 }
 
-function preprocess(adocIn, pfsxIn, jsonFilesDir, xmlFileName, callback) {
+function preprocess(adocIn, pfsxIn, xmlFileName, callback) {
   const storyID = eafUtils.getDocID(adocIn);
   const indexMetadata = helper.improveElanIndexData(xmlFileName, storyID, adocIn);
-  updateIndex(indexMetadata, "data/index.json", storyID);
-  updateIndex(indexMetadata, "data/index.json", storyID);
+  //updateIndex(indexMetadata, "data/index.json", storyID);
+  //updateIndex(indexMetadata, "data/index.json", storyID);
   const jsonOut = {
     "metadata": indexMetadata,
     "sentences": []
@@ -490,61 +490,65 @@ function preprocess(adocIn, pfsxIn, jsonFilesDir, xmlFileName, callback) {
     }
   }
   
-  const jsonPath = jsonFilesDir + storyID + ".json";
-  fs.writeFileSync(jsonPath, JSON.stringify(jsonOut, null, 2));
+  //const jsonPath = jsonFilesDir + storyID + ".json";
+  //fs.writeFileSync(jsonPath, JSON.stringify(jsonOut, null, 2));
+  fs.writeFile("data/eaf_temp.json", JSON.stringify(jsonOut, null, 2));
+  // fs.readString("data/eaf_temp.json").then((data) => {
+  //   console.log(data)
+  // })
   // console.log("✅  Correctly wrote " + storyID + ".json");
-  callback();
+  //callback();
 }
 
-function preprocess_dir(eafFilesDir, jsonFilesDir, callback) {
-  const eafFileNames = fs.readdirSync(eafFilesDir).filter(f => 
-    f[0] !== "." && f.slice(-4) !== 'pfsx'
-  ); // excludes pfsx files (which are generated just by opening ELAN) and hidden files
+// function preprocess_dir(eafFilesDir, jsonFilesDir, callback) {
+//   const eafFileNames = fs.readdirSync(eafFilesDir).filter(f => 
+//     f[0] !== "." && f.slice(-4) !== 'pfsx'
+//   ); // excludes pfsx files (which are generated just by opening ELAN) and hidden files
   
-  // use this to wait for all preprocess calls to terminate before executing the callback
-  const status = {numJobs: eafFileNames.length};
-  if (eafFileNames.length === 0) {
-    callback();
-  }
+//   // use this to wait for all preprocess calls to terminate before executing the callback
+//   const status = {numJobs: eafFileNames.length};
+//   if (eafFileNames.length === 0) {
+//     callback();
+//   }
 
-  const whenDone = function () {
-    status.numJobs--;
-    if (status.numJobs <= 0) {
-      callback();
-    }
-  };
+//   const whenDone = function () {
+//     status.numJobs--;
+//     if (status.numJobs <= 0) {
+//       callback();
+//     }
+//   };
 
-  for (const eafFileName of eafFileNames) {
-    console.log("Processing " + eafFileName);
-    const eafPath = eafFilesDir + eafFileName;
+//   for (const eafFileName of eafFileNames) {
+//     console.log("Processing " + eafFileName);
+//     const eafPath = eafFilesDir + eafFileName;
     
-    // parse .pfsx file, if found
-    let pfsxJson = null;
-    let pfsxPath = eafPath.slice(0, -4) + ".pfsx";
-    fs.readFile(pfsxPath, function(err1, xmlData) {
-      if (err1) {
-        console.log(`WARN: Could not find .pfsx file for ${eafFileName}. Viewing preferences won't be used.`);
-      } else {
-        parseXml(xmlData, function (err2, jsonData) {
-          if (err2) throw err2; 
-          pfsxJson = jsonData;
-        });
-      }
-    });
+//     // parse .pfsx file, if found
+//     let pfsxJson = null;
+//     let pfsxPath = eafPath.slice(0, -4) + ".pfsx";
+//     fs.readFile(pfsxPath, function(err1, xmlData) {
+//       if (err1) {
+//         console.log(`WARN: Could not find .pfsx file for ${eafFileName}. Viewing preferences won't be used.`);
+//       } else {
+//         parseXml(xmlData, function (err2, jsonData) {
+//           if (err2) throw err2; 
+//           pfsxJson = jsonData;
+//         });
+//       }
+//     });
     
-    fs.readFile(eafPath, function (err1, xmlData) {
-      if (err1) throw err1;
-      parseXml(xmlData, function (err2, jsonData) {
-        if (err2) throw err2;
-        const adoc = jsonData.ANNOTATION_DOCUMENT;
-        preprocess(adoc, pfsxJson, jsonFilesDir, eafFileName, whenDone);
-      });
-    });
-  }
-}
+//     fs.readFile(eafPath, function (err1, xmlData) {
+//       if (err1) throw err1;
+//       parseXml(xmlData, function (err2, jsonData) {
+//         if (err2) throw err2;
+//         const adoc = jsonData.ANNOTATION_DOCUMENT;
+//         preprocess(adoc, pfsxJson, jsonFilesDir, eafFileName, whenDone);
+//       });
+//     });
+//   }
+// }
 
 module.exports = {
-  preprocess_dir: preprocess_dir,
+  //preprocess_dir: preprocess_dir,
   preprocess: preprocess,
   assignSlots: assignSlots, // TODO remove when no longer needed for debugging
 };

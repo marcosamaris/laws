@@ -1,14 +1,13 @@
 import React from 'react';
 import * as fs from 'fs-web';
+
+
 const parseXml = require('xml2js').parseString;
 
 const elan = require('../../preprocessing/preprocess_eaf');
-const db = require('../../preprocessing/build_database.js');
 
-const jsonFilesDir = "data/json_files/";
-const isoFileName = "preprocessing/iso_dict.json";
-const indexFileName = "data/index.json"; // stores metadata for all documents
-const dbFileName = "data/database.json";
+//const jsonFilesDir = "data/json_files/";
+//const indexFileName = "data/index.json"; // stores metadata for all documents
 
 
 export class OpenProject extends React.Component {
@@ -19,21 +18,24 @@ export class OpenProject extends React.Component {
       }
       
       open_file(){
-        fs.mkdir("data")
+       
+        
         fs.mkdir("data/elan_files")
         fs.mkdir("data/json_files/")
-        fs.writeFile("data/database.json")
-        fs.writeFile("data/index.json")
+        fs.mkdir("data/media_files")
 
         var reader = new FileReader();
+        // for (const obj of this.fileInput.current.files) {
+        //   console.log(obj)
+        // }
         reader.readAsText(this.fileInput.current.files[0])
         reader.onload = function(){
           fs.writeFile("data/elan_files/eaftemp.eaf", reader.result);      
         }
         const nameFile = this.fileInput.current.files[0].name;
-        const whenDone = function(){
-          db.build(jsonFilesDir, indexFileName, dbFileName)
-        }
+        // const whenDone = function(){
+        //   db.build(jsonFilesDir, indexFileName, dbFileName)
+        // }
         
         fs.readString("data/elan_files/eaftemp.eaf")
           .then(function(res){
@@ -41,13 +43,15 @@ export class OpenProject extends React.Component {
                   if (err2) throw err2;
                   const adoc = jsonData.ANNOTATION_DOCUMENT
                   console.log(adoc)
-                  elan.preprocess(adoc, jsonFilesDir, nameFile, whenDone);
+                  elan.preprocess(adoc, nameFile, function(value){console.log(value)});
                   console.log("sucesso")
+                  
                 });
             
+                
               })
-            
-        
+
+          
       }
           
     render() {

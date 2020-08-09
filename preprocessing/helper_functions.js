@@ -34,13 +34,13 @@ function getFlexMediaFilenames(itext) {
   return filenames;
 }
 
-function verifyMedia(filename) {
-  // I/P: filename, a .mp3 or .mp4 file
-  // O/P: boolean, whether or not file exists in media_files directory
-  // Status: untested
-  const media_files = fs.readdirSync("data/media_files");
-  return (media_files.indexOf(filename) >= 0);
-}
+// function verifyMedia(filename) {
+//   // I/P: filename, a .mp3 or .mp4 file
+//   // O/P: boolean, whether or not file exists in media_files directory
+//   // Status: untested
+//   const media_files = fs.readdirSync("data/media_files");
+//   return (media_files.indexOf(filename) >= 0);
+// }
 
 function findValidMedia(filenames) {
   // I/P: filenames, a list of filenames (file extension included) that would be considered a match
@@ -141,94 +141,94 @@ function getTitleFromFilename(filename) {
   return String(filename).substring(0, String(filename).lastIndexOf('.'));
 }
 
-function improveFLExIndexData(path, storyID, itext) {
-  // I/P: path, a string
-  //      itext, an interlinear text, e.g., jsonIn["document"]["interlinear-text"][0]
-  // O/P: a JSON object, based on the index.json file and new metadata
-  // Status: untested
-  let metadata = getMetadataFromIndex(storyID);
+// function improveFLExIndexData(path, storyID, itext) {
+//   // I/P: path, a string
+//   //      itext, an interlinear text, e.g., jsonIn["document"]["interlinear-text"][0]
+//   // O/P: a JSON object, based on the index.json file and new metadata
+//   // Status: untested
+//   let metadata = getMetadataFromIndex(storyID);
 
-  const date = new Date();
-  const prettyDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
+//   const date = new Date();
+//   const prettyDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
   
-  const hasTimestamps = flexUtils.documentHasTimestamps(itext);
+//   const hasTimestamps = flexUtils.documentHasTimestamps(itext);
   
-  // get title/source info, part 1
-  let titlesAndSources = itext["item"];
-  let titles = {};
-  let sources = {};
-  if (titlesAndSources != null) {
-    for (const current_title of titlesAndSources) {
-      if (current_title['$']['type'] === 'title') {
-        titles[(current_title["$"]["lang"])] = current_title["_"];
-      } else if (current_title['$']['type'] === 'source') {
-        sources[(current_title["$"]["lang"])] = current_title["_"];
-      }
-    }
-  }
+//   // get title/source info, part 1
+//   let titlesAndSources = itext["item"];
+//   let titles = {};
+//   let sources = {};
+//   if (titlesAndSources != null) {
+//     for (const current_title of titlesAndSources) {
+//       if (current_title['$']['type'] === 'title') {
+//         titles[(current_title["$"]["lang"])] = current_title["_"];
+//       } else if (current_title['$']['type'] === 'source') {
+//         sources[(current_title["$"]["lang"])] = current_title["_"];
+//       }
+//     }
+//   }
   
-  if (metadata == null) { // file not in index previously
+//   if (metadata == null) { // file not in index previously
   
-    let defaultTitle = getTitleFromFilename(getFilenameFromPath(path));
-    // Uncomment the three lines below to use a particular language title 
-    // (in this case "es", Spanish) as the main title for newly added documents. 
-    // if (titles["es"] != null && titles["es"] != "") {
-      // defaultTitle = titles["es"];
-    // }
+//     let defaultTitle = getTitleFromFilename(getFilenameFromPath(path));
+//     // Uncomment the three lines below to use a particular language title 
+//     // (in this case "es", Spanish) as the main title for newly added documents. 
+//     // if (titles["es"] != null && titles["es"] != "") {
+//       // defaultTitle = titles["es"];
+//     // }
   
-    // below is the starter data:
-    metadata = {
-      "timed": hasTimestamps,
-      "story ID": storyID,
-      "title": {
-        "_default": defaultTitle,
-      },
-      "media": {
-        "audio": "",
-        "video": ""
-      },
-      "languages": [],
-      "date_created": "",
-      "date_uploaded": prettyDate,
-      "source": {
-        "_default": ""
-      },
-      "description": "",
-      "genre": "",
-      "author": "",
-      "glosser": "",
-      "speakers": [],
-      "xml_file_name": path,
-      "source_filetype": "FLEx"
-    }
-  }
+//     // below is the starter data:
+//     metadata = {
+//       "timed": hasTimestamps,
+//       "story ID": storyID,
+//       "title": {
+//         "_default": defaultTitle,
+//       },
+//       "media": {
+//         "audio": "",
+//         "video": ""
+//       },
+//       "languages": [],
+//       "date_created": "",
+//       "date_uploaded": prettyDate,
+//       "source": {
+//         "_default": ""
+//       },
+//       "description": "",
+//       "genre": "",
+//       "author": "",
+//       "glosser": "",
+//       "speakers": [],
+//       "xml_file_name": path,
+//       "source_filetype": "FLEx"
+//     }
+//   }
   
-  // get title/source info, part 2
-  titles["_default"] = metadata["title"]["_default"];
-  sources["_default"] = metadata["source"]["_default"];
-  metadata["title"] = titles;
-  metadata["source"] = sources;
+//   // get title/source info, part 2
+//   titles["_default"] = metadata["title"]["_default"];
+//   sources["_default"] = metadata["source"]["_default"];
+//   metadata["title"] = titles;
+//   metadata["source"] = sources;
   
-  // get language info
-  let languages = [];
-  let itextLanguages = itext.languages;
-  if (itextLanguages != null) { // null on .flextext freshly exported from ELAN
-    const languageData = itextLanguages[0].language;
-    for (const language of languageData) {
-      languages.push(language["$"]["lang"]);
-    }
-  }
-  metadata["languages"] = languages;
+//   // get language info
+//   let languages = [];
+//   let itextLanguages = itext.languages;
+//   if (itextLanguages != null) { // null on .flextext freshly exported from ELAN
+//     const languageData = itextLanguages[0].language;
+//     for (const language of languageData) {
+//       languages.push(language["$"]["lang"]);
+//     }
+//   }
+//   metadata["languages"] = languages;
   
-  // fill in any missing audio/video files, if we can
-  const linkedMediaPaths = getFlexMediaFilenames(itext);
-  const filename = getFilenameFromPath(path);
-  if (hasTimestamps) {
-    updateMediaMetadata(filename, storyID, metadata, linkedMediaPaths);
-  }
+//   // fill in any missing audio/video files, if we can
+//   const linkedMediaPaths = getFlexMediaFilenames(itext);
+//   const filename = getFilenameFromPath(path);
+//   if (hasTimestamps) {
+//     updateMediaMetadata(filename, storyID, metadata, linkedMediaPaths);
+//   }
   
-  return metadata;
-}
+//   return metadata;
+// }
 
 function improveElanIndexData(path, storyID, adoc) {
   // I/P: path, a string
@@ -237,7 +237,8 @@ function improveElanIndexData(path, storyID, adoc) {
   // O/P: a JSON object, based on the index.json file and new metadata
   // Status: untested
   const filename = getFilenameFromPath(path);
-  let metadata = getMetadataFromIndex(storyID);
+  //let metadata = getMetadataFromIndex(storyID);
+  let metadata = null;
 
   const date = new Date();
   const prettyDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
@@ -288,15 +289,15 @@ function improveElanIndexData(path, storyID, adoc) {
       linkedMediaPaths.push(mediaDesc['$']['MEDIA_URL']);
     }
   }
-  updateMediaMetadata(filename, storyID, metadata, linkedMediaPaths)
+  //updateMediaMetadata(filename, storyID, metadata, linkedMediaPaths)
 
   return metadata;
 }
 
 module.exports = {
-  verifyMedia: verifyMedia,
+  //verifyMedia: verifyMedia,
   getMetadataFromIndex: getMetadataFromIndex,
   getFilenameFromPath: getFilenameFromPath,
-  improveFLExIndexData: improveFLExIndexData,
+  //improveFLExIndexData: improveFLExIndexData,
   improveElanIndexData: improveElanIndexData
 };
