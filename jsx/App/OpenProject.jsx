@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import * as fs from 'fs-web';
+import { Redirect } from 'react-router';
 
 
 const parseXml = require('xml2js').parseString;
@@ -10,21 +11,33 @@ const elan = require('../../preprocessing/preprocess_eaf');
 //const indexFileName = "data/index.json"; // stores metadata for all documents
 
 
-export class OpenProject extends React.Component {
-    constructor(props){
-        super(props);
-        this.fileInput = React.createRef();
-        this.open_file = this.open_file.bind(this);
+export default class OpenProject extends Component {
+  constructor(props){
+    super(props);
+    this.fileInput = React.createRef();
+    this.open_file = this.open_file.bind(this);
+    this.setRedirect = this.setRedirect.bind(this);
+    this.state = {
+      redirect: false,
+      JSON: null
+    }
+  }
+
+
+      setRedirect(){
+        this.setState({redirect:true})
       }
+
+      
       
       open_file(){
        
-        
         fs.mkdir("data/elan_files")
         fs.mkdir("data/json_files/")
         fs.mkdir("data/media_files")
 
         var reader = new FileReader();
+        const setRedirect = this;
         // for (const obj of this.fileInput.current.files) {
         //   console.log(obj)
         // }
@@ -45,18 +58,28 @@ export class OpenProject extends React.Component {
                   console.log(adoc)
                   elan.preprocess(adoc, nameFile, function(value){console.log(value)});
                   console.log("sucesso")
-                  
-                });
-            
-                
-              })
 
-          
+                  fs.readString("data/eaf_temp.json")
+                    .then((data) => {
+                      let json = JSON.parse(data)
+                      setRedirect.state.JSON = json;
+                      console.log(json)
+                      setRedirect.setRedirect()
+                    });
+                });
+              })
+              
       }
           
     render() {
       return (
-          <div>
+        this.state.redirect ? 
+        
+        <Redirect  to={{
+          pathname:'/story',
+          state: {data:this.state.JSON}
+        }}/> :
+        <div>
             <form >
             <label>
                 Upload file:

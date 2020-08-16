@@ -14,7 +14,7 @@ export function Sidebar({ metadata }) {
 	
 	if (metadata['timed'] && metadata['media']['video'] != '') {
 		const filename = metadata['media']['video'];
-		const path = 'data/media_files/' + filename;
+		const path = filename;
 		return (
 			<div id="leftPanel">
 				<Video path={path} />
