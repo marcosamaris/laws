@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<document version="2">
+  <interlinear-text guid="f93e53b8-221f-4727-9edd-440e8afa3272">
+    <item type="title" lang="de">Zimmer Frei</item>
+    <paragraphs>
+      <paragraph guid="4ec7df64-8da8-4b22-8495-946859ed76b1">
+        <phrases>
+          <phrase guid="27a2e87e-2222-4bce-aacc-c268fa4b34d1" begin-time-offset="100" end-time-offset="1170" speaker="A" media-file="e7835700-5dc7-4af1-800c-27a0fd537653">
+            <item type="segnum" lang="en">1</item>
+            <words>
+              <word guid="f20024de-8d0d-41de-a599-fb3f39d811cd">
+                <item type="txt" lang="de">Wer</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">wer</item>
+                    <item type="cf" lang="de">wer</item>
+                    <item type="gls" lang="en">who</item>
+                    <item type="msa" lang="en">interrog </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">who</item>
+                <item type="pos" lang="en">interrog</item>
+              </word>
+              <word guid="e13fb1f0-ccac-43a8-9d46-7f3cc73f1991">
+                <item type="txt" lang="de">ist</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">ist</item>
+                    <item type="cf" lang="de">sein</item>
+                    <item type="variantTypes" lang="en" />
+                    <item type="gls" lang="en">be</item>
+                    <item type="glsAppend" lang="en"></item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">be</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="adb48207-2fdc-4060-a403-ca22f84c5aa8">
+                <item type="txt" lang="de">heut</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">heut</item>
+                    <item type="cf" lang="de">heute</item>
+                    <item type="variantTypes" lang="en">+fr. var.</item>
+                    <item type="gls" lang="en">today</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">today</item>
+                <item type="pos" lang="en">adv</item>
+              </word>
+              <word guid="5c3547b7-fef9-442d-a028-827c91ec6397">
+                <item type="txt" lang="de">unser</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">unser</item>
+                    <item type="cf" lang="de">unser</item>
+                    <item type="gls" lang="en">our</item>
+                    <item type="msa" lang="en">poss </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">our</item>
+                <item type="pos" lang="en">poss</item>
+              </word>
+              <word guid="e7737543-4a7e-4782-848a-e941d0dde9be">
+                <item type="txt" lang="de">Gast</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">Gast</item>
+                    <item type="cf" lang="de">Gast</item>
+                    <item type="gls" lang="en">guest</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">guest</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word>
+                <item type="punct" lang="de">?</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Who is our guest today?</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="5e5351cf-e467-444d-8213-c1da16fbc9d0">
+        <phrases>
+          <phrase guid="0a2c988b-fd61-4a2d-920d-96c8e9eedcd1" begin-time-offset="1417" end-time-offset="3431" speaker="B" media-file="e7835700-5dc7-4af1-800c-27a0fd537653">
+            <item type="segnum" lang="en">2</item>
+            <words>
+              <word guid="5c3547b7-fef9-442d-a028-827c91ec6397">
+                <item type="txt" lang="de">Unser</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">unser</item>
+                    <item type="cf" lang="de">unser</item>
+                    <item type="gls" lang="en">our</item>
+                    <item type="msa" lang="en">poss </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">our</item>
+                <item type="pos" lang="en">poss</item>
+              </word>
+              <word guid="e7737543-4a7e-4782-848a-e941d0dde9be">
+                <item type="txt" lang="de">Gast</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">Gast</item>
+                    <item type="cf" lang="de">Gast</item>
+                    <item type="gls" lang="en">guest</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">guest</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="adb48207-2fdc-4060-a403-ca22f84c5aa8">
+                <item type="txt" lang="de">heut</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">heut</item>
+                    <item type="cf" lang="de">heute</item>
+                    <item type="variantTypes" lang="en">+fr. var.</item>
+                    <item type="gls" lang="en">today</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">today</item>
+                <item type="pos" lang="en">adv</item>
+              </word>
+              <word guid="6de376ac-3110-43c2-85c4-1e7244a4c1c6">
+                <item type="txt" lang="de">abend</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">abend</item>
+                    <item type="cf" lang="de">abend</item>
+                    <item type="gls" lang="en">evening</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">evening</item>
+                <item type="pos" lang="en">adv</item>
+              </word>
+              <word guid="e13fb1f0-ccac-43a8-9d46-7f3cc73f1991">
+                <item type="txt" lang="de">ist</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">ist</item>
+                    <item type="cf" lang="de">sein</item>
+                    <item type="variantTypes" lang="en" />
+                    <item type="gls" lang="en">be</item>
+                    <item type="glsAppend" lang="en"></item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">be</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="e663ff77-8d49-472f-9851-09ab4bf84292">
+                <item type="txt" lang="de">eine</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">ein</item>
+                    <item type="cf" lang="de">ein</item>
+                    <item type="gls" lang="en">a</item>
+                    <item type="msa" lang="en">indf </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">-e</item>
+                    <item type="cf" lang="de">-e</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">nom.sg.f</item>
+                    <item type="msa" lang="en">indf:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">a</item>
+                <item type="pos" lang="en">indf</item>
+              </word>
+              <word guid="e5632fc6-33d4-4acf-89d4-2bd183039127">
+                <item type="txt" lang="de">Frau</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">Frau</item>
+                    <item type="cf" lang="de">Frau</item>
+                    <item type="gls" lang="en">woman</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">woman</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word>
+                <item type="punct" lang="de">,</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Our guest tonight is a woman,</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="3392ba23-0a4c-4a59-a2e8-ee00d6e7af0b">
+        <phrases>
+          <phrase guid="efa4e64a-d03f-45ed-9007-7129d4436169" begin-time-offset="3431" end-time-offset="5039" speaker="B" media-file="e7835700-5dc7-4af1-800c-27a0fd537653">
+            <item type="segnum" lang="en">3</item>
+            <words>
+              <word guid="e663ff77-8d49-472f-9851-09ab4bf84292">
+                <item type="txt" lang="de">eine</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">ein</item>
+                    <item type="cf" lang="de">ein</item>
+                    <item type="gls" lang="en">a</item>
+                    <item type="msa" lang="en">indf </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">-e</item>
+                    <item type="cf" lang="de">-e</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">nom.sg.f</item>
+                    <item type="msa" lang="en">indf:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">a</item>
+                <item type="pos" lang="en">indf</item>
+              </word>
+              <word guid="eb2434e1-136c-4617-9778-e29e74c55352">
+                <item type="txt" lang="de">sehr</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">sehr</item>
+                    <item type="cf" lang="de">sehr</item>
+                    <item type="gls" lang="en">very</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">very</item>
+                <item type="pos" lang="en">adv</item>
+              </word>
+              <word guid="fc85f57d-8e0b-4f5d-a24a-ab2151a6eed6">
+                <item type="txt" lang="de">bekannte</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">bekannt</item>
+                    <item type="cf" lang="de">bekannt</item>
+                    <item type="gls" lang="en">well-known</item>
+                    <item type="msa" lang="en">adj </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">-e</item>
+                    <item type="cf" lang="de">-e</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">nom.sg.f</item>
+                    <item type="msa" lang="en">adj:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">well-known</item>
+                <item type="pos" lang="en">adj</item>
+              </word>
+              <word guid="e5632fc6-33d4-4acf-89d4-2bd183039127">
+                <item type="txt" lang="de">Frau</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">Frau</item>
+                    <item type="cf" lang="de">Frau</item>
+                    <item type="gls" lang="en">woman</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">woman</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word>
+                <item type="punct" lang="de">,</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">a very well-known woman,</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="9d697272-2f0f-4888-9f96-a3abe2c71984">
+        <phrases>
+          <phrase guid="4bb1a9f2-02c7-4a2e-8271-7ff3cf2c7097" begin-time-offset="5039" end-time-offset="7519" speaker="B" media-file="e7835700-5dc7-4af1-800c-27a0fd537653">
+            <item type="segnum" lang="en">4</item>
+            <words>
+              <word guid="19783ce6-6225-4362-9ffa-af6b1b9485c2">
+                <item type="txt" lang="de">sie</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">sie</item>
+                    <item type="cf" lang="de">sie</item>
+                    <item type="gls" lang="en">she</item>
+                    <item type="msa" lang="en">pro </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">she</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="e13fb1f0-ccac-43a8-9d46-7f3cc73f1991">
+                <item type="txt" lang="de">ist</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">ist</item>
+                    <item type="cf" lang="de">sein</item>
+                    <item type="variantTypes" lang="en" />
+                    <item type="gls" lang="en">be</item>
+                    <item type="glsAppend" lang="en"></item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">be</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="e663ff77-8d49-472f-9851-09ab4bf84292">
+                <item type="txt" lang="de">eine</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">ein</item>
+                    <item type="cf" lang="de">ein</item>
+                    <item type="gls" lang="en">a</item>
+                    <item type="msa" lang="en">indf </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">-e</item>
+                    <item type="cf" lang="de">-e</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">nom.sg.f</item>
+                    <item type="msa" lang="en">indf:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">a</item>
+                <item type="pos" lang="en">indf</item>
+              </word>
+              <word guid="c2db6ff8-44cb-4add-ae59-d531498c49f9">
+                <item type="txt" lang="de">Sängerin</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">Sänger</item>
+                    <item type="cf" lang="de">Sänger</item>
+                    <item type="gls" lang="en">singer</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">-in</item>
+                    <item type="cf" lang="de">-in</item>
+                    <item type="gls" lang="en">f</item>
+                    <item type="msa" lang="en">n&gt;n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">singer</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="d8e0bbcc-b128-4b75-9c03-84426ee30836">
+                <item type="txt" lang="de">mit</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">mit</item>
+                    <item type="cf" lang="de">mit</item>
+                    <item type="gls" lang="en">with</item>
+                    <item type="msa" lang="en">prep </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">with</item>
+                <item type="pos" lang="en">prep</item>
+              </word>
+              <word guid="13fb208d-cb0e-4ee1-9901-7f970a6603cd">
+                <item type="txt" lang="de">einer</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">ein</item>
+                    <item type="cf" lang="de">ein</item>
+                    <item type="gls" lang="en">a</item>
+                    <item type="msa" lang="en">indf </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">-er</item>
+                    <item type="cf" lang="de">-er</item>
+                    <item type="gls" lang="en">dat.sg.f</item>
+                    <item type="msa" lang="en">indf:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">a</item>
+                <item type="pos" lang="en">indf</item>
+              </word>
+              <word guid="8c1e83a4-2655-46e1-980a-3a8ad9a08d68">
+                <item type="txt" lang="de">begnadeten</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">begnadet</item>
+                    <item type="cf" lang="de">begnadet</item>
+                    <item type="gls" lang="en">blessed</item>
+                    <item type="msa" lang="en">adj </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">-en</item>
+                    <item type="cf" lang="de">-en</item>
+                    <item type="gls" lang="en">dat.sg.f</item>
+                    <item type="msa" lang="en">adj:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">blessed</item>
+                <item type="pos" lang="en">adj</item>
+              </word>
+              <word guid="0a8078ee-57b8-4ddd-a534-ca3127fe6e92">
+                <item type="txt" lang="de">Stimme</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">Stimme</item>
+                    <item type="cf" lang="de">Stimme</item>
+                    <item type="gls" lang="en">voice</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">voice</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word>
+                <item type="punct" lang="de">,</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">she is a singer with a divine voice</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="9623b329-11ac-47ff-91c5-6d0adaca3432">
+        <phrases>
+          <phrase guid="170f875a-8478-4a9b-9c08-cdb5fd1d3916" begin-time-offset="7519" end-time-offset="8314" speaker="B" media-file="e7835700-5dc7-4af1-800c-27a0fd537653">
+            <item type="segnum" lang="en">5</item>
+            <words>
+              <word guid="f62c0109-ac52-4209-b268-c5b0f576b37c">
+                <item type="txt" lang="de">Schauspielerin</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">Schauspieler</item>
+                    <item type="cf" lang="de">Schauspieler</item>
+                    <item type="gls" lang="en">actor</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">-in</item>
+                    <item type="cf" lang="de">-in</item>
+                    <item type="gls" lang="en">f</item>
+                    <item type="msa" lang="en">n&gt;n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">actor</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word>
+                <item type="punct" lang="de">,</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">actress</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="135796c1-bb84-4015-9bc6-4b08637d9b31">
+        <phrases>
+          <phrase guid="a956f818-b8ae-48d4-8513-6533d9d4d677" begin-time-offset="8314" end-time-offset="9227" speaker="B" media-file="e7835700-5dc7-4af1-800c-27a0fd537653">
+            <item type="segnum" lang="en">6</item>
+            <words>
+              <word guid="19783ce6-6225-4362-9ffa-af6b1b9485c2">
+                <item type="txt" lang="de">sie</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">sie</item>
+                    <item type="cf" lang="de">sie</item>
+                    <item type="gls" lang="en">she</item>
+                    <item type="msa" lang="en">pro </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">she</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="bc5a57f6-c265-4b47-aefd-f546da284b18">
+                <item type="txt" lang="de">rettet</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">rett</item>
+                    <item type="cf" lang="de">rett</item>
+                    <item type="gls" lang="en">save</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">-et</item>
+                    <item type="cf" lang="de">-et</item>
+                    <item type="gls" lang="en">3.sg.prs</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">save</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="1b106707-028a-4819-8633-627e120341ee">
+                <item type="txt" lang="de">die</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">die</item>
+                    <item type="cf" lang="de">die</item>
+                    <item type="gls" lang="en">the</item>
+                    <item type="msa" lang="en">def </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">the</item>
+                <item type="pos" lang="en">def</item>
+              </word>
+              <word guid="c1bc5620-a17f-4b35-8a58-1780ba9dc6b4">
+                <item type="txt" lang="de">Welt</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="de">Welt</item>
+                    <item type="cf" lang="de">Welt</item>
+                    <item type="gls" lang="en">world</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">world</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word>
+                <item type="punct" lang="de">.</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">she saves the world.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="de" font="Times New Roman" vernacular="true" />
+      <language lang="en" font="Times New Roman" />
+    </languages>
+    <media-files offset-type="">
+      <media guid="e7835700-5dc7-4af1-800c-27a0fd537653" location="file:///C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set/2 - setting the participants/ZimmerFrei.mp4" />
+    </media-files>
+  </interlinear-text>
+</document>

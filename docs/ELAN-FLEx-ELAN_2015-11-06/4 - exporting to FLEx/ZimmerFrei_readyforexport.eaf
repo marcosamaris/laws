@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ANNOTATION_DOCUMENT AUTHOR="" DATE="2020-02-21T18:51:57+00:00" FORMAT="3.0" VERSION="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv3.0.xsd">
+    <HEADER MEDIA_FILE="" TIME_UNITS="milliseconds">
+        <MEDIA_DESCRIPTOR MEDIA_URL="file:///home/kalebe/Projects/laws/docs/ELAN-FLEx-ELAN_2015-11-06/4 - exporting to FLEx/ZimmerFrei.mp4" MIME_TYPE="video/mp4" RELATIVE_MEDIA_URL="./ZimmerFrei.mp4"/>
+        <MEDIA_DESCRIPTOR EXTRACTED_FROM="file:///home/kalebe/Projects/laws/docs/ELAN-FLEx-ELAN_2015-11-06/4 - exporting to FLEx/ZimmerFrei.mp4" MEDIA_URL="file:///home/kalebe/Projects/laws/docs/ELAN-FLEx-ELAN_2015-11-06/4 - exporting to FLEx/ZimmerFrei.wav" MIME_TYPE="audio/x-wav" RELATIVE_MEDIA_URL="./ZimmerFrei.wav"/>
+        <PROPERTY NAME="URN">urn:nl-mpi-tools-elan-eaf:50f4016c-fc1e-466f-a95f-649875bbd1aa</PROPERTY>
+        <PROPERTY NAME="lastUsedAnnotationId">50</PROPERTY>
+    </HEADER>
+    <TIME_ORDER>
+        <TIME_SLOT TIME_SLOT_ID="ts1" TIME_VALUE="0"/>
+        <TIME_SLOT TIME_SLOT_ID="ts2" TIME_VALUE="100"/>
+        <TIME_SLOT TIME_SLOT_ID="ts3" TIME_VALUE="1170"/>
+        <TIME_SLOT TIME_SLOT_ID="ts4" TIME_VALUE="1417"/>
+        <TIME_SLOT TIME_SLOT_ID="ts5" TIME_VALUE="1580"/>
+        <TIME_SLOT TIME_SLOT_ID="ts6" TIME_VALUE="3431"/>
+        <TIME_SLOT TIME_SLOT_ID="ts7" TIME_VALUE="3431"/>
+        <TIME_SLOT TIME_SLOT_ID="ts8" TIME_VALUE="5039"/>
+        <TIME_SLOT TIME_SLOT_ID="ts9" TIME_VALUE="5039"/>
+        <TIME_SLOT TIME_SLOT_ID="ts10" TIME_VALUE="7519"/>
+        <TIME_SLOT TIME_SLOT_ID="ts11" TIME_VALUE="7519"/>
+        <TIME_SLOT TIME_SLOT_ID="ts12" TIME_VALUE="8314"/>
+        <TIME_SLOT TIME_SLOT_ID="ts13" TIME_VALUE="8314"/>
+        <TIME_SLOT TIME_SLOT_ID="ts14" TIME_VALUE="9227"/>
+    </TIME_ORDER>
+    <TIER LINGUISTIC_TYPE_REF="Phrases" PARTICIPANT="A" TIER_ID="A_Transcription-txt-deu">
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a3" TIME_SLOT_REF1="ts2" TIME_SLOT_REF2="ts3">
+                <ANNOTATION_VALUE>Wer ist heut unser Gast?</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Words" PARENT_REF="A_Transcription-txt-deu" PARTICIPANT="A" TIER_ID="A_Words-txt-deu">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a5" ANNOTATION_REF="a3">
+                <ANNOTATION_VALUE>Wer</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a6" ANNOTATION_REF="a3" PREVIOUS_ANNOTATION="a5">
+                <ANNOTATION_VALUE>ist</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a7" ANNOTATION_REF="a3" PREVIOUS_ANNOTATION="a6">
+                <ANNOTATION_VALUE>heut</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a8" ANNOTATION_REF="a3" PREVIOUS_ANNOTATION="a7">
+                <ANNOTATION_VALUE>unser</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a9" ANNOTATION_REF="a3" PREVIOUS_ANNOTATION="a8">
+                <ANNOTATION_VALUE>Gast?</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Text" TIER_ID="Interlinear-title-deu">
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a1" TIME_SLOT_REF1="ts1" TIME_SLOT_REF2="ts5">
+                <ANNOTATION_VALUE>Zimmer Frei</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="A_Transcription-txt-deu" PARTICIPANT="A" TIER_ID="A_Translation-gls-en">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a10" ANNOTATION_REF="a3">
+                <ANNOTATION_VALUE>Who is our guest today?</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="A_Transcription-txt-deu" PARTICIPANT="A" TIER_ID="A_Participant-note-en">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a11" ANNOTATION_REF="a3">
+                <ANNOTATION_VALUE>A</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Phrases" PARTICIPANT="B" TIER_ID="B_Transcription-txt-deu">
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a12" TIME_SLOT_REF1="ts4" TIME_SLOT_REF2="ts6">
+                <ANNOTATION_VALUE>Unser Gast heut abend ist eine Frau,</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a13" TIME_SLOT_REF1="ts7" TIME_SLOT_REF2="ts9">
+                <ANNOTATION_VALUE>eine sehr bekannte Frau,</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a14" TIME_SLOT_REF1="ts8" TIME_SLOT_REF2="ts10">
+                <ANNOTATION_VALUE>sie ist eine Sängerin mit einer begnadeten Stimme,</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a15" TIME_SLOT_REF1="ts11" TIME_SLOT_REF2="ts12">
+                <ANNOTATION_VALUE>Schauspielerin,</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a16" TIME_SLOT_REF1="ts13" TIME_SLOT_REF2="ts14">
+                <ANNOTATION_VALUE>sie rettet die Welt.</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Words" PARENT_REF="B_Transcription-txt-deu" PARTICIPANT="B" TIER_ID="B_Words-txt-deu">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a17" ANNOTATION_REF="a12">
+                <ANNOTATION_VALUE>Unser</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a18" ANNOTATION_REF="a12" PREVIOUS_ANNOTATION="a17">
+                <ANNOTATION_VALUE>Gast</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a19" ANNOTATION_REF="a12" PREVIOUS_ANNOTATION="a18">
+                <ANNOTATION_VALUE>heut</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a20" ANNOTATION_REF="a12" PREVIOUS_ANNOTATION="a19">
+                <ANNOTATION_VALUE>abend</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a21" ANNOTATION_REF="a12" PREVIOUS_ANNOTATION="a20">
+                <ANNOTATION_VALUE>ist</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a22" ANNOTATION_REF="a12" PREVIOUS_ANNOTATION="a21">
+                <ANNOTATION_VALUE>eine</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a23" ANNOTATION_REF="a12" PREVIOUS_ANNOTATION="a22">
+                <ANNOTATION_VALUE>Frau,</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a24" ANNOTATION_REF="a13">
+                <ANNOTATION_VALUE>eine</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a25" ANNOTATION_REF="a13" PREVIOUS_ANNOTATION="a24">
+                <ANNOTATION_VALUE>sehr</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a26" ANNOTATION_REF="a13" PREVIOUS_ANNOTATION="a25">
+                <ANNOTATION_VALUE>bekannte</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a27" ANNOTATION_REF="a13" PREVIOUS_ANNOTATION="a26">
+                <ANNOTATION_VALUE>Frau,</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a28" ANNOTATION_REF="a14">
+                <ANNOTATION_VALUE>sie</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a29" ANNOTATION_REF="a14" PREVIOUS_ANNOTATION="a28">
+                <ANNOTATION_VALUE>ist</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a30" ANNOTATION_REF="a14" PREVIOUS_ANNOTATION="a29">
+                <ANNOTATION_VALUE>eine</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a31" ANNOTATION_REF="a14" PREVIOUS_ANNOTATION="a30">
+                <ANNOTATION_VALUE>Sängerin</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a32" ANNOTATION_REF="a14" PREVIOUS_ANNOTATION="a31">
+                <ANNOTATION_VALUE>mit</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a33" ANNOTATION_REF="a14" PREVIOUS_ANNOTATION="a32">
+                <ANNOTATION_VALUE>einer</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a34" ANNOTATION_REF="a14" PREVIOUS_ANNOTATION="a33">
+                <ANNOTATION_VALUE>begnadeten</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a35" ANNOTATION_REF="a14" PREVIOUS_ANNOTATION="a34">
+                <ANNOTATION_VALUE>Stimme,</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a36" ANNOTATION_REF="a15">
+                <ANNOTATION_VALUE>Schauspielerin,</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a37" ANNOTATION_REF="a16">
+                <ANNOTATION_VALUE>sie</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a38" ANNOTATION_REF="a16" PREVIOUS_ANNOTATION="a37">
+                <ANNOTATION_VALUE>rettet</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a39" ANNOTATION_REF="a16" PREVIOUS_ANNOTATION="a38">
+                <ANNOTATION_VALUE>die</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a40" ANNOTATION_REF="a16" PREVIOUS_ANNOTATION="a39">
+                <ANNOTATION_VALUE>Welt.</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="B_Transcription-txt-deu" PARTICIPANT="B" TIER_ID="B_Translation-gls-en">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a41" ANNOTATION_REF="a12">
+                <ANNOTATION_VALUE>Our guest tonight is a woman,</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a42" ANNOTATION_REF="a13">
+                <ANNOTATION_VALUE>a very well-known woman,</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a43" ANNOTATION_REF="a14">
+                <ANNOTATION_VALUE>she is a singer with a divine voice</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a44" ANNOTATION_REF="a15">
+                <ANNOTATION_VALUE>actress</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a45" ANNOTATION_REF="a16">
+                <ANNOTATION_VALUE>she saves the world.</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER LINGUISTIC_TYPE_REF="Note" PARENT_REF="B_Transcription-txt-deu" PARTICIPANT="B" TIER_ID="B_Participant-note-en">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a46" ANNOTATION_REF="a12">
+                <ANNOTATION_VALUE>B</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a47" ANNOTATION_REF="a13">
+                <ANNOTATION_VALUE>B</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a48" ANNOTATION_REF="a14">
+                <ANNOTATION_VALUE>B</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a49" ANNOTATION_REF="a15">
+                <ANNOTATION_VALUE>B</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a50" ANNOTATION_REF="a16">
+                <ANNOTATION_VALUE>B</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="default-lt" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Phrases" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Blank" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Subdivision" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Words" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Text" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Note" TIME_ALIGNABLE="false"/>
+    <CONSTRAINT DESCRIPTION="Time subdivision of parent annotation's time interval, no time gaps allowed within this interval" STEREOTYPE="Time_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="Symbolic subdivision of a parent annotation. Annotations refering to the same parent are ordered" STEREOTYPE="Symbolic_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="1-1 association with a parent annotation" STEREOTYPE="Symbolic_Association"/>
+    <CONSTRAINT DESCRIPTION="Time alignable annotations within the parent annotation's time interval, gaps are allowed" STEREOTYPE="Included_In"/>
+</ANNOTATION_DOCUMENT>

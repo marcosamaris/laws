@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- See http://code.google.com/p/lift-standard for more information on the format used here. -->
+<lift producer="SIL.FLEx 8.0.3.41467" version="0.13">
+<header>
+<ranges>
+<range id="dialect" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="etymology" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="grammatical-info" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="lexical-relation" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="note-type" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="paradigm" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="reversal-type" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="semantic-domain-ddp4" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="status" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="users" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="location" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<!-- The following ranges are produced by FieldWorks Language Explorer, and are not part of the LIFT standard. -->
+<range id="anthro-code" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="translation-type" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<!-- The parts of speech are duplicated in another range because derivational affixes require a "From" PartOfSpeech as well as a "To" PartOfSpeech. -->
+<range id="from-part-of-speech" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="morph-type" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="exception-feature" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="inflection-feature" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="inflection-feature-type" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="case-feature-value" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="pers-feature-value" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="absten-feature-value" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="gen-feature-value" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="num-feature-value" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+<range id="do-not-publish-in" href="file://C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set - backup files/teaching set - backup files.lift-ranges"/>
+</ranges>
+<fields>
+<field tag="cv-pattern">
+<form lang="en"><text>This records the syllable pattern for a LexPronunciation in FieldWorks.</text></form>
+</field>
+<field tag="tone">
+<form lang="en"><text>This records the tone information for a LexPronunciation in FieldWorks.</text></form>
+</field>
+<field tag="comment">
+<form lang="en"><text>This records a comment (note) in a LexEtymology in FieldWorks.</text></form>
+</field>
+<field tag="import-residue">
+<form lang="en"><text>This records residue left over from importing a standard format file into FieldWorks (or LinguaLinks).</text></form>
+</field>
+<field tag="literal-meaning">
+<form lang="en"><text>This field is used to store a literal meaning of the entry.  Typically, this field is necessary only for a compound or an idiom where the meaning of the whole is different from the sum of its parts.</text></form>
+</field>
+<field tag="summary-definition">
+<form lang="en"><text>A summary definition (located at the entry level in the Entry pane) is a general definition summarizing all the senses of a primary entry. It has no theoretical value; its use is solely pragmatic.</text></form>
+</field>
+<field tag="scientific-name">
+<form lang="en"><text>This field stores the scientific name pertinent to the current sense.</text></form>
+</field>
+</fields>
+</header>
+<entry dateCreated="2013-09-21T11:12:00Z" dateModified="2013-09-21T11:12:00Z" id="mit_0b7524bb-ce03-43d8-b9ad-aed6548cd1e9" guid="0b7524bb-ce03-43d8-b9ad-aed6548cd1e9">
+<lexical-unit>
+<form lang="de"><text>mit</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="168b95a8-8c23-48c4-b6f1-ad2c0d4e3e95">
+<grammatical-info value="Preposition">
+</grammatical-info>
+<gloss lang="en"><text>with</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:10:10Z" dateModified="2013-09-21T11:10:10Z" id="-e2_0ff1d3cf-0a1f-4b1c-91cc-73968fceb820" guid="0ff1d3cf-0a1f-4b1c-91cc-73968fceb820" order="2">
+<lexical-unit>
+<form lang="de"><text>-e</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="suffix"/>
+<sense id="c2aa011d-ba11-4685-b72f-e0662e23c400">
+<grammatical-info value="Adjective">
+<trait name="type" value="inflAffix"/>
+<trait name="inflection-feature" value="{adjAgr}[adjagr:[case:nom num:sg gen:f]]"/>
+</grammatical-info>
+<gloss lang="en"><text>nom.sg.f</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:12:42Z" dateModified="2013-09-21T11:12:42Z" id="-er_128316b1-83ea-4e55-b1f9-219e03568219" guid="128316b1-83ea-4e55-b1f9-219e03568219">
+<lexical-unit>
+<form lang="de"><text>-er</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="suffix"/>
+<sense id="5fba96cb-4f09-4227-b3b5-d7ecb5fb9724">
+<grammatical-info value="Indefinite article">
+<trait name="type" value="inflAffix"/>
+<trait name="inflection-feature" value="{artAgr}[artagr:[case:dat gen:f num:sg]]"/>
+</grammatical-info>
+<gloss lang="en"><text>dat.sg.f</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:04:51Z" dateModified="2013-09-21T11:04:51Z" id="sein_2ae693c8-d456-4b49-bc32-3043c497058d" guid="2ae693c8-d456-4b49-bc32-3043c497058d">
+<lexical-unit>
+<form lang="de"><text>sein</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="725a9034-e907-465c-985f-0a8f0b0624ee">
+<grammatical-info value="Verb">
+</grammatical-info>
+<gloss lang="en"><text>be</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:07:32Z" dateModified="2013-09-21T11:07:32Z" id="Frau_2f8c16c3-1c60-4755-bb62-be005eb0d045" guid="2f8c16c3-1c60-4755-bb62-be005eb0d045">
+<lexical-unit>
+<form lang="de"><text>Frau</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="d39db5d9-fe67-4e16-810c-5b7e3681aac0">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>woman</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:14:30Z" dateModified="2013-09-23T09:54:27Z" id="retten_433d0aa9-0611-4193-b5c6-4135156b2463" guid="433d0aa9-0611-4193-b5c6-4135156b2463">
+<lexical-unit>
+<form lang="de"><text>rett</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<citation>
+<form lang="de"><text>retten</text></form>
+</citation>
+<sense id="cab1e127-b77b-42da-8e75-76a13062694b">
+<grammatical-info value="Verb">
+</grammatical-info>
+<gloss lang="en"><text>save</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:13:45Z" dateModified="2013-09-21T11:13:45Z" id="Stimme_44a56db5-66f2-4f6c-8338-e17bf6c99250" guid="44a56db5-66f2-4f6c-8338-e17bf6c99250">
+<lexical-unit>
+<form lang="de"><text>Stimme</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="61969ed9-875b-4838-8c7b-91b84bd59964">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>voice</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:07:20Z" dateModified="2013-09-21T11:10:10Z" id="-e1_6135d06b-e8f9-4bff-ac48-132a773ceab7" guid="6135d06b-e8f9-4bff-ac48-132a773ceab7" order="1">
+<lexical-unit>
+<form lang="de"><text>-e</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="suffix"/>
+<sense id="996b7789-47c9-4a6b-9e1e-e5c410182f23">
+<grammatical-info value="Indefinite article">
+<trait name="type" value="inflAffix"/>
+<trait name="inflection-feature" value="{artAgr}[artagr:[num:sg gen:f case:nom]]"/>
+</grammatical-info>
+<gloss lang="en"><text>nom.sg.f</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:05:10Z" dateModified="2013-09-21T11:05:10Z" id="heut_63da8eb0-e7b2-4664-9b0b-0c61fc7b42c2" guid="63da8eb0-e7b2-4664-9b0b-0c61fc7b42c2">
+<lexical-unit>
+<form lang="de"><text>heut</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<relation type="_component-lexeme" ref="heute_b806a092-6a87-4302-8c77-1c96ddde1793" order="0">
+<trait  name="variant-type" value="Free Variant"/>
+</relation>
+</entry>
+<entry dateCreated="2013-09-21T11:16:14Z" dateModified="2013-09-21T11:16:14Z" id="Welt_834360b2-4f08-441d-88f7-3deaf80b2e0e" guid="834360b2-4f08-441d-88f7-3deaf80b2e0e">
+<lexical-unit>
+<form lang="de"><text>Welt</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="f3b50b9a-f1b2-45ef-95dc-b61d971be010">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>world</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:10:57Z" dateModified="2013-09-21T11:10:57Z" id="sie_92b1e7d6-a64a-4ca3-8db2-7b750810fd3c" guid="92b1e7d6-a64a-4ca3-8db2-7b750810fd3c">
+<lexical-unit>
+<form lang="de"><text>sie</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="49d16bdb-b9af-4465-b6db-30c7ada67b1f">
+<grammatical-info value="Pronoun">
+</grammatical-info>
+<gloss lang="en"><text>she</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:04:51Z" dateModified="2013-09-21T11:04:51Z" id="ist_992a97ef-2a1e-46c4-b8fc-55032dc05788" guid="992a97ef-2a1e-46c4-b8fc-55032dc05788">
+<lexical-unit>
+<form lang="de"><text>ist</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<relation type="_component-lexeme" ref="sein_2ae693c8-d456-4b49-bc32-3043c497058d" order="0">
+<trait  name="variant-type" value="Irregularly Inflected Form"/>
+</relation>
+</entry>
+<entry dateCreated="2013-09-21T11:08:39Z" dateModified="2013-09-21T11:08:39Z" id="ein_a7680870-9f0f-44f2-b152-90470d7b3698" guid="a7680870-9f0f-44f2-b152-90470d7b3698">
+<lexical-unit>
+<form lang="de"><text>ein</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<variant>
+<form lang="de"><text>eino</text></form>
+<trait  name="morph-type" value="stem"/>
+</variant>
+<sense id="143c8741-64ce-46c4-8b7b-06cbeb7f27dc">
+<grammatical-info value="Indefinite article">
+</grammatical-info>
+<gloss lang="en"><text>a</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:05:10Z" dateModified="2013-09-21T11:05:10Z" id="heute_b806a092-6a87-4302-8c77-1c96ddde1793" guid="b806a092-6a87-4302-8c77-1c96ddde1793">
+<lexical-unit>
+<form lang="de"><text>heute</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="eef93db4-df66-4a2b-b4c7-22e37d61422b">
+<grammatical-info value="Adverb">
+</grammatical-info>
+<gloss lang="en"><text>today</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:10:29Z" dateModified="2013-09-21T11:10:29Z" id="bekannt_b9ba2939-a6be-4719-80b5-2c0651457ce2" guid="b9ba2939-a6be-4719-80b5-2c0651457ce2">
+<lexical-unit>
+<form lang="de"><text>bekannt</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="8286f46e-3677-4e81-a062-b83e18d6d09a">
+<grammatical-info value="Adjective">
+</grammatical-info>
+<gloss lang="en"><text>well-known</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:12:58Z" dateModified="2013-09-21T11:12:58Z" id="begnadet_bf6b0fd8-3367-4d19-a6e9-0b1a221c0712" guid="bf6b0fd8-3367-4d19-a6e9-0b1a221c0712">
+<lexical-unit>
+<form lang="de"><text>begnadet</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="55eb0432-f1cd-401b-b90f-cd7d2af1a9bb">
+<grammatical-info value="Adjective">
+</grammatical-info>
+<gloss lang="en"><text>blessed</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:11:38Z" dateModified="2013-09-21T11:11:38Z" id="-in_c4323cc2-ca65-472f-8c02-276a9364eaa6" guid="c4323cc2-ca65-472f-8c02-276a9364eaa6">
+<lexical-unit>
+<form lang="de"><text>-in</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="suffix"/>
+<sense id="0f65bfb3-4327-4ffc-b5da-2b43a6096173">
+<grammatical-info value="Noun">
+<trait name="type" value="derivAffix"/>
+<trait  name="from-part-of-speech" value="Noun"/>
+</grammatical-info>
+<gloss lang="en"><text>f</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:13:34Z" dateModified="2013-09-21T11:13:34Z" id="-en_d224b076-8822-4e90-8a52-825dfe2a97db" guid="d224b076-8822-4e90-8a52-825dfe2a97db">
+<lexical-unit>
+<form lang="de"><text>-en</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="suffix"/>
+<sense id="1c8852ff-9103-4141-b280-b26e868eaba1">
+<grammatical-info value="Adjective">
+<trait name="type" value="inflAffix"/>
+<trait name="inflection-feature" value="{adjAgr}[adjagr:[num:sg gen:f case:dat]]"/>
+</grammatical-info>
+<gloss lang="en"><text>dat.sg.f</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:04:30Z" dateModified="2013-09-21T11:04:30Z" id="wer_d23e90de-6ab2-422f-aaed-706bbf8cb13a" guid="d23e90de-6ab2-422f-aaed-706bbf8cb13a">
+<lexical-unit>
+<form lang="de"><text>wer</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="dd987d6e-4d43-4a3e-a60e-4a72c1f5dfa4">
+<grammatical-info value="Interrogative pro-form">
+</grammatical-info>
+<gloss lang="en"><text>who</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:06:15Z" dateModified="2013-09-21T11:06:15Z" id="abend_d55efbbb-b9c4-4387-952a-06a7a14bae8c" guid="d55efbbb-b9c4-4387-952a-06a7a14bae8c">
+<lexical-unit>
+<form lang="de"><text>abend</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="e24ffd93-2038-43e8-ba92-1b9f9d5488fd">
+<grammatical-info value="Adverb">
+</grammatical-info>
+<gloss lang="en"><text>evening</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:05:56Z" dateModified="2013-09-21T11:05:56Z" id="Gast_de7b4956-1e62-41e4-821d-176e12c58196" guid="de7b4956-1e62-41e4-821d-176e12c58196">
+<lexical-unit>
+<form lang="de"><text>Gast</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="4c0b7906-7ef2-4835-96ca-ea1cc7514742">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>guest</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:16:04Z" dateModified="2013-09-21T11:16:04Z" id="die_e57e02e4-18ea-49d6-b809-e8e69bcf0c77" guid="e57e02e4-18ea-49d6-b809-e8e69bcf0c77">
+<lexical-unit>
+<form lang="de"><text>die</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="f8882a76-5059-4ca5-a7d2-14a69e9bc3e0">
+<grammatical-info value="Definite article">
+</grammatical-info>
+<gloss lang="en"><text>the</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:15:42Z" dateModified="2013-09-21T11:15:42Z" id="-et_e67220fc-6a72-4cb2-aadb-c7b76dc9dd82" guid="e67220fc-6a72-4cb2-aadb-c7b76dc9dd82">
+<lexical-unit>
+<form lang="de"><text>-et</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="suffix"/>
+<sense id="d2b4d9fa-d52b-4da3-877e-29c62084dfa3">
+<grammatical-info value="Verb">
+<trait name="type" value="inflAffix"/>
+<trait name="inflection-feature" value="{Infl}[absten:prs sbj:[num:sg pers:3]]"/>
+</grammatical-info>
+<gloss lang="en"><text>3.sg.prs</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:11:13Z" dateModified="2013-09-21T11:11:13Z" id="Sänger_e788d3f6-3928-41fe-bcee-74c54cb8adca" guid="e788d3f6-3928-41fe-bcee-74c54cb8adca">
+<lexical-unit>
+<form lang="de"><text>Sänger</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="afff25ed-4e01-428e-876b-6ce3d99fab7f">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>singer</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:09:22Z" dateModified="2013-09-21T11:09:22Z" id="sehr_fc375fa0-6143-4f3b-a112-ce15f134d32a" guid="fc375fa0-6143-4f3b-a112-ce15f134d32a">
+<lexical-unit>
+<form lang="de"><text>sehr</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="c31561b7-46af-4c16-94bb-4c3ac7d73a19">
+<grammatical-info value="Adverb">
+</grammatical-info>
+<gloss lang="en"><text>very</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:14:05Z" dateModified="2013-09-23T09:54:44Z" id="Schauspieler_fcebd242-1c73-479e-ad82-9de04b4630ec" guid="fcebd242-1c73-479e-ad82-9de04b4630ec">
+<lexical-unit>
+<form lang="de"><text>Schauspieler</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="6e1f742a-440b-4692-91da-4a6a1215a559">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>actor</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2013-09-21T11:05:44Z" dateModified="2013-09-21T11:05:44Z" id="unser_fda84640-7e11-474b-8198-43966cdd3cc0" guid="fda84640-7e11-474b-8198-43966cdd3cc0">
+<lexical-unit>
+<form lang="de"><text>unser</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="4970e0b9-4c3f-4d47-b06e-1a491d66c47c">
+<grammatical-info value="Possessive pronoun">
+</grammatical-info>
+<gloss lang="en"><text>our</text></gloss>
+</sense>
+</entry>
+</lift>
