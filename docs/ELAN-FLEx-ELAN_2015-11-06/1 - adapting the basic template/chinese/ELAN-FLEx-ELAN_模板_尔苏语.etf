@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ANNOTATION_DOCUMENT AUTHOR="" DATE="2015-09-16T15:15:10+01:00" FORMAT="2.8" VERSION="2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.8.xsd">
+    <HEADER MEDIA_FILE="" TIME_UNITS="milliseconds"/>
+    <TIME_ORDER/>
+    <TIER LINGUISTIC_TYPE_REF="句子" PARTICIPANT="A" TIER_ID="A_句子-txt-ers-Qaaa-CN-x-Ersu-ersueast"/>
+    <TIER LINGUISTIC_TYPE_REF="单词" PARENT_REF="A_句子-txt-ers-Qaaa-CN-x-Ersu-ersueast" PARTICIPANT="A" TIER_ID="A_单词-txt-ers-Qaaa-CN-x-Ersu-ersueast"/>
+    <TIER LINGUISTIC_TYPE_REF="文本" TIER_ID="Interlinear-文件名-ers-Qaaa-CN-x-Ersu-ersueast"/>
+    <TIER LINGUISTIC_TYPE_REF="注释" PARENT_REF="A_句子-txt-ers-Qaaa-CN-x-Ersu-ersueast" PARTICIPANT="A" TIER_ID="A_翻译-gls-zh-CN"/>
+    <TIER LINGUISTIC_TYPE_REF="注释" PARENT_REF="A_句子-txt-ers-Qaaa-CN-x-Ersu-ersueast" PARTICIPANT="A" TIER_ID="A_参与者注释-note-zh-CN"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="default-lt" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="句子" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Blank" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Subdivision" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="单词" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="文本" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="注释" TIME_ALIGNABLE="false"/>
+    <CONSTRAINT DESCRIPTION="Time subdivision of parent annotation's time interval, no time gaps allowed within this interval" STEREOTYPE="Time_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="Symbolic subdivision of a parent annotation. Annotations refering to the same parent are ordered" STEREOTYPE="Symbolic_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="1-1 association with a parent annotation" STEREOTYPE="Symbolic_Association"/>
+    <CONSTRAINT DESCRIPTION="Time alignable annotations within the parent annotation's time interval, gaps are allowed" STEREOTYPE="Included_In"/>
+</ANNOTATION_DOCUMENT>

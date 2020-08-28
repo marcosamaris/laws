@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document version="2">
+    <interlinear-text guid="f93e53b8-221f-4727-9edd-440e8afa3272">
+        <item lang="deu" type="title">Zimmer Frei</item>
+        <paragraphs>
+            <paragraph guid="38cf5121-e1e6-4b77-a877-01739dc6e0a3">
+                <phrases>
+                    <phrase begin-time-offset="100" end-time-offset="1170" guid="27a2e87e-2222-4bce-aacc-c268fa4b34d1" media-file="e7835700-5dc7-4af1-800c-27a0fd537653" speaker="A">
+                        <item lang="deu" type="txt">Wer ist heut unser Gast?</item>
+                        <words>
+                            <word guid="79ef1203-83b3-470d-8fce-6db244661e9f">
+                                <item lang="deu" type="txt">Wer</item>
+                            </word>
+                            <word guid="19514630-9be3-4eb8-9350-9c2485a5efb3">
+                                <item lang="deu" type="txt">ist</item>
+                            </word>
+                            <word guid="7e376891-f69c-4af0-acb8-1092e9e0e6e8">
+                                <item lang="deu" type="txt">heut</item>
+                            </word>
+                            <word guid="6ee42ab6-bbc7-4783-af4a-77e78f3e4a58">
+                                <item lang="deu" type="txt">unser</item>
+                            </word>
+                            <word guid="7ed8f105-528d-4c39-8703-f0fe53b15f80">
+                                <item lang="deu" type="txt">Gast?</item>
+                            </word>
+                        </words>
+                        <item lang="en" type="gls">Who is our guest today?</item>
+                        <item lang="en" type="note">A</item>
+                    </phrase>
+                </phrases>
+            </paragraph>
+            <paragraph guid="2afb2776-65cc-4dcc-b13d-c77e1a551048">
+                <phrases>
+                    <phrase begin-time-offset="1417" end-time-offset="3431" guid="0a2c988b-fd61-4a2d-920d-96c8e9eedcd1" media-file="e7835700-5dc7-4af1-800c-27a0fd537653" speaker="B">
+                        <item lang="deu" type="txt">Unser Gast heut abend ist eine Frau,</item>
+                        <words>
+                            <word guid="f1faf4f3-8cb9-40f8-9d93-ed0c7fbc7c04">
+                                <item lang="deu" type="txt">Unser</item>
+                            </word>
+                            <word guid="3bed583e-21bf-4c63-8116-043a7aca6943">
+                                <item lang="deu" type="txt">Gast</item>
+                            </word>
+                            <word guid="7e376891-f69c-4af0-acb8-1092e9e0e6e8">
+                                <item lang="deu" type="txt">heut</item>
+                            </word>
+                            <word guid="3f9a0c92-8999-4961-9ce3-4d7e5b8d9009">
+                                <item lang="deu" type="txt">abend</item>
+                            </word>
+                            <word guid="19514630-9be3-4eb8-9350-9c2485a5efb3">
+                                <item lang="deu" type="txt">ist</item>
+                            </word>
+                            <word guid="93754ca2-eaaf-4206-9703-fa479b828cbb">
+                                <item lang="deu" type="txt">eine</item>
+                            </word>
+                            <word guid="8ba7a010-8d93-40fb-be7f-e704b6748617">
+                                <item lang="deu" type="txt">Frau,</item>
+                            </word>
+                        </words>
+                        <item lang="en" type="gls">Our guest tonight is a woman,</item>
+                        <item lang="en" type="note">B</item>
+                    </phrase>
+                </phrases>
+            </paragraph>
+            <paragraph guid="f978bc21-7597-4691-8370-38f4265db009">
+                <phrases>
+                    <phrase begin-time-offset="3431" end-time-offset="5039" guid="efa4e64a-d03f-45ed-9007-7129d4436169" media-file="e7835700-5dc7-4af1-800c-27a0fd537653" speaker="B">
+                        <item lang="deu" type="txt">eine sehr bekannte Frau,</item>
+                        <words>
+                            <word guid="93754ca2-eaaf-4206-9703-fa479b828cbb">
+                                <item lang="deu" type="txt">eine</item>
+                            </word>
+                            <word guid="45d85b62-591e-4e07-a331-189acb4fd413">
+                                <item lang="deu" type="txt">sehr</item>
+                            </word>
+                            <word guid="4d525a56-d17e-4c02-9a52-c52b179956a4">
+                                <item lang="deu" type="txt">bekannte</item>
+                            </word>
+                            <word guid="8ba7a010-8d93-40fb-be7f-e704b6748617">
+                                <item lang="deu" type="txt">Frau,</item>
+                            </word>
+                        </words>
+                        <item lang="en" type="gls">a very well-known woman,</item>
+                        <item lang="en" type="note">B</item>
+                    </phrase>
+                </phrases>
+            </paragraph>
+            <paragraph guid="a044b512-c4c0-4682-9f65-7e46ef0b1027">
+                <phrases>
+                    <phrase begin-time-offset="5039" end-time-offset="7519" guid="4bb1a9f2-02c7-4a2e-8271-7ff3cf2c7097" media-file="e7835700-5dc7-4af1-800c-27a0fd537653" speaker="B">
+                        <item lang="deu" type="txt">sie ist eine Sängerin mit einer begnadeten Stimme,</item>
+                        <words>
+                            <word guid="f35d1967-a2af-4601-bac6-cc912a4a214b">
+                                <item lang="deu" type="txt">sie</item>
+                            </word>
+                            <word guid="19514630-9be3-4eb8-9350-9c2485a5efb3">
+                                <item lang="deu" type="txt">ist</item>
+                            </word>
+                            <word guid="93754ca2-eaaf-4206-9703-fa479b828cbb">
+                                <item lang="deu" type="txt">eine</item>
+                            </word>
+                            <word guid="1f1c0d09-baaf-4673-be3b-3cd77988a6af">
+                                <item lang="deu" type="txt">Sängerin</item>
+                            </word>
+                            <word guid="4e48a799-6715-49ca-a3af-14297905f0ea">
+                                <item lang="deu" type="txt">mit</item>
+                            </word>
+                            <word guid="05492842-5a3f-4fc8-92d3-414a42fe3833">
+                                <item lang="deu" type="txt">einer</item>
+                            </word>
+                            <word guid="dfe53b9b-a6a2-46fe-b964-1d222e7f83b9">
+                                <item lang="deu" type="txt">begnadeten</item>
+                            </word>
+                            <word guid="e7eee54a-27a5-40cf-bc87-71a080d1d4d3">
+                                <item lang="deu" type="txt">Stimme,</item>
+                            </word>
+                        </words>
+                        <item lang="en" type="gls">she is a singer with a divine voice</item>
+                        <item lang="en" type="note">B</item>
+                    </phrase>
+                </phrases>
+            </paragraph>
+            <paragraph guid="48ba0e64-4221-43c3-a85f-d314113b6c8d">
+                <phrases>
+                    <phrase begin-time-offset="7519" end-time-offset="8314" guid="170f875a-8478-4a9b-9c08-cdb5fd1d3916" media-file="e7835700-5dc7-4af1-800c-27a0fd537653" speaker="B">
+                        <item lang="deu" type="txt">Schauspielerin,</item>
+                        <words>
+                            <word guid="ac9870c0-aab6-4750-a1b1-28e0e8c285b4">
+                                <item lang="deu" type="txt">Schauspielerin,</item>
+                            </word>
+                        </words>
+                        <item lang="en" type="gls">actress</item>
+                        <item lang="en" type="note">B</item>
+                    </phrase>
+                </phrases>
+            </paragraph>
+            <paragraph guid="f96959a7-56bb-4766-8a82-afba2eb7179d">
+                <phrases>
+                    <phrase begin-time-offset="8314" end-time-offset="9227" guid="a956f818-b8ae-48d4-8513-6533d9d4d677" media-file="e7835700-5dc7-4af1-800c-27a0fd537653" speaker="B">
+                        <item lang="deu" type="txt">sie rettet die Welt.</item>
+                        <words>
+                            <word guid="f35d1967-a2af-4601-bac6-cc912a4a214b">
+                                <item lang="deu" type="txt">sie</item>
+                            </word>
+                            <word guid="a1c36286-7153-45fc-8080-9fbf34d31265">
+                                <item lang="deu" type="txt">rettet</item>
+                            </word>
+                            <word guid="5c5174b9-e46c-4fbe-9aa3-1a1b0e744594">
+                                <item lang="deu" type="txt">die</item>
+                            </word>
+                            <word guid="5ee68bc3-dbed-40fa-b036-98faa3894982">
+                                <item lang="deu" type="txt">Welt.</item>
+                            </word>
+                        </words>
+                        <item lang="en" type="gls">she saves the world.</item>
+                        <item lang="en" type="note">B</item>
+                    </phrase>
+                </phrases>
+            </paragraph>
+        </paragraphs>
+        <media-files offset-type="">
+            <media guid="e7835700-5dc7-4af1-800c-27a0fd537653" location="file:///C:/Users/ss123/Documents/Teaching/ELDPtraining/SOAS_Sept2013/workflow/teaching set/2 - setting the participants/ZimmerFrei.mp4"/>
+        </media-files>
+    </interlinear-text>
+</document>
