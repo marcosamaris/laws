@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import id from 'shortid';
 import { Route, Switch } from 'react-router-dom';
 import { Story } from './Story/Story.jsx';
+import { Insert } from '../Stories/Story/Display/Insert.jsx';
 import { NotFound } from './NotFound.jsx';
 import * as fs from 'fs-web';
 
@@ -85,8 +85,11 @@ export default class Stories extends Component{
 							// 		key={id.generate()}
 							// 		exact path={`/story/${story['metadata']['story ID']}`}
 							// 		render={props => <Story story={story} />}
-							// />
-              <Story story={story} />
+              // />
+              <div>
+                <button  onClick={Insert}>Insert</button>
+                <Story story={story} />
+              </div>
           
         }
 				<Route component={NotFound} />

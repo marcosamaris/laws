@@ -1,5 +1,8 @@
 import id from 'shortid';
 import { Sentence } from './Sentence.jsx';
+import { Apagar } from './Apagar.jsx';
+
+
 
 function LabeledSentence({ sentence }) {
 	// I/P: sentence, a sentence
@@ -55,15 +58,15 @@ function LabeledTimeBlock({ sentences, timestamp }) {
 			maxEnd = endTime;
 		}
 	}
+	
 	return (
 		<div className="labeledTimeBlock" data-start_time={minStart} data-end_time={maxEnd}>
 			<span className="timeStampContainer">
 				<a href="javascript:void(0)" data-start_time={minStart} className="timeStamp">
 					{timestamp}
 				</a>
-				<a href="javascript:void(0)" >
-					Apagar
-				</a>
+				<button capture-start-time={minStart} onClick={Apagar}>Delete</button>
+				
 			</span>
 			<TimeBlock sentences={sentences} />
 		</div>
@@ -105,5 +108,6 @@ export function TimedTextDisplay({ sentences }) {
 			/>
 		);
 	}
+	
 	return <div id="timedTextDisplay">{output}</div>;
 }
