@@ -15,18 +15,19 @@ export default class Stories extends Component{
     this.fileAudio = React.createRef();
     this.fileVideo = React.createRef();
     this.open_file = this.open_file.bind(this);
+    this.preprocessFile = this.preprocessFile.bind(this);
     this.state = {
       JSON: null,
       fileLoadend: false,
       hasVideo: false,
-      hasAudio: false
+      hasAudio: false,
+      video: null,
+      audio: null,
+      xml: null
     }
   }
 
   open_file(){
-    fs.mkdir("data/elan_files")
-    fs.mkdir("data/json_files/")
-    fs.mkdir("data/media_files")
     const setFileLoadend = this;
     let video="";
     let audio="";
@@ -41,6 +42,7 @@ export default class Stories extends Component{
     reader2.readAsDataURL(this.fileVideo.current.files[0])
     reader2.onload= function(){
       video = reader2.result
+      
     }
 
     reader3.readAsDataURL(this.fileAudio.current.files[0])
@@ -73,24 +75,21 @@ export default class Stories extends Component{
           
   }
 
+  preprocessFile(){
+
+  }
+
   render(){
     const story = this.state.JSON;
+    {console.log(story)}
     return (
       this.state.fileLoadend ?
       <Switch>
         {
-          
-            console.log(story),
-              // <Route
-							// 		key={id.generate()}
-							// 		exact path={`/story/${story['metadata']['story ID']}`}
-							// 		render={props => <Story story={story} />}
-              // />
               <div>
-                <button  onClick={Insert}>Insert</button>
+                <Insert />
                 <Story story={story} />
-              </div>
-          
+              </div>          
         }
 				<Route component={NotFound} />
       </Switch>
