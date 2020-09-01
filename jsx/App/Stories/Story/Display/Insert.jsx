@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import * as fs from 'fs-web';
 
 const initialState = {
     participant: '',
@@ -21,6 +22,8 @@ export class Insert extends Component{
         };
         this.captureInfo = this.captureInfo.bind(this)
         this.verifyCompatibleWithLenghtOfMedia = this.verifyCompatibleWithLenghtOfMedia.bind(this)
+        this.setSentenceOnJSON = this.setSentenceOnJSON.bind(this)
+
         this.handleChangeParticipant = this.handleChangeParticipant.bind(this);
         this.handleChangeTranslations = this.handleChangeTranslations.bind(this);
         this.handleChangeTranscriptions = this.handleChangeTranscriptions.bind(this);
@@ -31,21 +34,44 @@ export class Insert extends Component{
 
     captureInfo() {
         console.log(this.state)
-        //reseta o state
-        //this.setState(...initialState)
-        this.verifyCompatibleWithLenghtOfMedia();
+        let sentence = '';
+        if(this.verifyCompatibleWithLenghtOfMedia()){
+            sentence = {
+                "dependents":
+                    {
+                        "tier": "",
+                        "values": this.state.translations
+                    }, 
+                "end_time_ms": this.state.endtime,
+                "num_slots": "",
+                "speaker": this.state.participant,
+                "start_time_ms": this.state.starttime,
+                "text": this.state.transcriptions
+            }
+            
+
+            console.log(sentence)
+            this.setSentenceOnJSON(sentence);
+
+            //reseta o state
+            this.setState(...initialState)
+            
+        }
     }
 
     verifyCompatibleWithLenghtOfMedia(){
         let duration = document.getElementById('audio')
-        console.log(duration)
-        
         if(duration.duration > this.state.endtime){
             console.log('Trilha compativel')
+            return true;
         }
     }
 
-
+    setSentenceOnJSON(sentence){
+        let json = this.props.story;
+        json['sentences'].push(sentence)
+        console.log(json)
+    }
 
     handleChangeParticipant(event){
         this.setState({participant: event.target.value})
@@ -80,11 +106,11 @@ export class Insert extends Component{
                     <label className='endtime' htmlFor=""> End Time:    </label>
                     <input type="text" className='endtime' value={this.state.endTime} onChange={this.handleChangeEndTime}/>
 
-                    <label className='translations' htmlFor=""> Translations:</label>
-                    <input type="text" className='translations' value={this.state.translations} onChange={this.handleChangeTranslations}/>
-
                     <label className='transcriptions' htmlFor=""> Transcriptions:</label>
                     <input type="text" className='transcriptions' value={this.state.transcriptions} onChange={this.handleChangeTranscriptions}/>
+
+                    <label className='translations' htmlFor=""> Translations:</label>
+                    <input type="text" className='translations' value={this.state.translations} onChange={this.handleChangeTranslations}/>
 
                     <input type="Submit" id="submit" onClick={this.captureInfo} Submit/>
                 </div>

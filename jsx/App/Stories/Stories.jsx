@@ -87,7 +87,7 @@ export default class Stories extends Component{
       <Switch>
         {
               <div>
-                <Insert />
+                <Insert story={story} />
                 <Story story={story} />
               </div>          
         }
