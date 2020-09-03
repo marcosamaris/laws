@@ -42,12 +42,14 @@ export default class Stories extends Component{
     reader2.readAsDataURL(this.fileVideo.current.files[0])
     reader2.onload= function(){
       video = reader2.result
+      setFileLoadend.setState({video: video})
       
     }
 
     reader3.readAsDataURL(this.fileAudio.current.files[0])
     reader3.onload= function(){
       audio = reader3.result
+      setFileLoadend.setState({audio: audio})
     }
     const nameFile = this.fileInput.current.files[0].name;
     
@@ -63,12 +65,12 @@ export default class Stories extends Component{
           fs.readString("data/eaf_temp.json")
             .then((data) => {
               let json = JSON.parse(data);
-              json['metadata']['media']['video']= video
-              json['metadata']['media']['audio']= audio
+              json['metadata']['media']['video']= setFileLoadend.state.video
+              json['metadata']['media']['audio']= setFileLoadend.state.audio
               setFileLoadend.setState({
                 JSON: json,
                 fileLoadend: true
-              })              
+              });
             });
           });
         })

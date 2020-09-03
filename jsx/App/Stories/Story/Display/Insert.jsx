@@ -23,6 +23,7 @@ export class Insert extends Component{
         this.captureInfo = this.captureInfo.bind(this)
         this.verifyCompatibleWithLenghtOfMedia = this.verifyCompatibleWithLenghtOfMedia.bind(this)
         this.setSentenceOnJSON = this.setSentenceOnJSON.bind(this)
+        this.writeFile = this.writeFile.bind(this)
 
         this.handleChangeParticipant = this.handleChangeParticipant.bind(this);
         this.handleChangeTranslations = this.handleChangeTranslations.bind(this);
@@ -71,6 +72,11 @@ export class Insert extends Component{
         let json = this.props.story;
         json['sentences'].push(sentence)
         console.log(json)
+        this.writeFile(json)
+    }
+
+    writeFile(json){
+        fs.writeFile("data/elan_files/eaftemp.eaf", JSON.stringify(json, null, 2))
     }
 
     handleChangeParticipant(event){
@@ -112,7 +118,7 @@ export class Insert extends Component{
                     <label className='translations' htmlFor=""> Translations:</label>
                     <input type="text" className='translations' value={this.state.translations} onChange={this.handleChangeTranslations}/>
 
-                    <input type="Submit" id="submit" onClick={this.captureInfo} Submit/>
+                    <input type="Submit" id="submit" onClick={this.captureInfo} />
                 </div>
             </div>
         )
