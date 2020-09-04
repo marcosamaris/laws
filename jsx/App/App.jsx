@@ -5,7 +5,7 @@ import { LandingPage } from './LandingPage.jsx';
 import { StoryIndex } from './StoryIndex.jsx';
 
 import  Stories  from '../App/Stories/Stories.jsx';
-import { NewProject } from './NewProject.jsx';
+import  NewProject  from './NewProject.jsx';
 import { Home } from './Home.jsx';
 import { About } from './About.jsx';
 
