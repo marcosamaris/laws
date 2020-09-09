@@ -18,7 +18,8 @@ export class Insert extends Component{
             translations: '',
             transcriptions: '',
             starttime: '',
-            endtime: ''
+            endtime: '',
+            sentence: null
         };
         this.captureInfo = this.captureInfo.bind(this)
         this.verifyCompatibleWithLenghtOfMedia = this.verifyCompatibleWithLenghtOfMedia.bind(this)
@@ -37,17 +38,30 @@ export class Insert extends Component{
         console.log(this.state)
         let sentence = '';
         if(this.verifyCompatibleWithLenghtOfMedia()){
+            let json = this.props.story;
+            
+            json['speaker IDs']={
+                S1: {
+                    name: this.state.participant,
+                    tier: 'T1'
+                }
+            }
+            Array.of(json['speakers']).push(this.state.participant)
             sentence = {
-                "dependents":
+                "dependents":[
                     {
-                        "tier": "",
-                        "values": this.state.translations
-                    }, 
+                        "tier": "T2",
+                        "values": [
+                            this.state.translations
+                        ]
+                    }
+                ], 
                 "end_time_ms": this.state.endtime,
                 "num_slots": "",
                 "speaker": this.state.participant,
                 "start_time_ms": this.state.starttime,
-                "text": this.state.transcriptions
+                "text": this.state.transcriptions,
+                "tier": "T1"
             }
             
 
@@ -61,18 +75,20 @@ export class Insert extends Component{
     }
 
     verifyCompatibleWithLenghtOfMedia(){
-        let duration = document.getElementById('audio')
-        if(duration.duration > this.state.endtime){
+        let duration = document.getElementById('video')
+        if((duration.duration * 1000) > this.state.endtime){
             console.log('Trilha compativel')
             return true;
         }
     }
 
     setSentenceOnJSON(sentence){
-        let json = this.props.story;
-        json['sentences'].push(sentence)
-        console.log(json)
-        this.writeFile(json)
+         let json = this.props.story;
+         json.sentences.push(sentence)
+        // console.log(json)
+        // this.writeFile(json)
+        this.props.setJSONCallback(json);
+        
     }
 
     writeFile(json){

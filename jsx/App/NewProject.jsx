@@ -15,7 +15,7 @@ export default class NewProject extends Component {
 
         }
         this.createJSON = this.createJSON.bind(this);
-
+        this.setJSON = this.setJSON.bind(this);
         this.fileMedia = React.createRef();
         this.loadFiles = this.loadFiles.bind(this);
         this.captureNameProject = this.captureNameProject.bind(this);
@@ -44,7 +44,16 @@ export default class NewProject extends Component {
                 "speaker IDs":{},
                 "speakers":[],
                 "story ID": "0ef60c73-c757-46c9-ab12-a17874de63ee",
-                "tier IDs":{},
+                "tier IDs":{
+                    "T1": {
+                        "name": "Transcriptions",
+                        "subdivided": false
+                    },
+                    "T2": {
+                        "name": "Translations",
+                        "subdivided": "false"
+                    }
+                },
                 "timed":true,
                 "title":{
                     "_default":""
@@ -74,6 +83,12 @@ export default class NewProject extends Component {
     captureNameProject(event){
         this.setState({nameproject: event.target.value})
     }
+    
+    setJSON(JSON){
+        this.setState({
+          JSON
+        })
+    }
 
     render(){
 
@@ -82,8 +97,8 @@ export default class NewProject extends Component {
         return(
             this.state.JSON ? 
             <div>
-                <Insert story={story}/>
-                <Story story={story}/>
+                <Insert story={story} setJSONCallback={this.setJSON} />
+                <Story story={this.state.JSON}/>
             </div>
             :
 

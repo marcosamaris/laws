@@ -15,7 +15,7 @@ export default class Stories extends Component{
     this.fileAudio = React.createRef();
     this.fileVideo = React.createRef();
     this.open_file = this.open_file.bind(this);
-    this.preprocessFile = this.preprocessFile.bind(this);
+    this.setJSON = this.setJSON.bind(this);
     this.state = {
       JSON: null,
       fileLoadend: false,
@@ -23,7 +23,8 @@ export default class Stories extends Component{
       hasAudio: false,
       video: null,
       audio: null,
-      xml: null
+      xml: null,
+      sentence: null
     }
   }
 
@@ -67,6 +68,7 @@ export default class Stories extends Component{
               let json = JSON.parse(data);
               json['metadata']['media']['video']= setFileLoadend.state.video
               json['metadata']['media']['audio']= setFileLoadend.state.audio
+              
               setFileLoadend.setState({
                 JSON: json,
                 fileLoadend: true
@@ -77,19 +79,22 @@ export default class Stories extends Component{
           
   }
 
-  preprocessFile(){
 
+  setJSON(JSON){
+    this.setState({
+      JSON
+    })
   }
 
   render(){
     const story = this.state.JSON;
-    {console.log(story)}
+    
     return (
       this.state.fileLoadend ?
       <Switch>
         {
               <div>
-                <Insert story={story} />
+                <Insert story={story} setJSONCallback={this.setJSON} />
                 <Story story={story} />
               </div>          
         }
