@@ -10,7 +10,6 @@ export default class NewProject extends Component {
         this.state = {
             JSON:null,
             media: null,
-            nameproject: '',
             
 
         }
@@ -18,7 +17,6 @@ export default class NewProject extends Component {
         this.setJSON = this.setJSON.bind(this);
         this.fileMedia = React.createRef();
         this.loadFiles = this.loadFiles.bind(this);
-        this.captureNameProject = this.captureNameProject.bind(this);
     }
 
     createJSON(){
@@ -79,10 +77,6 @@ export default class NewProject extends Component {
         }
         
     }
-
-    captureNameProject(event){
-        this.setState({nameproject: event.target.value})
-    }
     
     setJSON(JSON){
         this.setState({
@@ -102,18 +96,17 @@ export default class NewProject extends Component {
             </div>
             :
 
-            <div>
-            <form >
-            <label>
-                Name project:
-                <input type="text" value={this.state.nameproject} onChange={this.captureNameProject}/>
-                Upload media:
+            <div className='body'>
+                <div >
+                <form >
                 <input type="file" id="file-here" ref = {this.fileMedia}/>
-            </label>
-            <br />
-            <input type="submit" value="Submit" onClick={this.loadFiles}/>
-            </form>
-          </div>
+                <label for='file'>
+                    Choose a media:
+                </label>
+                <input type="submit" value="Submit" onClick={this.loadFiles}/>
+                </form>
+                </div>
+            </div>
         )
     }
 }

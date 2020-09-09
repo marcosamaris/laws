@@ -52,7 +52,11 @@ export class Insert extends Component{
                     {
                         "tier": "T2",
                         "values": [
-                            this.state.translations
+                            {
+                                'value': this.state.translations,
+                                'end_slot': 1,
+                                'start_slot': 0
+                            }
                         ]
                     }
                 ], 

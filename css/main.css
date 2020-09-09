@@ -350,3 +350,9 @@ label.translations {
 label.transcriptions {
 	margin: 0 60% 0 10px;
 }
+
+.body{
+	height: 1000px;
+	padding: 0;
+	margin: 0;
+}
