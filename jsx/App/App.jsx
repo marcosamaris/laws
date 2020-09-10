@@ -15,9 +15,7 @@ export function App() {
         <div>
             <Route exact path="/" render={props => <LandingPage/>} />
             <Route path="/stories" render={props => <Stories/>}/>
-            
             <Route exact path="/newproject" render={props => <NewProject/>}/>
-            <Route exact path="/about" render={props => <About/>}/>
             <Route exact path="/home" render={props => <Home/>}/>
         </div>
     );

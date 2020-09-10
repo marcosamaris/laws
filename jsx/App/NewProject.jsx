@@ -72,6 +72,10 @@ export default class NewProject extends Component {
         reader.readAsDataURL(this.fileMedia.current.files[0])
         reader.onload= function(){
             ref.setState({media: reader.result})
+            if(ref.fileMedia.current.files[0].type.includes('video'))
+                console.log("video")
+            else if(ref.fileMedia.current.files[0].type.includes('audio'))
+                console.log("audio")
             ref.createJSON()
             
         }
@@ -97,15 +101,7 @@ export default class NewProject extends Component {
             :
 
             <div className='body'>
-                <div >
-                <form >
-                <input type="file" id="file-here" ref = {this.fileMedia}/>
-                <label for='file'>
-                    Choose a media:
-                </label>
-                <input type="submit" value="Submit" onClick={this.loadFiles}/>
-                </form>
-                </div>
+                <input type="file" id="file-here" ref = {this.fileMedia} onInput={this.loadFiles}/>
             </div>
         )
     }

@@ -12,46 +12,34 @@ export default class Stories extends Component{
   constructor(props){
     super(props);
     this.fileInput = React.createRef();
-    this.fileAudio = React.createRef();
-    this.fileVideo = React.createRef();
+    this.media = React.createRef();
     this.open_file = this.open_file.bind(this);
     this.setJSON = this.setJSON.bind(this);
     this.state = {
       JSON: null,
       fileLoadend: false,
-      hasVideo: false,
-      hasAudio: false,
-      video: null,
-      audio: null,
+      media: null,
       xml: null,
       sentence: null
     }
   }
 
   open_file(){
-    const setFileLoadend = this;
-    let video="";
-    let audio="";
+    const ref = this;
     var reader1 = new FileReader();
     var reader2 = new FileReader();
-    var reader3 = new FileReader();
+    
     reader1.readAsText(this.fileInput.current.files[0])
     reader1.onload = function(){
       fs.writeFile("data/elan_files/eaftemp.eaf", reader1.result);      
     }
 
-    reader2.readAsDataURL(this.fileVideo.current.files[0])
+    reader2.readAsDataURL(this.media.current.files[0])
     reader2.onload= function(){
-      video = reader2.result
-      setFileLoadend.setState({video: video})
+        ref.setState({video: reader2.result})
       
     }
 
-    reader3.readAsDataURL(this.fileAudio.current.files[0])
-    reader3.onload= function(){
-      audio = reader3.result
-      setFileLoadend.setState({audio: audio})
-    }
     const nameFile = this.fileInput.current.files[0].name;
     
     fs.readString("data/elan_files/eaftemp.eaf")
@@ -66,10 +54,10 @@ export default class Stories extends Component{
           fs.readString("data/eaf_temp.json")
             .then((data) => {
               let json = JSON.parse(data);
-              json['metadata']['media']['video']= setFileLoadend.state.video
-              json['metadata']['media']['audio']= setFileLoadend.state.audio
+              json['metadata']['media']['video']= ref.state.video
+              json['metadata']['media']['audio']= ref.state.audio
               
-              setFileLoadend.setState({
+              ref.setState({
                 JSON: json,
                 fileLoadend: true
               });
@@ -105,12 +93,10 @@ export default class Stories extends Component{
       <div>
             <form >
             <label>
-                Upload file:
+                Upload XML:
                 <input type="file" id="file-here" ref = {this.fileInput}/>
-                Upload video:
-                <input type="file" id="file-here" ref = {this.fileVideo}/>
-                Upload audio:
-                <input type="file" id="file-here" ref = {this.fileAudio}/>
+                Choose media:
+                <input type="file" id="file-here" ref = {this.media}/>
             </label>
             <br />
             <input type="submit" value="Submit" onClick={this.open_file}/>
