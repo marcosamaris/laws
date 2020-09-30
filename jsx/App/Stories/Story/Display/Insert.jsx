@@ -140,6 +140,7 @@ export class Insert extends Component{
 
                     <input type="Submit" id="submit" onClick={this.captureInfo} />
                 </div>
+
             </div>
         )
     }

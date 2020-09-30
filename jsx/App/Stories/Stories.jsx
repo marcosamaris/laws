@@ -90,10 +90,13 @@ export default class Stories extends Component{
       </Switch>
           
       :
-      <div>
+          <div className='openproject'>
+            <div>
+              Escolha os arquivos XMLs e o de media!
+            </div>
             <form >
             <label>
-                Upload XML:
+                Choose XML:
                 <input type="file" id="file-here" ref = {this.fileInput}/>
                 Choose media:
                 <input type="file" id="file-here" ref = {this.media}/>

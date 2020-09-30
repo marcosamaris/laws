@@ -373,3 +373,8 @@ label.transcriptions {
 	align-items: center;
 	font-family: "Montserrat", sans-serif;
 } */
+
+.export{
+	margin: 0;
+	padding: 2px;
+}
