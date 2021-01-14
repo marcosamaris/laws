@@ -301,54 +301,6 @@ div.insert{
     padding: 10px 0px 10px
 }
 
-.insert{
-	height: 100px;
-}
-
-.participant{
-	width: 50px;
-	
-	margin: 0 10px 0 10px;
-}
-
-label.participant {
-	margin: 0 5px 0 10px;
-}
-
-.starttime{
-	width: 50px;
-}
-
-label.starttime {
-	margin: 0 5px 0 10px;
-}
-
-.endtime{
-	width: 50px;
-}
-
-label.endtime {
-	margin: 0 5px 0 10px;
-}
-
-
-/* input[type="file"]{
-	color: white;
-	height: 60px;
-	width: 250px;
-	position: absolute;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	font-size: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: "Montserrat", sans-serif;
-} */
-
 .export{
 	margin: 0;
 	padding: 2px;
