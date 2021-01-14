@@ -1,0 +1,54 @@
+.line-right {
+    width: 100px;
+    height: 47px;
+    margin-bottom: 0.5%;
+    border-bottom: 2px solid black;
+}
+
+.line-left{
+    width: 100px;
+    height: 47px;
+    margin-bottom: 0.5%;
+    border-bottom: 2px solid black;
+}
+.fs-18{
+    font-size: 18px;
+    color:black;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform:uppercase;
+    
+}
+
+input[type='file']{
+    display: none;
+}
+
+.xml {
+    padding: 20px 10px;
+    width: 200px;
+    background-color: black;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
+}
+
+.xml:hover{
+    background-color: #333;
+}
+
+.line{
+    display: inline-block;
+    text-align: center;
+}
+.line-center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

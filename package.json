@@ -1,55 +1,44 @@
 {
-  "name": "LingView",
-  "version": "1.0.0",
-  "description": "For presentation of audio/video/text corpus of texts. Previously using code from [ETST](http://community.village.virginia.edu/etst/).",
-  "main": "index.html",
+  "name": "laws",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "create-react-class": "^15.6.3",
-    "datatables.net-dt": "^1.10.20",
-    "fs-web": "^1.0.1",
-    "inquirer": "7.3.3",
-    "jquery": "3.5.1",
-    "prompt": "1.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-router": "5.2.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4",
     "react-router-dom": "5.2.0",
-    "shortid": "2.2.15",
-    "webpack": "4.44.0",
-    "webpack-cli": "3.3.12",
-    "xml2js": "0.4.23"
-  },
-  "devDependencies": {
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "css-loader": "^3.5.2",
-    "style-loader": "^1.1.4",
-    "url-loader": "^4.1.0",
-    "webpack-dev-server": "^3.11.0"
+    "jquery": "3.5.1",
+    "fs-web": "1.0.1",
+    "react-router": "5.2.0",
+    "xml2js": "0.4.23",
+    "shortid": "2.2.16"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "rebuild-db": "node preprocessing/rebuild.js",
-    "webpack": "webpack --config webpack.config.js",
-    "build-online": "npm run webpack",
-    "build-offline": "echo \"Error: not yet implemented; will modify ELAN files first before running webpack script\" && exit 1",
-    "bundle-online": "rm -rf dist/ && mkdir dist/ && cp --recursive index.html js/ css/ images/ dist/",
-    "bundle-offline": "npm run bundle-online && mkdir dist/data/ && cp --recursive data/media_files/ dist/"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrownCLPS/LingView.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BrownCLPS/LingView/issues"
-  },
-  "homepage": "https://github.com/BrownCLPS/LingView#readme",
-  "private": true
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
