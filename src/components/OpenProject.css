@@ -1,28 +1,17 @@
-.translations{
-	width: 80%;
-	padding: 2px 10px 2px 10px;
-	margin: 0 10px 0 10px;
+.labels{
+    margin: 0px 1px 0px 5px;
+    text-transform: uppercase;
 }
 
-label.translations {
-	margin: 0 60% 0 10px;
+input[type="text"]{
+    margin: 10px 5px 0px 1px;
 }
-
-.transcriptions{
-	width: 80%;
-	padding: 2px 10px 2px 10px;
-	margin: 0 10px 0 10px;
-}
-
-label.transcriptions {
-	margin: 0 60% 0 10px;
-}
-
+/* 
 .body{
 	height: 1000px;
 	padding: 0;
 	margin: 0;
-}
+} */
 
 .labels-open {
     padding: 20px 10px;
@@ -39,7 +28,7 @@ label.transcriptions {
     border-radius: 4px;
 }
 
-input[type="submit"]{
+.start{
 	padding: 20px 10px;
     width: 200px;
     background-color: #111;
@@ -53,3 +42,13 @@ input[type="submit"]{
     margin-left: auto;
     border-radius: 4px;	
 }
+
+.add{
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: black;
+    color: #FFF;
+    border-radius: 4px;
+    margin: 0px 0px 0px 10px;
+}
+

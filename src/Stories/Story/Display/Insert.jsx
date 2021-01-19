@@ -123,23 +123,24 @@ export class Insert extends Component{
         return(
             <div>
                 <div className="insert" >
-                    <label className='participant' htmlFor=""> Participant:</label>
+                    <label className='labels participant' htmlFor="">Participant</label>
                     <input type="text" className='participant' value={this.state.participant} onChange={this.handleChangeParticipant}/>
 
-                    <label className='starttime' htmlFor=""> Start Time:</label>
+                    <label className='labels starttime' htmlFor="">Start Time</label>
                     <input type="text" className='starttime' value={this.state.starttime} onChange={this.handleChangeStartTime}/>
 
-                    <label className='endtime' htmlFor=""> End Time:    </label>
+                    <label className='labels endtime' htmlFor="">End Time</label>
                     <input type="text" className='endtime' value={this.state.endTime} onChange={this.handleChangeEndTime}/>
 
-                    <label className='transcriptions' htmlFor=""> Transcriptions:</label>
+                    <label className='labels transcriptions' htmlFor="">Transcriptions</label>
                     <input type="text" className='transcriptions' value={this.state.transcriptions} onChange={this.handleChangeTranscriptions}/>
 
-                    <label className='translations' htmlFor=""> Translations:</label>
+                    <label className='labels translations' htmlFor="">Translations</label>
                     <input type="text" className='translations' value={this.state.translations} onChange={this.handleChangeTranslations}/>
 
-                    <input type="Submit" id="submit" onClick={this.captureInfo} />
+                    <input type="Submit" id="submit" className="add" value="Add" onClick={this.captureInfo} />
                 </div>
+                <div className="line"></div>
 
             </div>
         )

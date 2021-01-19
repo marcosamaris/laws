@@ -8,9 +8,16 @@ export default class Home extends Component{
 
     render(){
         return(
-            <div home>
-                <h2>Laws é uma ferramenta computacional para anotações linguísticas manuais de arquivos audiovisuais!</h2>
-                <h3>Plataforma amigavel e simples para todos os públicos</h3>
+            <div className="home">
+                <div className="descr">
+                    <div className="line-title"></div>
+                        <h2 className="subtitle">Laws é uma ferramenta computacional para anotações linguísticas manuais de arquivos audiovisuais!</h2>
+                    <div className="line-title"></div>
+                    
+                </div>
+                <div className="descr">
+                    <h3 className="sub-desc">Plataforma amigavel e simples para todos os públicos</h3>
+                </div>
                 <div className='view'>
                 <h2>View</h2>
                 </div>

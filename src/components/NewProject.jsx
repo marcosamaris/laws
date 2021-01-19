@@ -111,7 +111,7 @@ export default class NewProject extends Component {
                     <div className="line line-left"></div>
                 </div>
                 <div className="start-button" >
-                    <label for="arquivo" className='xml'>Choose a Media</label>
+                    <label htmlFor="arquivo" className='xml'>Choose a Media</label>
                     <input type="file" id="file-here" ref={this.fileMedia} onInput={this.loadFiles} id="arquivo"/>
                 </div>
             </div>

@@ -98,13 +98,12 @@ export default class Stories extends Component{
                     <div className="line line-left"></div>
             </div>
             <form >
+              <label className="labels-open" htmlFor="xml">Choose XML</label>
+              <input type="file" id="xml" ref = {this.fileInput}/>
+              <label className="labels-open" htmlFor="media"> Choose media</label>
+              <input type="file" id="media" ref = {this.media}/>
 
-            <label className="labels-open" for="file-here">Choose XML</label>
-            <input type="file" id="file-here" ref = {this.fileInput}/>
-            <label className="labels-open" for="file-here"> Choose media</label>
-            <input type="file" id="file-here" ref = {this.media}/>
-
-            <input type="submit" value="Start" onClick={this.open_file}/>
+              <input type="submit" className="start" value="Start" onClick={this.open_file}/>
             </form>
           </div>
       
