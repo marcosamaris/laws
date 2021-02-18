@@ -9,7 +9,7 @@ export function Info({ metadata }) {
 	return (
 		<div id="info" className="miniPage active">
 			<Metadata metadata={metadata} />
-			<SpeakerInfo speakers={metadata['speaker IDs']} />
+			{/* <SpeakerInfo speakers={metadata['speaker IDs']} /> */}
 		</div>
 	);
 }

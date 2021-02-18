@@ -11,9 +11,9 @@ export class Video extends React.Component {
 	static show() {
 		// Resize panels:
 		$('#leftPanel').css('width', '40%');
-		$('#leftPanel').css('height', 'calc(100% - 48px)');
+		$('#leftPanel').css('height', 'calc(100% - 100px)');
 		$('#centerPanel').css('margin-left', '40%');
-		$('#centerPanel').css('height', 'calc(100% - 48px)');
+		$('#centerPanel').css('height', 'calc(100% - 100px)');
 		$("#centerPanel").css("width", "60%");
 
 		// Deactivate audio:

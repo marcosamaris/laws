@@ -1,90 +1,79 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Story } from './Story/Story.jsx';
-import { Insert } from '../Stories/Story/Display/Insert.jsx';
 import { NotFound } from './NotFound.jsx';
-import * as fs from 'fs-web';
 import '../components/OpenProject.css'
+import { parseString } from 'xml2js';
+
 
 const parseXml = require('xml2js').parseString;
 const elan = require('../preprocessing/preprocess_eaf');
 
-export default class Stories extends Component{
-  constructor(props){
-    super(props);
-    this.fileInput = React.createRef();
-    this.media = React.createRef();
-    this.open_file = this.open_file.bind(this);
-    this.setJSON = this.setJSON.bind(this);
-    this.state = {
-      JSON: null,
-      fileLoadend: false,
-      media: null,
-      xml: null,
-      sentence: null
-    }
-  }
+const initialState = {
+  xml: '',
+  media: '',
+  video: ''
+}
 
-  open_file(){
-    const ref = this;
-    var reader1 = new FileReader();
-    var reader2 = new FileReader();
-    
-    reader1.readAsText(this.fileInput.current.files[0])
-    reader1.onload = function(){
-      fs.writeFile("data/elan_files/eaftemp.eaf", reader1.result);      
-    }
+function Stories () {
+    localStorage.clear()
+    const [files, setFiles] = React.useState(initialState)
+    const [json, setJson] = React.useState(
+      localStorage.getItem('json') || ''
+    );
 
-    reader2.readAsDataURL(this.media.current.files[0])
-    reader2.onload= function(){
-        ref.setState({video: reader2.result})
+    React.useEffect(() => {
+      localStorage.setItem('json', json);
+    }, [json])
+
+    const handleChangeInput = e => {
+      const {name} = e.target
+      const value = e.target.files[0]
       
+      setFiles({...files, [name]:value, video:''})
     }
 
-    const nameFile = this.fileInput.current.files[0].name;
-    
-    fs.readString("data/elan_files/eaftemp.eaf")
-      .then(function(res){
-        parseXml(res, function(err2, jsonData){
+    const open_file = ()=>{
+      
+      var reader1 = new FileReader();
+      var reader2 = new FileReader();
+      
+      reader1.readAsText(files.xml)
+      reader2.readAsDataURL(files.media)
+
+      reader1.onload = function(){
+        const nameFile = files.xml.name
+        parseXml(reader1.result , function(err2, jsonData){
           if (err2) throw err2;
+          console.log(jsonData)
           const adoc = jsonData.ANNOTATION_DOCUMENT
           console.log(adoc)
-          elan.preprocess(adoc, nameFile, function(value){console.log(value)});
-          console.log("sucesso")
-
-          fs.readString("data/eaf_temp.json")
-            .then((data) => {
-              let json = JSON.parse(data);
-              json['metadata']['media']['video']= ref.state.video
-              json['metadata']['media']['audio']= ref.state.audio
+          elan.preprocess(adoc, nameFile, function(jsonOut){
+            reader2.onload= function(){
               
-              ref.setState({
-                JSON: json,
-                fileLoadend: true
-              });
-            });
+              jsonOut['metadata']['media']['video']= reader2.result
+              jsonOut['metadata']['media']['audio']= reader2.result
+              console.log(jsonOut)
+              let text = JSON.stringify(jsonOut, null, 2)
+              console.log(text)
+              setJson(jsonOut)
+            }
           });
-        })
           
-  }
+        });
+      }     
+            
+    }
 
-
-  setJSON(JSON){
-    this.setState({
-      JSON
-    })
-  }
-
-  render(){
-    const story = this.state.JSON;
+    // const story = this.state.JSON;
     
     return (
-      this.state.fileLoadend ?
+      json !== '' ?
       <Switch>
         {
               <div>
-                <Insert story={story} setJSONCallback={this.setJSON} />
-                <Story story={story} />
+                {/* <Insert story={story} setJSONCallback={this.setJSON} /> */}
+                <Story story={json} />
               </div>          
         }
 				<Route component={NotFound} />
@@ -99,14 +88,18 @@ export default class Stories extends Component{
             </div>
             <form >
               <label className="labels-open" htmlFor="xml">Choose XML</label>
-              <input type="file" id="xml" ref = {this.fileInput}/>
+              <input type="file" id="xml" name="xml" 
+              onChange={handleChangeInput} />
               <label className="labels-open" htmlFor="media"> Choose media</label>
-              <input type="file" id="media" ref = {this.media}/>
+              <input type="file" id="media" name="media" 
+              onChange={handleChangeInput} />
 
-              <input type="submit" className="start" value="Start" onClick={this.open_file}/>
+              <input type="submit" className="start" value="Start" onClick={open_file}/>
             </form>
           </div>
       
   );
+
 }
-}
+
+export default Stories;

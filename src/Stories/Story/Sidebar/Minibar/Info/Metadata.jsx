@@ -7,19 +7,19 @@ export function Metadata({ metadata }) {
 	let genre = null;
 	let date_created = null;
 
-	if (metadata["description"] != "") {
+	if (metadata["description"] !== "") {
 		description = <p><b>Description:</b> {metadata["description"]}</p>;
 	}
 
-	if (metadata["author"] != "") {
+	if (metadata["author"] !== "") {
 		author = <p>Author: {metadata["author"]}</p>;
 	}
 
-	if (metadata["genre"] != "") {
+	if (metadata["genre"] !== "") {
 		genre = <p>Genre: {metadata["genre"]}</p>;
 	}
 
-	if (metadata["date_created"] != "") {
+	if (metadata["date_created"] !== "") {
 		date_created = <p>Date: {metadata["date_created"]}</p>;
 	}
 
@@ -39,13 +39,13 @@ export function MoreMetadata({ metadata }) {
 	let source = null;
 
 
-	if (metadata["glosser"] != "") {
+	if (metadata["glosser"] !== "") {
 		glosser = <p>Glosser: {metadata["glosser"]}</p>;
 	}
 
-	if (metadata["source"]["_default"] != "") {
+	if (metadata["source"]["_default"] !== "") {
 		source = <p>Source: {metadata["source"]["_default"]}</p>;
-	} else if (metadata["source"].hasOwnProperty("con-Latn-EC") && metadata["source"]["con-Latn-EC"] != "") {
+	} else if (metadata["source"].hasOwnProperty("con-Latn-EC") && metadata["source"]["con-Latn-EC"] !== "") {
 		source = <p>Source: {metadata["source"]["con-Latn-EC"]}</p>;
 	}
 

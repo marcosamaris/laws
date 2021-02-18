@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import * as fs from 'fs-web';
-import { Insert } from '../Stories/Story/Display/Insert.jsx';
 import { Story } from '../Stories/Story/Story.jsx'
 import Export from '../Stories/Story/Display/Export.jsx'
 import './NewProject.css'
@@ -97,7 +95,7 @@ export default class NewProject extends Component {
         return(
             this.state.JSON ? 
             <div>
-                <Insert story={story} setJSONCallback={this.setJSON} />
+                {/* <Insert story={story} setJSONCallback={this.setJSON} /> */}
                 <Export />
                 <Story story={this.state.JSON}/>
             </div>

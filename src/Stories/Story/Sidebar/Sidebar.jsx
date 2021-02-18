@@ -1,6 +1,7 @@
 import { Title } from './Title.jsx';
 import { Video } from './Video.jsx';
 import { Minibar } from './Minibar/Minibar.jsx'
+import  Insert  from '../Display/Insert.jsx';
 
 export function Sidebar({ metadata }) {
 	// I/P: metadata, in JSON format
@@ -17,14 +18,16 @@ export function Sidebar({ metadata }) {
 		const path = filename;
 		return (
 			<div id="leftPanel">
+				<Insert  />
 				<Video path={path} />
 				<Title title={title} />
-				<Minibar metadata={metadata} hasVideo />
+				{/* <Minibar metadata={metadata} hasVideo /> */}
 			</div>
 		);
 	} else {
 		return (
 			<div id="leftPanel">
+				<Insert  />
 				<Title title={title} />
 				<Minibar metadata={metadata} hasVideo={false} />
 			</div>
