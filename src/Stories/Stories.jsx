@@ -53,7 +53,6 @@ function Stories () {
               
               jsonOut['metadata']['media']['video']= reader2.result
               jsonOut['metadata']['media']['audio']= reader2.result
-              console.log(jsonOut)
               let text = JSON.stringify(jsonOut, null, 2)
               console.log(text)
               setJson(jsonOut)
