@@ -21,6 +21,7 @@ export class Story extends React.Component {
 
     render() {
         const story = this.props.story;
+        
         console.log(story);
         const sentences = story['sentences'];
         const timed = (story['metadata']['timed']);
@@ -39,7 +40,7 @@ export class Story extends React.Component {
         return (
             <div>
                 <div id="middle">
-                    <Sidebar metadata={story['metadata']}/>
+                    <Sidebar metadata={story['metadata']} />
                     <CenterPanel timed={timed} sentences={sentences}/>
                 </div>
                 {footer}
@@ -47,3 +48,4 @@ export class Story extends React.Component {
         );
     }
 }
+

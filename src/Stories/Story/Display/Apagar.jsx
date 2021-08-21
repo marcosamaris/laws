@@ -1,32 +1,22 @@
-import * as fs from 'fs-web'
+import {store} from '../../../redux/store.jsx'
+import {useDispatch} from 'react-redux'
+
 export function Apagar(){
+    // const dispatch = useDispatch()
+
     const startTime = window.document.activeElement.getAttribute('capture-start-time');
-    const filho = window.document.activeElement.parentElement.parentElement
-    ApagarElement(filho)
-    ApagarTrilhanoJSON(startTime)
-}
-
-function ApagarElement(filho){
-    window.document.activeElement.parentElement.parentElement.parentElement.removeChild(filho)
-}
-
-function ApagarTrilhanoJSON(startTime){
-    console.log(startTime)
-    fs.readString('data/eaf_temp.json').then((data) => {
+    const json = store.getState().json
         
-        let json = JSON.parse(data);
-        let cont=0;
-        let objTemp;
-        json.sentences.forEach(trilha => {
-            cont++;
-            if(trilha['start_time_ms'] == startTime){
-                objTemp = delete json.sentences[cont]
-                if(objTemp){
-                    cont=0;
-                    console.log(json.sentences)
-
-                }
+    let cont=[0];
+    json.sentences.forEach(trilha => {
+        cont[0]++;
+        if(trilha['start_time_ms'] == startTime){
+            const objTemp = delete json.sentences[cont]
+            if(objTemp){
+                cont=0;
+                // dispatch({type: "actions/set", json})
+                console.log(json.sentences)
             }
-        });
-    })
+        }
+    });
 }

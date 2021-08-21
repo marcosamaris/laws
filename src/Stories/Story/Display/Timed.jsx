@@ -65,7 +65,8 @@ function LabeledTimeBlock({ sentences, timestamp }) {
 				<a href="javascript:void(0)" data-start_time={minStart} className="timeStamp">
 					{timestamp}
 				</a>
-				<button capture-start-time={minStart} onClick={Apagar}>Delete</button>
+				<button capture-start-time={minStart} onClick={Apagar}>Del</button>
+				<button capture-start-time={minStart} >Edit</button>
 				
 			</span>
 			<TimeBlock sentences={sentences} />

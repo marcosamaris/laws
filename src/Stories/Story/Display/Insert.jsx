@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import * as fs from 'fs-web';
+import React from 'react';
 import './Insert.css'
+import {useDispatch} from 'react-redux'
+import {store} from '../../../redux/store.jsx'
 
 const initialState = {
     participant: '',
@@ -11,55 +12,57 @@ const initialState = {
 }
 
 function Insert() {
+    const dispatch = useDispatch()
+    const json = store.getState().json
     const [trail, setTrail] = React.useState(initialState)
-    const json = localStorage.getItem('json')
 
     const handleChangeInput = e => {
         const { name, value } = e.target
-
+        
         setTrail({ ...trail, [name]: value })
     }
 
     const captureInfo = () => {
-        console.log(trail)
         let sentence = '';
-        console.log(JSON.parse(json))
+        // isTimeOk()
         if (verifyCompatibleWithLenghtOfMedia()) {
 
-            json['speaker IDs'] = {
+            json['metadata']['speaker IDs'] = {
                 S1: {
                     name: trail.participant,
                     tier: 'T1'
                 }
             }
-            Array.of(json['speakers']).push(trail.participant)
+            Array.of(json['metadata']['speakers']).push(trail.participant)
             sentence = {
-                "dependents": [
-                    {
-                        "tier": "T2",
-                        "values": [
-                            {
-                                'value': trail.translations,
-                                'end_slot': 1,
-                                'start_slot': 0
-                            }
-                        ]
-                    }
-                ],
-                "end_time_ms": trail.endtime,
-                "num_slots": "",
+                "end_time_ms": parseInt(trail.endtime),
+                "num_slots": 1,
                 "speaker": trail.participant,
-                "start_time_ms": trail.starttime,
+                "start_time_ms": parseInt(trail.starttime),
                 "text": trail.transcriptions,
-                "tier": "T1"
+                "tier": "T"+(json['sentences'].length+1),
+                "ref1": "ts1",
+                "ref2": "ts2",
+                "dependents": []
             }
 
+            
+            const dependents = {
+                "tier": sentence['tier'],
+                "values":[
+                {
+                    "start_slot": 0,
+                    "end_slot": 1,
+                    "value": trail.translations
+                }
+                ]
+            }
+            sentence['dependents'].push(dependents)
 
-            console.log(sentence)
+
             setSentenceOnJSON(sentence);
-
-            //reseta o state
-            setTrail(...initialState)
+            dispatch({type: "actions/set", json})          
+            console.log(store.getState())
 
         }
     }
@@ -72,16 +75,20 @@ function Insert() {
         }
     }
 
+    const isTimeOk = () => {
+        let i=0
+        while(json["sentences"][i]['starttime'] < trail.starttime ){
+
+            i = i+1
+            console.log(json["sentences"][i]['starttime'])
+        }
+    }
+
     const setSentenceOnJSON = (sentence) => {
         json.sentences.push(sentence)
         
 
     }
-
-    const writeFile = (json) => {
-        fs.writeFile("data/elan_files/eaftemp.eaf", JSON.stringify(json, null, 2))
-    }
-
 
     return (
         <div>

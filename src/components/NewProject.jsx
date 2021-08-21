@@ -1,31 +1,36 @@
-import React, {Component} from 'react';
-import { Story } from '../Stories/Story/Story.jsx'
-import Export from '../Stories/Story/Display/Export.jsx'
+import React from 'react';
 import './NewProject.css'
+import { Switch } from 'react-router-dom';
+import { Story } from '../Stories/Story/Story.jsx'
+import {useDispatch, connect} from 'react-redux'
+import Export from '../components/Export.jsx'
 
 
-export default class NewProject extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            JSON:null,
-            media: null,
-            
+const NewProject = () => {
+    const [media, setMedia] = React.useState();
+    const [jsonInit, setJson]   = React.useState('');
 
+    const dispatch = useDispatch()
+
+
+    const handleChangeInput = e => {
+        const value = e.target.files[0]
+        var reader = new FileReader();
+        reader.readAsDataURL(value)
+        reader.onload= function(){
+            setMedia(reader.result)
         }
-        this.createJSON = this.createJSON.bind(this);
-        this.setJSON = this.setJSON.bind(this);
-        this.fileMedia = React.createRef();
-        this.loadFiles = this.loadFiles.bind(this);
-    }
+      }    
 
-    createJSON(){
-        let json = 
+    const createJSON = () => {
+        const date = new Date();
+        const prettyDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
+        const json = 
         {
             "metadata":{
-                "author": "",
+                "author":"",
                 "timed": true,
-                "date_created": new Date(),
+                "date_created": prettyDate,
                 "data_uploaded": "",
                 "description": "",
                 "genre": "",
@@ -33,7 +38,7 @@ export default class NewProject extends Component {
                 "languages": [],
                 "media":{
                     "audio": "",
-                    "video": this.state.media
+                    "video": ""
                 },
                 "source":{
                     "_default":""
@@ -52,7 +57,6 @@ export default class NewProject extends Component {
                         "subdivided": "false"
                     }
                 },
-                "timed":true,
                 "title":{
                     "_default":""
                 }
@@ -60,45 +64,22 @@ export default class NewProject extends Component {
 
             "sentences": []
         }
-        this.setState({JSON: json})
-        console.log(json)
+        json['metadata']['media']['audio'] = media
+        json['metadata']['media']['video'] = media
+
+        setJson(json)
+        dispatch({type: "actions/set", json})
     }
 
-    loadFiles(){
-        const ref = this;
-        
-        var reader = new FileReader();
-        
-        reader.readAsDataURL(this.fileMedia.current.files[0])
-        reader.onload= function(){
-            ref.setState({media: reader.result})
-            if(ref.fileMedia.current.files[0].type.includes('video'))
-                console.log("video")
-            else if(ref.fileMedia.current.files[0].type.includes('audio'))
-                console.log("audio")
-            ref.createJSON()
-            
-        }
-        
-    }
     
-    setJSON(JSON){
-        this.setState({
-          JSON
-        })
-    }
-
-    render(){
-
-        const story = this.state.JSON;
-        console.log(story)
-        return(
-            this.state.JSON ? 
-            <div>
-                {/* <Insert story={story} setJSONCallback={this.setJSON} /> */}
-                <Export />
-                <Story story={this.state.JSON}/>
-            </div>
+    return(
+            jsonInit ?
+            <Switch>
+                    <div>
+                    <Export />
+                    <Story story={jsonInit} />
+                    </div>                          
+            </Switch>
             :
 
             <div className='form'>
@@ -109,10 +90,13 @@ export default class NewProject extends Component {
                     <div className="line line-left"></div>
                 </div>
                 <div className="start-button" >
-                    <label htmlFor="arquivo" className='xml'>Choose a Media</label>
-                    <input type="file" id="file-here" ref={this.fileMedia} onInput={this.loadFiles} id="arquivo"/>
+                    <label htmlFor="media" className='xml'>Choose a Media</label>
+                    <input type="file" id="media" name="media" 
+              onChange={handleChangeInput}/>
+                    <input type="submit" className="start" value="Start" onClick={createJSON}/>
                 </div>
             </div>
         )
-    }
 }
+
+export default connect(state => ({modules: state}))(NewProject)

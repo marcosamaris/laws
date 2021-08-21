@@ -3,7 +3,7 @@ import { Video } from './Video.jsx';
 import { Minibar } from './Minibar/Minibar.jsx'
 import  Insert  from '../Display/Insert.jsx';
 
-export function Sidebar({ metadata }) {
+export function Sidebar({ metadata, setJSONCallback }) {
 	// I/P: metadata, in JSON format
 	// O/P: a sidebar complement to the TextDisplay
 	// Status: untested
@@ -18,7 +18,7 @@ export function Sidebar({ metadata }) {
 		const path = filename;
 		return (
 			<div id="leftPanel">
-				<Insert  />
+				<Insert />
 				<Video path={path} />
 				<Title title={title} />
 				{/* <Minibar metadata={metadata} hasVideo /> */}
@@ -27,7 +27,7 @@ export function Sidebar({ metadata }) {
 	} else {
 		return (
 			<div id="leftPanel">
-				<Insert  />
+				<Insert />
 				<Title title={title} />
 				<Minibar metadata={metadata} hasVideo={false} />
 			</div>

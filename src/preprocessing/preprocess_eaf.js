@@ -6,8 +6,7 @@ const {getAlignableAnnotationStartSlot,
   getAnnotationID, getAnnotationIDMap, 
   getDocTimeslotsMap, getTierSpeakerName, 
   getTierChildrenMap, getTierLanguage} = require('./eaf_utils')
-// const pfsxUtils = require('./pfsx_utils');
-const pfsxUtils = require ('./pfsx_utils')
+
 const helper = require('./helper_functions');
 
 function scaledSlot(slotIn, parentStart, tierEnd, latestEnd) {
@@ -163,6 +162,7 @@ function preprocess(adocIn, /*pfsxIn,*/ xmlFileName, callback) {
   
   const annotationsFromIDs = getAnnotationIDMap(tiers);
   const timeslots = getDocTimeslotsMap(adocIn);
+  console.log(timeslots)
   
   // sort untimed children
   for (const parentAnnotationID in annotationChildren) {
@@ -371,19 +371,7 @@ function preprocess(adocIn, /*pfsxIn,*/ xmlFileName, callback) {
       anotDescendants[indepAnotID] = depTiersAnots;
     }
   }
-  //jsonOut['anotDescendants'] = anotDescendants; // TODO remove when no longer needed for debugging
   
-  // const garbageTierNames = pfsxUtils.getHiddenTiers(pfsxIn);
-  // let garbageTierIDs = [];
-  // for (const garbageTierName of garbageTierNames) {
-  //   garbageTierIDs.push(tierIDsFromNames[garbageTierName]);
-  // }
-  
-  // const tierNameOrder = pfsxUtils.getTierOrder(pfsxIn);
-  // let tierIDOrder = [];
-  // for (const tierName of tierNameOrder) {
-  //   tierIDOrder.push(tierIDsFromNames[tierName]);
-  // }
   
   // careful - garbageTierIDs and tierIDOrder may contain undefined, e.g. if there are empty tiers
   
@@ -405,10 +393,12 @@ function preprocess(adocIn, /*pfsxIn,*/ xmlFileName, callback) {
       assignSlots(indepAnotID, tiersToConstraints, annotationChildren, 
         annotationsFromIDs, timeslots, anotStartSlots, anotEndSlots
       );
-      
+
       const sentenceJson = {
         "speaker": spkrID,
         "tier": tierID,
+        "ref1": getAlignableAnnotationStartSlot(indepAnot),
+        "ref2": getAlignableAnnotationEndSlot(indepAnot),
         "start_time_ms": parseInt(timeslots[getAlignableAnnotationStartSlot(indepAnot)], 10),
         "end_time_ms": parseInt(timeslots[getAlignableAnnotationEndSlot(indepAnot)], 10),
         "num_slots": anotEndSlots[indepAnotID],
@@ -416,6 +406,7 @@ function preprocess(adocIn, /*pfsxIn,*/ xmlFileName, callback) {
         //"anotID": indepAnotID, // TODO remove when no longer needed for debugging
         "dependents": [],
       };
+
       
       const depTiersAnots = anotDescendants[indepAnotID];
       for (const depTierName in depTiersAnots) {
@@ -442,25 +433,7 @@ function preprocess(adocIn, /*pfsxIn,*/ xmlFileName, callback) {
         }
       }
       
-      // if (tierIDOrder.length !== 0) {
-      //   const orderedDependents = [];
-      //   for (const tierID of tierIDOrder) {
-      //     const tier = sentenceJson.dependents.find((t) => t.tier === tierID);
-      //     if (tier != null) {
-      //       orderedDependents.push(tier);
-      //     }
-      //   }
-      //   sentenceJson["dependents"] = orderedDependents;
-      // }
-      
-      // remove hidden dependent tiers
-      // sentenceJson.dependents = sentenceJson.dependents.filter((t) => !garbageTierIDs.includes(t.tier));
-      // // remove the independent tier if it's hidden
-      // if (garbageTierIDs.includes(sentenceJson["tier"])) {
-      //   sentenceJson["text"] = "";
-      //   sentenceJson["noTopRow"] = "true";
-      // }
-      
+            
       // sort by the numerical part of the tier ID to ensure consistent ordering; TODO delete this line
       // sentenceJson.dependents.sort((t1,t2) => parseInt(t1.tier.slice(1),10) - parseInt(t2.tier.slice(1),10));
           
@@ -475,7 +448,6 @@ function preprocess(adocIn, /*pfsxIn,*/ xmlFileName, callback) {
     }
   }
   callback(jsonOut)
-  // localStorage.setItem('json', JSON.stringify(jsonOut, null, 2))
   
 }
 

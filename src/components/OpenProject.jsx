@@ -1,116 +1,100 @@
-import React, {Component} from 'react';
-import * as fs from 'fs-web';
-import { Redirect } from 'react-router';
-import Stories from '../App/Stories/Stories';
-import './OpenProject.css'
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { Story } from '../Stories/Story/Story.jsx';
+import { NotFound } from './NotFound.jsx';
+import '../components/OpenProject.css'
+import Export from '../components/Export.jsx'
 
+import {useDispatch, connect} from 'react-redux'
 
 const parseXml = require('xml2js').parseString;
+const elan = require('../preprocessing/preprocess_eaf');
 
-const elan = require('../../preprocessing/preprocess_eaf');
+const initialState = {
+  xml: '',
+  media: '',
+  video: ''
+}
 
-//const jsonFilesDir = "data/json_files/";
-//const indexFileName = "data/index.json"; // stores metadata for all documents
+const OpenProject = ({modules}) => {
+    
+    const [files, setFiles] = React.useState(initialState)
+    const [json, setJson] = React.useState();
 
+    const dispatch = useDispatch()
 
-export default class OpenProject extends Component {
-  constructor(props){
-    super(props);
-    this.fileInput = React.createRef();
-    this.fileAudio = React.createRef();
-    this.fileVideo = React.createRef();
-    this.open_file = this.open_file.bind(this);
-    this.preprocessFile = this.preprocessFile.bind(this);
-    this.state = {
-      JSON: null,
-      fileLoadend: false,
-      hasVideo: false,
-      hasAudio: false,
-      video: null,
-      audio: null,
-      xml: null
+    const handleChangeInput = e => {
+      const {name} = e.target
+      const value = e.target.files[0]
+      
+      setFiles({...files, [name]:value, video:''})
     }
-  }
 
 
-      setRedirect(){
-        this.setState({redirect:true})
-      }
-
+    const open_file = ()=>{
       
+      var reader1 = new FileReader();
+      var reader2 = new FileReader();
       
-      open_file(){
-        const setFileLoadend = this;
-        let video="";
-        let audio="";
-        var reader1 = new FileReader();
-        var reader2 = new FileReader();
-        var reader3 = new FileReader();
-        reader1.readAsText(this.fileInput.current.files[0])
-        reader1.onload = function(){
-          fs.writeFile("data/elan_files/eaftemp.eaf", reader1.result);      
-        }
-    
-        reader2.readAsDataURL(this.fileVideo.current.files[0])
-        reader2.onload= function(){
-          video = reader2.result
-          setFileLoadend.setState({video: video})
+      reader1.readAsText(files.xml)
+      reader2.readAsDataURL(files.media)
+
+      reader1.onload = function(){
+        const nameFile = files.xml.name
+        parseXml(reader1.result , function(err2, jsonData){
+          if (err2) throw err2;
+          // console.log(jsonData)
+          const adoc = jsonData.ANNOTATION_DOCUMENT
+          console.log(adoc)
           
-        }
-    
-        reader3.readAsDataURL(this.fileAudio.current.files[0])
-        reader3.onload= function(){
-          audio = reader3.result
-          setFileLoadend.setState({audio: audio})
-        }
-        const nameFile = this.fileInput.current.files[0].name;
-        
-        fs.readString("data/elan_files/eaftemp.eaf")
-          .then(function(res){
-            parseXml(res, function(err2, jsonData){
-              if (err2) throw err2;
-              const adoc = jsonData.ANNOTATION_DOCUMENT
-              console.log(adoc)
-              elan.preprocess(adoc, nameFile, function(value){console.log(value)});
-              console.log("sucesso")
-    
-              fs.readString("data/eaf_temp.json")
-                .then((data) => {
-                  let json = JSON.parse(data);
-                  json['metadata']['media']['video']= setFileLoadend.state.video
-                  json['metadata']['media']['audio']= setFileLoadend.state.audio
-                  setFileLoadend.setState({
-                    JSON: json,
-                    fileLoadend: true
-                  });
-                });
-              });
-            })
+          elan.preprocess(adoc, nameFile, function(json){
+            reader2.onload= function(){
               
-      }
-          
-    render() {
-      const story = this.state.JSON;
-      return (
-        this.state.redirect ? 
-        <Stories story={}/>
-        :
-        <div>
-            <form >
-            <label>
-                Upload file:
-                <input type="file" id="file-here" ref = {this.fileInput}/>
-                Upload video:
-                <input type="file" id="file-here" ref = {this.fileVideo}/>
-                Upload audio:
-                <input type="file" id="file-here" ref = {this.fileAudio}/>
-            </label>
-            <br />
-            <input type="submit" value="Submit" onClick={this.open_file}/>
-            </form>
-          </div>
-      );
+              json['metadata']['media']['video']= reader2.result
+              json['metadata']['media']['audio']= reader2.result
+             
+              setJson(json)
+              dispatch({type: "actions/set", json})
+              
+            }
+          });  
+        });
+      }          
     }
+    
+    return (
+      json ?
+      <Switch>
+        {
+              <div>
+                <Export />
+               <Story story={json} />
+              </div>          
+        }
+				<Route component={NotFound} />
+      </Switch>
+          
+      :
+          <div className='openproject'>
+            <div className="line-center">
+                    <div className="line line-right"></div>
+                    <h1 className="line fs-18">Choose the files XMLs and the of media!</h1>
+                    <div className="line line-left"></div>
+            </div>
+            <div >
+              <label className="labels-open" htmlFor="xml">Choose XML</label>
+              <input type="file" id="xml" name="xml" 
+              onChange={handleChangeInput} />
+              <label className="labels-open" htmlFor="media"> Choose media</label>
+              <input type="file" id="media" name="media" 
+              onChange={handleChangeInput} />
 
-  }
-  
+              <input type="submit" className="start" value="Start" onClick={open_file}/>
+            </div>
+          </div>
+      
+  );
+
+}
+
+export default connect(state => ({modules: state}))(OpenProject)
