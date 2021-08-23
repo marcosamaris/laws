@@ -9,7 +9,6 @@ module.exports ={
     output:{
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'build'),
-        publicPath: './build/'
     },
     mode: 'development',
     plugins:[
@@ -21,7 +20,7 @@ module.exports ={
             jQuery: 'jquery'
         }),
         new HtmlWebpackPlugin({
-            template: './public/index.html'
+            template: './public/index.html',
         }),
     ],
     module: {
@@ -45,7 +44,7 @@ module.exports ={
         alias: {
             '~.': path.resolve(__dirname)
         },
-        fallback: {"stream": false}
+        fallback: {"stream": require.resolve("stream-browserify"),"timers": require.resolve("timers-browserify")}
     },
     optimization: {
         splitChunks: {
@@ -64,6 +63,5 @@ module.exports ={
         },
         usedExports: true,
       },
-    devtool: 'eval',
     
 }
