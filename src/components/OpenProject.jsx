@@ -8,7 +8,7 @@ import Export from '../components/Export.jsx'
 import {useDispatch, connect} from 'react-redux'
 
 const parseXml = require('xml2js').parseString;
-const elan = require('../preprocessing/preprocess_eaf');
+const elan = require('../preprocessing/preprocess_eaf.js');
 
 const initialState = {
   xml: '',

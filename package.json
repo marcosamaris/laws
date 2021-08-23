@@ -1,56 +1,71 @@
 {
-    "name": "laws",
-    "version": "0.1.0",
-    "homepage": "http://marcosamaris.github.io/laws",
-    "private": true,
-    "dependencies": {
-      "-": "0.0.1",
-      "@testing-library/jest-dom": "^5.11.4",
-      "@testing-library/react": "^11.1.0",
-      "@testing-library/user-event": "^12.1.10",
-      "axios": "^0.21.1",
-      "fs-web": "1.0.1",
-      "gh-pages": "^3.1.0",
-      "jquery": "3.5.1",
-      "prompt": "1.1.0",
-      "react": "^17.0.1",
-      "react-dom": "^17.0.1",
-      "react-file-reader": "^1.1.4",
-      "react-redux": "^7.2.2",
-      "react-router": "5.2.0",
-      "react-router-dom": "5.2.0",
-      "react-scripts": "4.0.1",
-      "redux": "^4.0.5",
-      "save-dev": "0.0.1-security",
-      "shortid": "2.2.16",
-      "web-vitals": "^0.2.4",
-      "xml2js": "0.4.23"
-    },
-    "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -b master -d build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-      "extends": [
-        "react-app",
-        "react-app/jest"
-      ]
-    },
-    "browserslist": {
-      "production": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all"
-      ],
-      "development": [
-        "last 1 chrome version",
-        "last 1 firefox version",
-        "last 1 safari version"
-      ]
-    }
+  "name": "laws",
+  "version": "0.1.0",
+  "homepage": "http://marcosamaris.github.io/laws",
+  "private": true,
+  "main": "src/index.jsx",
+  "dependencies": {
+    "-": "0.0.1",
+    "@babel/core": "^7.15.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "babel-loader": "8.2.2",
+    "@babel/preset-env": "7.15.0",
+    "@babel/preset-react": "7.14.5",
+    "gh-pages": "^3.1.0",
+    "jquery": "3.5.1",
+    "prompt": "1.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-file-reader": "^1.1.4",
+    "react-redux": "^7.2.2",
+    "react-router": "5.2.0",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.1",
+    "redux": "^4.0.5",
+    "save-dev": "0.0.1-security",
+    "shortid": "2.2.16",
+    "web-vitals": "^0.2.4",
+    "webpack": "5.51.1",
+    "webpack-cli": "4.8.0",
+    "webpack-dev-server": "4.0.0",
+    "webpack-merge": "5.8.0",
+    "xml2js": "^0.4.23"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "webpack –config webpack.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "webpack-dev-server webpack.config.js",
+    "webpack": "webpack-cli --config webpack.config.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "css-loader": "6.2.0",
+    "html-webpack-plugin": "5.3.2",
+    "style-loader": "3.2.1"
   }
-  
+}

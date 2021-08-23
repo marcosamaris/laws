@@ -1,3 +1,11 @@
 node_modules
 node_modules
 passos.txt
+build/bundle.js
+build/node_modules_web-vitals_dist_web-vitals_es5_min_js.bundle.js
+build/index.html
+webpack.common.js
+webpack.dev.js
+webpack.prod.js
+.eslintcache
+yarn.lock

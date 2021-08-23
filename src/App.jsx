@@ -5,7 +5,7 @@ import  OpenProject  from './components/OpenProject.jsx';
 import  Home  from './components/Home.jsx';
 import './App.css'
 
-import DataProvider from './redux/store'
+import DataProvider from './redux/store.jsx'
 
 
 export function App() {
