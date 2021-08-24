@@ -1,14 +1,18 @@
 import { parseXML } from 'jquery';
 import React from 'react';
+import { useState } from 'react';
 import {store} from '../redux/store.jsx'
 
 
 const Export = () =>{
     
+    const [time, setTime] = useState()
+    const [annotationID, setAnnotationId] = useState(0)
+    const [idRef, setIdRef] = useState('')
+
     const clickMe = () =>{
         const xml = createXML(store.getState().json)
         downloadFiles(xml, "xml.eaf")
-
 
     }
 
@@ -19,6 +23,7 @@ const Export = () =>{
             time[i.start_time_ms] = "ts"+ ++inc
             time[i.end_time_ms] = "ts"+ ++inc
         }
+        setTime(time)
         const S = `
             <ANNOTATION_DOCUMENT AUTHOR="" DATE="${json.metadata.date_uploaded}" >
                 <HEADER MEDIA_FILE="" TIME_UNITS="milliseconds">
@@ -33,7 +38,8 @@ const Export = () =>{
                         json.sentences.map(e => `<TIME_SLOT TIME_SLOT_ID="${time[e.end_time_ms]}" TIME_VALUE="${e.end_time_ms}"/>` ).join("\n")
                     }
                 </TIME_ORDER>
-                ${console.log(createJsonOfSentences(json))}
+
+                ${generateTrails(json.sentences)}
 
                 <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="default-lt" TIME_ALIGNABLE="true"/>
                 <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="Phrases" TIME_ALIGNABLE="true"/>
@@ -52,29 +58,60 @@ const Export = () =>{
         return S
     }
 
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const generateTrails = (sentences) =>{
+        let phrase = ''
+        let translations = ''
+        let words = ''
+        let note = ''
+        let trails=[]
+        let tierID=0
+        let tierIDWords=tierID
 
-    const createJsonOfSentences = (json) => {
-        const res=[]
-
-        for (const sentence of json.sentences) {
-            const str={}
-            str['ref1']=sentence.ref1
-            str['ref2']=sentence.ref2
-            str['text']=sentence.text
-            str['speaker']=sentence.speaker
-            res.push(str)
-        }
         
-        return res.reduce((result, el) => 
-             result + `<TIER LINGUISTIC_TYPE_REF="Phrases" PARTICIPANT="${el.speaker}" TIER_ID="A_Transcription-txt-deu">
-            <ANNOTATION>
-                <ALIGNABLE_ANNOTATION ANNOTATION_ID="a3" TIME_SLOT_REF1="${el.ref1}" TIME_SLOT_REF2="${el.ref2}">
-                    <ANNOTATION_VALUE>${el.text}</ANNOTATION_VALUE>
-                </ALIGNABLE_ANNOTATION>
-            </ANNOTATION>
-        </TIER>`
-        )
+        for (const item of sentences) {
+            phrase = TokenTranscriptions("Phrase", generateAnnotationId(), item.speaker, item.speaker, item.ref1, item.ref2, item.text)
+            trails.push(phrase)
+            setIdRef('a'+annotationID)
+            if(item.dependents.length > 0)
+                    
+                    for (const i of item.dependents) {
+                        if (i.values.length == 1){
+                            // transcriptions
+                            translations=TokenTranslations("Phrase", generateAnnotationId(), item.speaker, i.values[0].value,
+                            item.speaker, item.speaker, idRef)
+                        }
+                        trails.push(translations)
+                    }
+        }
+
+
+        return trails.join('\n')
+    }    
+
+    const TokenTranscriptions = (linguisticType, annotationID, speaker, tierID, ref1, ref2, text) =>{
+        return `<TIER LINGUISTIC_TYPE_REF="${linguisticType}" PARTICIPANT="${speaker}" TIER_ID="${tierID}">
+                    <ANNOTATION>
+                        <ALIGNABLE_ANNOTATION ANNOTATION_ID="${annotationID}" TIME_SLOT_REF1="${ref1}" TIME_SLOT_REF2="${ref2}">
+                            <ANNOTATION_VALUE>${text}</ANNOTATION_VALUE>
+                        </ALIGNABLE_ANNOTATION>
+                    </ANNOTATION>
+                </TIER>`
+    }
+
+    const TokenTranslations = (linguisticType, annotationID, speaker, text, tierID, parentRef, annotationRef) =>{
+        return `
+                            <TIER LINGUISTIC_TYPE_REF="${linguisticType}" PARENT_REF="${parentRef}" PARTICIPANT="${speaker}" TIER_ID="${tierID}">
+                                <ANNOTATION>
+                                    <ALIGNABLE_ANNOTATION ANNOTATION_ID="${annotationID}" ANNOTATION_REF="${annotationRef}">
+                                        <ANNOTATION_VALUE>${text}</ANNOTATION_VALUE>
+                                    </ALIGNABLE_ANNOTATION>
+                                </ANNOTATION>
+                            </TIER>`
+    }
+
+    const generateAnnotationId = ()=>{
+        setAnnotationId(annotationID+1)
+        return annotationID
     }
 
 
