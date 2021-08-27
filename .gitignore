@@ -6,3 +6,7 @@ webpack.dev.js
 webpack.prod.js
 .eslintcache
 yarn.lock
+media_files/example_audio.mp3
+elan_files/example_elan.pfsx
+elan_files/example_elan.eaf
+package-lock.json

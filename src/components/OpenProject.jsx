@@ -49,7 +49,8 @@ const OpenProject = ({modules}) => {
           
           elan.preprocess(adoc, nameFile, function(json){
             reader2.onload= function(){
-              
+              console.log(files.media)
+              json['metadata']['nameFile'] = files.media.name
               json['metadata']['media']['video']= reader2.result
               json['metadata']['media']['audio']= reader2.result
              

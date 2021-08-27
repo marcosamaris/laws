@@ -149,7 +149,6 @@ function preprocess(adocIn, /*pfsxIn,*/ xmlFileName, callback) {
     for (const annotation of getAnnotations(tier)) {
       const childAnnotationID = getAnnotationID(annotation);
       let parentAnnotationID = annotation.REF_ANNOTATION[0].$.ANNOTATION_REF; 
-      
       if (annotationChildren[parentAnnotationID] == null) {
         annotationChildren[parentAnnotationID] = {}
       }
@@ -397,8 +396,6 @@ function preprocess(adocIn, /*pfsxIn,*/ xmlFileName, callback) {
       const sentenceJson = {
         "speaker": spkrID,
         "tier": tierID,
-        "ref1": getAlignableAnnotationStartSlot(indepAnot),
-        "ref2": getAlignableAnnotationEndSlot(indepAnot),
         "start_time_ms": parseInt(timeslots[getAlignableAnnotationStartSlot(indepAnot)], 10),
         "end_time_ms": parseInt(timeslots[getAlignableAnnotationEndSlot(indepAnot)], 10),
         "num_slots": anotEndSlots[indepAnotID],
