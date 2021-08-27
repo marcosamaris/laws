@@ -7,6 +7,7 @@ import Export from '../components/Export.jsx'
 
 
 const NewProject = () => {
+    const [mediaUrl, setMediaUrl] = React.useState();
     const [media, setMedia] = React.useState();
     const [jsonInit, setJson]   = React.useState('');
 
@@ -18,8 +19,9 @@ const NewProject = () => {
         var reader = new FileReader();
         reader.readAsDataURL(value)
         reader.onload= function(){
-            setMedia(reader.result)
+            setMediaUrl(reader.result)
         }
+        setMedia(value)
       }    
 
     const createJSON = () => {
@@ -47,16 +49,7 @@ const NewProject = () => {
                 "speaker IDs":{},
                 "speakers":[],
                 "story ID": "0ef60c73-c757-46c9-ab12-a17874de63ee",
-                "tier IDs":{
-                    "T1": {
-                        "name": "Transcriptions",
-                        "subdivided": false
-                    },
-                    "T2": {
-                        "name": "Translations",
-                        "subdivided": "false"
-                    }
-                },
+                "tier IDs":{},
                 "title":{
                     "_default":""
                 }
@@ -64,12 +57,14 @@ const NewProject = () => {
 
             "sentences": []
         }
-        json['metadata']['media']['audio'] = media
-        json['metadata']['media']['video'] = media
+        json['metadata']['nameFile'] = media.name
+        json['metadata']['media']['audio'] = mediaUrl
+        json['metadata']['media']['video'] = mediaUrl
 
         setJson(json)
         dispatch({type: "actions/set", json})
     }
+
 
     
     return(
