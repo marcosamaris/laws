@@ -1,7 +1,7 @@
 import { Title } from './Title.jsx';
 import { Video } from './Video.jsx';
 import { Minibar } from './Minibar/Minibar.jsx'
-import  Insert  from '../Display/Insert.jsx';
+import  Insert  from '../../../components/Insert.jsx';
 
 export function Sidebar({ metadata, setJSONCallback }) {
 	// I/P: metadata, in JSON format
