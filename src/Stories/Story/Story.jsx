@@ -22,7 +22,6 @@ export class Story extends React.Component {
     render() {
         const story = this.props.story;
         
-        console.log(story);
         const sentences = story['sentences'];
         const timed = (story['metadata']['timed']);
         let footer = null;

@@ -36,6 +36,10 @@ function Insert() {
         if(isTimeConfit(starttime, endtime)){
             return setTrail({...trail, err: 'Tempo em conflito'})
         }
+
+        if(isLengthMedia(endtime)){
+            return setTrail({...trail, err: 'Tempo informado ultrapassa duração da midia'})
+        }
         
         let sentence = '';
         
@@ -87,8 +91,6 @@ function Insert() {
         let end = 0
         let aux = 0
         for (const index in json.sentences) {
-            console.log(parseInt(timeStart, 10) , json.sentences[index].start_time_ms)
-            console.log(parseInt(timeEnd, 10), json.sentences[index].end_time_ms)
             start = parseInt(timeStart, 10)
             end = parseInt(timeEnd, 10)
             aux = json.sentences[index].end_time_ms - json.sentences[index].start_time_ms

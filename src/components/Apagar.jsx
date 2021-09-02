@@ -1,4 +1,4 @@
-import {store} from '../../../redux/store.jsx'
+import {store} from '../redux/store.jsx'
 import {useDispatch} from 'react-redux'
 
 export function Apagar(){

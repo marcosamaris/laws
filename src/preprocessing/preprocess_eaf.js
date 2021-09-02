@@ -161,7 +161,6 @@ function preprocess(adocIn, /*pfsxIn,*/ xmlFileName, callback) {
   
   const annotationsFromIDs = getAnnotationIDMap(tiers);
   const timeslots = getDocTimeslotsMap(adocIn);
-  console.log(timeslots)
   
   // sort untimed children
   for (const parentAnnotationID in annotationChildren) {
