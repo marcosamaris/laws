@@ -1,5 +1,7 @@
 import id from 'shortid';
 import { Sentence } from './Sentence.jsx';
+import { Edit } from '../../../components/Edit.jsx'
+import Delete from '../../../components/Delete.jsx'
 
 
 
@@ -25,6 +27,9 @@ function TimeBlock({ sentences }) {
 	// Iterate through the list of these sentences.
 	for (const sentence of sentences) {
 		output.push(<LabeledSentence key={id.generate()} sentence={sentence} />);
+		output.push(<Edit sentence={sentence}/>)
+		output.push(<Delete sentence={sentence}/>)
+
 	}
 	return <div className="timeBlock">{output}</div>;
 }
@@ -63,10 +68,7 @@ function LabeledTimeBlock({ sentences, timestamp }) {
 			<span className="timeStampContainer">
 				<a href="javascript:void(0)" data-start_time={minStart} className="timeStamp">
 					{timestamp}
-				</a>
-				<button capture-start-time={minStart} >Del</button>
-				<button capture-start-time={minStart} >Edit</button>
-				
+				</a>				
 			</span>
 			<TimeBlock sentences={sentences} />
 		</div>
