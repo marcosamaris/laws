@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Insert.css'
 import {useDispatch} from 'react-redux'
 import {store} from '../redux/store.jsx'
@@ -15,17 +15,18 @@ const initialState = {
     success: ''
 }
 
-function Insert() {
+function Insert(props) {
     const dispatch = useDispatch()
     const json = store.getState().json
     const [trail, setTrail] = React.useState(initialState)
 
     const {transcriptions, translations, starttime, endtime, participant, err, success} = trail
-
     const handleChangeInput = e => {
         const { name, value } = e.target
         setTrail({ ...trail, [name]: value, err: '', success: ''})
+
     }
+
 
     const initInsert = () => {
 

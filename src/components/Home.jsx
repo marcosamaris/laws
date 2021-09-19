@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import './Home.css'
+import Example from "./../../images/example.gif"
+
+import {AiOutlineMail} from 'react-icons/ai'
+import {AiFillGithub} from 'react-icons/ai'
 
 export default class Home extends Component{
     constructor(props){
@@ -8,28 +11,32 @@ export default class Home extends Component{
 
     render(){
         return(
-            <div className="home">
-                <div className="descr">
-                    <p className="subtitle">
-                        No máximo, os lingüistas analisam a linguagem humana observando uma interação entre som e significado. Essas observações 
-                        são adquiridas por meio de métodos etnográficos em arquivos multimídia. Para muitos linguistas, um dos primeiros passos em 
-                        suas pesquisas é a criação da transcrição e tradução do material adquirido, para depois analisar o material ortograficamente 
-                        ou foneticamente, ou mesmo outra análise sofisticada. ELAN é uma ferramenta de anotação que nos permite trabalhe com anotações 
-                        para dados de vídeo e áudio. ELAN funciona em máquinas autônomas e tem vários processos complexos que podem chegar a ser 
-                        complicados para usuários não especializados. Neste trabalho, propomos um sistema web de fácil utilização para anotações 
-                        linguísticas manuais sobre transcrição e tradução de arquivos audiovisuais.
-                    </p> 
+            <div className="container">
+                <div >
+                    <h2>Laws é uma ferramenta para anotações de gravações, quer seja audio ou video!</h2> 
+                    <p>Esta ferramenta foi inspirado no projeto <a href='https://github.com/BrownCLPS/LingView'>LingView</a>!</p>
                 </div>
-                <div className="descr">
-                    <p className="sub-desc">Plataforma amigavel e simples para todos os públicos</p>
-                </div>
-                <div className='view'>
-                <p>View</p>
-                </div>
-                <div>
-
+                <div className="container-contrib">
+                    <img style={{padding:'0px 20px'}} src={Example} alt="Exibição do Site Laws" />
+                    <div style={{padding:'0px 20px'}}>
+                        <h3 className="sub-desc">Nossas contribuições, foram:</h3>
+                        <ul>
+                            <li className='list-contrib'>Interface amigavel e simples para todos os públicos</li>
+                            <li className='list-contrib'>Facilidade edição de anotações</li>
+                            <li className='list-contrib'>Criação de Novo Projeto</li>
+                            <li className='list-contrib'>Exportar Projeto</li>
+                        </ul>
+                    </div>
                 </div>
 
+                <div className='end'>
+                    <a target='_blank' href="https://mail.google.com/mail/u/0/?fs=1&to=jeremiaskalebe@gmail.com&tf=cm">
+                        <AiOutlineMail className='iconesTools' size='3rem'/>
+                        </a>
+                    <a target='_blank' href='https://github.com/jkalebe'>
+                        <AiFillGithub className='iconesTools'size='3rem'/>
+                        </a>
+                </div>
             </div>
         );
     }

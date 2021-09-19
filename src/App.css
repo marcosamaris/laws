@@ -306,3 +306,66 @@ div.insert{
 	margin: 0;
 	padding: 2px;
 }
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1140px;
+  }
+}
+
+/* ----------------HOME------------------- */
+.container-contrib{
+	margin: 0px;
+	padding: 50px 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.list-contrib{
+	padding: 15px 20px;
+	list-style: circle;
+}
+
+.end{
+	padding: 100px 20px;
+	margin: 0px;
+	display: block;
+	width: 100%;
+	align-items: center;
+}
+
+.iconesTools{
+	padding: 0px 50px;
+}

@@ -6,6 +6,6 @@ export const isEmpty = value => {
 
 export const isLengthMedia = (time) => {
 
-    if(time > $('#video').length) return true
+    if(time > $('#video').length*1000) return true
     return false
 }

@@ -10,7 +10,6 @@ class Delete extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = null
         this.handleClick = this.handleClick.bind(this);
         this.del = this.del.bind(this);
       }
