@@ -3,7 +3,10 @@ import { Route } from 'react-router-dom';
 import  NewProject  from './components/NewProject.jsx';
 import  OpenProject  from './components/OpenProject.jsx';
 import  Home  from './components/Home.jsx';
+
+
 import './App.css'
+
 
 import DataProvider from './redux/store.jsx'
 

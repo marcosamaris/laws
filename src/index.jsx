@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
 // import './index.css';
 import {App} from './App.jsx';
+import NavBar from './components/NavBar.jsx'
 import reportWebVitals from './reportWebVitals.jsx';
 
 ReactDOM.render(
   <Router>
+    <NavBar/>
     <App />
   </Router>,
   document.getElementById('root')

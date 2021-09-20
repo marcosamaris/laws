@@ -12,22 +12,23 @@ export default class Home extends Component{
     render(){
         return(
             <div className="container">
-                <div >
-                    <h2>Laws é uma ferramenta para anotações de gravações, quer seja audio ou video!</h2> 
-                    <p>Esta ferramenta foi inspirado no projeto <a href='https://github.com/BrownCLPS/LingView'>LingView</a>!</p>
-                </div>
-                <div className="container-contrib">
-                    <img style={{padding:'0px 20px'}} src={Example} alt="Exibição do Site Laws" />
-                    <div style={{padding:'0px 20px'}}>
-                        <h3 className="sub-desc">Nossas contribuições, foram:</h3>
-                        <ul>
-                            <li className='list-contrib'>Interface amigavel e simples para todos os públicos</li>
-                            <li className='list-contrib'>Facilidade edição de anotações</li>
-                            <li className='list-contrib'>Criação de Novo Projeto</li>
-                            <li className='list-contrib'>Exportar Projeto</li>
-                        </ul>
+                    <div style={{padding: '20px 0px'}}>
+                        <h2>Laws é uma ferramenta para anotações de gravações, quer seja audio ou video!</h2> 
+                        <p>Esta ferramenta foi inspirado no projeto <a target='_blank' href='https://github.com/BrownCLPS/LingView'>LingView</a>!</p>
                     </div>
-                </div>
+                    <div className="container-contrib">
+                        <img style={{padding:'0px 20px', borderRadius: '4%'}} src={Example} alt="Exibição do Site Laws" />
+                        <div style={{padding:'0px 20px'}}>
+                            <h3 className="sub-desc">Nossas contribuições, foram:</h3>
+                            <ul>
+                                <li className='list-contrib'>Interface amigavel e simples para todos os públicos</li>
+                                <li className='list-contrib'>Facilidade edição de anotações</li>
+                                <li className='list-contrib'>Criação de Novo Projeto</li>
+                                <li className='list-contrib'>Exportar Projeto</li>
+                            </ul>
+                        </div>
+                    </div>
+
 
                 <div className='end'>
                     <a target='_blank' href="https://mail.google.com/mail/u/0/?fs=1&to=jeremiaskalebe@gmail.com&tf=cm">

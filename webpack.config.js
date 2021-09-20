@@ -33,10 +33,11 @@ module.exports ={
                 presets: ['@babel/preset-env', '@babel/preset-react']}
         },
         {
-            test: /\.css$/,
+            test: /\.s?css$/i,
             use: [
                 'style-loader',
-                'css-loader'
+                'css-loader',
+                'sass-loader'
                 ]
         },{
             test: /\.(png|jpg|svg|gif)$/,
