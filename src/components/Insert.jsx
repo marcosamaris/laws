@@ -148,7 +148,7 @@ function Insert(props) {
                         onChange={handleChangeInput} name="translations" id="translations" />
                 </div>
 
-                <input type="Submit" id="submit" className="add" value="Add" onClick={initInsert} />
+                <button type="Submit" id="submit" className="btn btn-dark btn-sm" onClick={initInsert}>Add</button>
             </div>
             <div className="line"></div>
 

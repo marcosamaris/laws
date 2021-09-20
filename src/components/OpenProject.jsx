@@ -74,17 +74,15 @@ const OpenProject = ({modules}) => {
       </Switch>
           
       :
-          <div className='openproject'>
-            <div className="line-center">
-                    <div className="line line-right"></div>
-                    <h1 className="line fs-18">Choose the files XMLs and the of media!</h1>
-                    <div className="line line-left"></div>
+          <div className='container'>
+            <div className="line-center display-4">
+                    Carregue os arquivos XML e o de media.
             </div>
             <div >
-              <label className="labels-open" htmlFor="xml">Choose XML</label>
+              <label className="labels-open" htmlFor="xml">Upload XML</label>
               <input type="file" id="xml" name="xml" 
               onChange={handleChangeInput} />
-              <label className="labels-open" htmlFor="media"> Choose media</label>
+              <label className="labels-open" htmlFor="media"> Upload media</label>
               <input type="file" id="media" name="media" 
               onChange={handleChangeInput} />
 

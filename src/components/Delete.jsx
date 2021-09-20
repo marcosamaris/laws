@@ -36,8 +36,8 @@ class Delete extends React.Component {
 
     render() {
         return (
-            <div class="latexButtonContainer">
-                <button class="latexButton" onClick={this.handleClick}>
+            <div >
+                <button className="btn btn-outline-dark btn-sm" onClick={this.handleClick}>
                 Delete
                 </button>
             </div>); 

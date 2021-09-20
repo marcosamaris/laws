@@ -68,8 +68,8 @@ export class Edit extends React.Component {
 
     render() {
         return (
-            <div class="latexButtonContainer">
-                <button class="latexButton" onClick={this.handleClick}>
+            <div>
+                <button className="btn btn-outline-dark btn-sm" onClick={this.handleClick}>
                 Edit
                 </button>
                 {this.state.clicked ? 
@@ -85,7 +85,7 @@ export class Edit extends React.Component {
                         <input value={this.state['translations']} type="text" className='translations' placeholder="Enter the transcriptions"
                             onChange={this.handleChangeInput} name="translations" id="translations" />
                         </div>
-                        <button onClick={this.editSentence}>
+                        <button className='btn btn-dark btn-sm' onClick={this.editSentence}>
                         Editar
                         </button>
                 </div>

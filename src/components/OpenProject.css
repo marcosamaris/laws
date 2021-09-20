@@ -6,12 +6,6 @@
 input[type="text"]{
     margin: 10px 5px 0px 1px;
 }
-/* 
-.body{
-	height: 1000px;
-	padding: 0;
-	margin: 0;
-} */
 
 .labels-open {
     padding: 20px 10px;
@@ -43,14 +37,6 @@ input[type="text"]{
     border-radius: 4px;	
 }
 
-.add{
-    text-transform: uppercase;
-    font-size: 15px;
-    background-color: black;
-    color: #FFF;
-    border-radius: 4px;
-    margin: 0px 0px 0px 10px;
-}
 
 /* --------------Notification.jsx------------------- */
 

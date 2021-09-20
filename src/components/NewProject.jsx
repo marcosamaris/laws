@@ -78,14 +78,11 @@ const NewProject = () => {
             :
 
             <div className='form'>
-                <div className="line-center">
-
-                    <div className="line line-right"></div>
-                    <h1 className="line fs-18">Choose the file of Media</h1>
-                    <div className="line line-left"></div>
+                <div className="line-center display-4">
+                    Carregue um arquivo de media.
                 </div>
                 <div className="start-button" >
-                    <label htmlFor="media" className='xml'>Choose a Media</label>
+                    <label htmlFor="media" className='xml'>Carregue uma Media</label>
                     <input type="file" id="media" name="media" 
               onChange={handleChangeInput}/>
                     <input type="submit" className="start" value="Start" onClick={createJSON}/>

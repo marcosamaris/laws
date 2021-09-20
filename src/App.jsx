@@ -4,7 +4,7 @@ import  NewProject  from './components/NewProject.jsx';
 import  OpenProject  from './components/OpenProject.jsx';
 import  Home  from './components/Home.jsx';
 
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 

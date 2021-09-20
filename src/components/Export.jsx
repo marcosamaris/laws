@@ -35,7 +35,7 @@ const Export = () =>{
 
     return (
         <div className='export'>
-            <button onClick = {clickMe}>Export XML</button>
+            <button className='btn btn-secondary' style={{padding: '10px 0'}} onClick = {clickMe}>Exportar XML</button>
         </div>
     );
 }
