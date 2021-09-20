@@ -61,7 +61,7 @@ export class Edit extends React.Component {
                                              && e.end_time_ms == sentence.end_time_ms)
         
         json['sentences'][index]=sentence
-
+        store.dispatch({type: "actions/set", json})
         
 
     }
@@ -78,13 +78,16 @@ export class Edit extends React.Component {
                         <label className='labels transcriptions' htmlFor="transcriptions">Transcriptions</label>
                         <input value={this.state['transcriptions']} type="text" className='transcriptions' placeholder="Enter the transcriptions"
                             onChange={this.handleChangeInput} name="transcriptions" id="transcriptions" />
-                    </div>
+                        </div>
 
-                    <div>
+                        <div>
                         <label className='labels translations' htmlFor="translations">Translations</label>
                         <input value={this.state['translations']} type="text" className='translations' placeholder="Enter the transcriptions"
                             onChange={this.handleChangeInput} name="translations" id="translations" />
-                    </div>
+                        </div>
+                        <button onClick={this.editSentence}>
+                        Editar
+                        </button>
                 </div>
                 : null }
             </div>); 

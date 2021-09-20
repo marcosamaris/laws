@@ -339,3 +339,16 @@ div.insert{
 	float: right;
 	margin: 0 50px;
 }
+
+.overlaygrad {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    background-color: #000000d0;
+}
