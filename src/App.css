@@ -352,3 +352,27 @@ div.insert{
     transition: .5s ease;
     background-color: #000000d0;
 }
+
+/* ------------------------Inputs do newProject e OpenProject--------------------------*/
+input[type='file']{
+    display: none;
+}
+
+
+/* --------------Notification.jsx------------------- */
+
+.errMsg{
+    background: rgb(214, 10, 10);
+    color: #fff9;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 1.3px;
+}
+
+.successMsg{
+    background: rgb(9, 158, 54);
+    color: #fff9;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 1.3px;
+}

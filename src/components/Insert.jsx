@@ -2,7 +2,7 @@ import React from 'react';
 import './Insert.css'
 import {useDispatch} from 'react-redux'
 import {store} from '../redux/store.jsx'
-import {isEmpty, isLengthMedia} from '../js/validation.js'
+import {isDigit, isEmpty, isLengthMedia} from '../js/validation.js'
 import {showErrMsg, showSucessMsg} from './Notification.jsx'
 
 const initialState = {
@@ -23,7 +23,14 @@ function Insert(props) {
     const {transcriptions, translations, starttime, endtime, participant, err, success} = trail
     const handleChangeInput = e => {
         const { name, value } = e.target
+        console.log(name, value)
         setTrail({ ...trail, [name]: value, err: '', success: ''})
+        if(name == 'starttime' && /\D/.test(value)){
+            return setTrail({...trail, err: 'Não permitido \'.\', \'e\' e \',\' no START-TIME'})
+        }
+        if(name == 'endtime' && /\D/.test(value)){
+            return setTrail({...trail, err: 'Não permitido \'.\', \'e\' e \',\' no END-TIME'})
+        }
 
     }
 
@@ -132,13 +139,13 @@ function Insert(props) {
 
                 <div>
                     <label className='labels endtime' htmlFor="endtime">End Time</label>
-                    <input value={trail['endtime']} type="number" className='endtime' placeholder="Enter the End time in milliseconds"
+                    <input pattern="\d+" value={trail['endtime']} type="number" className='endtime' placeholder="Enter the End time in milliseconds"
                         onChange={handleChangeInput} name="endtime" id="endtime" />
                 </div>
 
                 <div>
                     <label className='labels transcriptions' htmlFor="transcriptions">Transcriptions</label>
-                    <input value={trail['transcriptions']} type="text" className='transcriptions' placeholder="Enter the transcriptions"
+                    <input pattern="\d+" value={trail['transcriptions']} type="text" className='transcriptions' placeholder="Enter the transcriptions"
                         onChange={handleChangeInput} name="transcriptions" id="transcriptions" />
                 </div>
 

@@ -2,10 +2,11 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Story } from '../Stories/Story/Story.jsx';
 import { NotFound } from './NotFound.jsx';
-import '../components/OpenProject.css'
 import Export from '../components/Export.jsx'
 
 import {useDispatch, connect} from 'react-redux'
+
+import tutorial from './../../images/tuto-open.gif'
 
 const parseXml = require('xml2js').parseString;
 const elan = require('../preprocessing/preprocess_eaf.js');
@@ -75,18 +76,23 @@ const OpenProject = ({modules}) => {
           
       :
           <div className='container'>
-            <div className="line-center display-4">
-                    Carregue os arquivos XML e o de media.
+            <div style={{textAlign: 'center', padding: '20px 20px'}}>
+              <img style={{maxWidth: '40%'}} src={tutorial} alt="" />
             </div>
-            <div >
-              <label className="labels-open" htmlFor="xml">Upload XML</label>
-              <input type="file" id="xml" name="xml" 
-              onChange={handleChangeInput} />
-              <label className="labels-open" htmlFor="media"> Upload media</label>
-              <input type="file" id="media" name="media" 
-              onChange={handleChangeInput} />
+            <div style={{textAlign: 'center'}}>
+              <h3>Carregue os arquivos XML e de media.</h3>
+            </div>
+            <div className='row'>
+              <div style={{textAlign: 'center'}}>
+                <label style={{margin: '20px'}} className='btn btn-dark btn-sm' htmlFor="xml">Upload XML</label>
+                <input type="file" id="xml" name="xml" 
+                onChange={handleChangeInput} />
+                <label style={{margin: '20px'}} className='btn btn-dark btn-sm' htmlFor="media">Upload media</label>
+                <input  type="file" id="media" name="media" 
+                onChange={handleChangeInput} />
+              </div>
 
-              <input type="submit" className="start" value="Start" onClick={open_file}/>
+              <input className='btn btn-dark btn-sm' type="submit" value="Começar" onClick={open_file}/>
             </div>
           </div>
       

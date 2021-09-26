@@ -9,9 +9,9 @@ export const isLengthMedia = (time) => {
     return false
 }
 
-export const isDigit = (time) => {
-    if(Number.isInteger(time)){
-        console.log('Inteiro: ', time)
-    }
+export const isDigit = (value) => {
+    if(String(value).indexOf('.') != -1 || String(value).indexOf('e') != -1 || String(value).indexOf(',') != -1)
+        return false
+    return true
 
 }

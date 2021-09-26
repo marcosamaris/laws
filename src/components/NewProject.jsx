@@ -1,10 +1,10 @@
 import React from 'react';
-import './NewProject.css'
 import { Switch } from 'react-router-dom';
 import { Story } from '../Stories/Story/Story.jsx'
 import {useDispatch, connect} from 'react-redux'
 import Export from '../components/Export.jsx'
 
+import tutorial from './../../images/tuto-new.gif'
 
 const NewProject = () => {
     const [mediaUrl, setMediaUrl] = React.useState();
@@ -77,15 +77,20 @@ const NewProject = () => {
             </Switch>
             :
 
-            <div className='form'>
-                <div className="line-center display-4">
-                    Carregue um arquivo de media.
+            <div className='container'>
+                <div style={{textAlign: 'center', padding: '20px 20px'}}>
+                    <img style={{maxWidth: '40%'}} src={tutorial} alt="" />
                 </div>
-                <div className="start-button" >
-                    <label htmlFor="media" className='xml'>Carregue uma Media</label>
-                    <input type="file" id="media" name="media" 
-              onChange={handleChangeInput}/>
-                    <input type="submit" className="start" value="Start" onClick={createJSON}/>
+                <div style={{textAlign: 'center'}}>
+                    <h3>Carregue um arquivo de media.</h3>
+                </div>
+                <div className='row'>
+                    <div style={{textAlign: 'center'}}>
+                        <label htmlFor="media" style={{margin: '20px'}} className='btn btn-dark btn-sm'>Carregue uma Media</label>
+                        <input type="file" id="media" name="media" 
+                onChange={handleChangeInput}/>
+                    </div>
+                    <input type="submit" className="btn btn-dark btn-sm" value="Começar" onClick={createJSON}/>
                 </div>
             </div>
         )

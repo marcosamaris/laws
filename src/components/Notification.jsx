@@ -1,5 +1,4 @@
 import React from 'react'
-import './OpenProject.css'
 
 export const showErrMsg = (msg) => {
     return <div className="errMsg">{msg}</div>
