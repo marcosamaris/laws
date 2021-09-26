@@ -1,5 +1,6 @@
 import React from 'react';
 import {store} from '../redux/store.jsx'
+import {AiOutlineArrowUp} from 'react-icons/ai'
 /* 
   A text format button that renders a window for tier selection on clicked. 
   This tier selection window then leads to a new block displaying the result of LaTeX format conversion.
@@ -39,22 +40,25 @@ export class Edit extends React.Component {
         let json = store.getState().json
         let sentence = this.props.sentence
 
-        //update the sentence
-        sentence['text'] = this.state.transcriptions
-        if (sentence['dependents'].lenght == 0){
-            sentence['dependents'].push({tier: '', values:[{
-                start_slot:0,
-                end_slot: 1,
-                value: this.state.translations
-            }]})
-        }
-        else{
-            sentence['dependents'][0] = {tier: '', values:[{
-                                        start_slot:0,
-                                        end_slot: 1,
-                                        value: this.state.translations
-                                    }]}
-        }
+        //verifica se a Transcriptions foi alterada
+        if(this.state.transcriptions != '')
+            sentence['text'] = this.state.transcriptions
+
+        if(this.state.translations != '')
+            if (sentence['dependents'].lenght == 0){
+                sentence['dependents'].push({tier: '', values:[{
+                    start_slot:0,
+                    end_slot: 1,
+                    value: this.state.translations
+                }]})
+            }
+            else{
+                sentence['dependents'][0] = {tier: '', values:[{
+                                            start_slot:0,
+                                            end_slot: 1,
+                                            value: this.state.translations
+                                        }]}
+            }
 
         //encontra o index do array
         let index = json.sentences.findIndex(e => e.start_time_ms == sentence.start_time_ms
@@ -62,6 +66,9 @@ export class Edit extends React.Component {
         
         json['sentences'][index]=sentence
         store.dispatch({type: "actions/set", json})
+        
+        //minimizar inputs do Editar
+        this.setState({clicked: true })
         
 
     }
@@ -82,12 +89,18 @@ export class Edit extends React.Component {
 
                         <div>
                         <label className='labels translations' htmlFor="translations">Translations</label>
-                        <input value={this.state['translations']} type="text" className='translations' placeholder="Enter the transcriptions"
+                        <input value={this.state['translations']} type="text" className='translations' placeholder="Enter the Translations"
                             onChange={this.handleChangeInput} name="translations" id="translations" />
+                        
                         </div>
-                        <button className='btn btn-dark btn-sm' onClick={this.editSentence}>
-                        Editar
-                        </button>
+                        <div >
+                            <button className='btn btn-dark btn-sm' onClick={this.editSentence}>
+                            Editar
+                            </button>
+                            <button  style={{margin: '0 20px'}} onClick={()=>this.setState({clicked: false })} >
+                                <AiOutlineArrowUp />
+                            </button>
+                        </div>
                 </div>
                 : null }
             </div>); 

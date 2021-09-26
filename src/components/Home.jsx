@@ -23,7 +23,7 @@ export default class Home extends Component{
                         target='_blank' 
                         style={{TextDecoder: 'underline', fontStyle: 'italic', fontWeight:'bold', cursor: 'pointer'}} 
                         className='link-tcc' href='https://github.com/BrownCLPS/LingView'
-                        >LingView</a>! O qual 
+                        >LingView.</a> O qual 
                         foi originalmente desenvolvido como parte do Projeto de Documentação da Língua A’ingae para exibir um corpus de materiais em A'ingae, 
                         o software foi projetado para ser um recurso flexível para uma variedade de diferentes comunidades, pesquisadores e materiais.</p>
                     </div>

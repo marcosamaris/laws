@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './Insert.css'
 import {useDispatch} from 'react-redux'
 import {store} from '../redux/store.jsx'
