@@ -15,7 +15,7 @@ export default class Home extends Component{
         return(
             <div className="container">
                     <div style={{padding: '20px 0px'}}>
-                        <h2>Laws é uma ferramenta para anotações de gravações, quer seja audio ou video!</h2> 
+                        <h2>Laws é uma ferramenta simples e acessível para anotações de gravações audiovisuais</h2> 
                         <p style={{padding: '20px 0px'}}>Esta ferramenta foi inspirado no
                         projeto <a 
                         onMouseOver={() => $( ".overlaygrad" ).css( "display", "block" )} 
@@ -23,9 +23,10 @@ export default class Home extends Component{
                         target='_blank' 
                         style={{TextDecoder: 'underline', fontStyle: 'italic', fontWeight:'bold', cursor: 'pointer'}} 
                         className='link-tcc' href='https://github.com/BrownCLPS/LingView'
-                        >LingView.</a> O qual 
-                        foi originalmente desenvolvido como parte do Projeto de Documentação da Língua A’ingae para exibir um corpus de materiais em A'ingae, 
-                        o software foi projetado para ser um recurso flexível para uma variedade de diferentes comunidades, pesquisadores e materiais.</p>
+                        >LingView</a>, o qual foi originalmente desenvolvido como parte do 
+                        Projeto de Documentação da língua A’ingae. O LingView é um software de visualização de anotações 
+                        linguísticas (como transcrição e tradução) e suas respectivas mídias simultaneamente e foi  projetado para 
+                        ser um recurso amigável a uma grande variedade de público.</p>
                     </div>
 
                     <div  style={{position: "relative"}}>
@@ -41,7 +42,9 @@ export default class Home extends Component{
 
                     <div>
                         <h3>Sobre o Laws</h3>
-                        <p>O objetivo do Laws é criar anotações em audiovisuais de maneira simples, com interface de facil visualização. Assim, obtemos o LingView e acrescentamos funcionalidades na ferramenta!</p>
+                        <p>O objetivo do Laws é criar anotações em materiais audiovisuais de maneira simples, com uma interface de fácil
+                            manuseio e visualização. A partir do LingView, criamos funcionalidades, de uso acessível a um público amplo, 
+                            para a transcrição e tradução de materiais audiovisuais. </p>
                     </div>
                     <div className="container-contrib">
                         <img style={{padding:'0px 20px', borderRadius: '4%'}} src={Example} alt="Exibição do Site Laws" />
@@ -49,12 +52,17 @@ export default class Home extends Component{
                             <h4 className="sub-desc">Nossas contribuições, foram:</h4>
                             <ul>
                                 <li className='list-contrib'>Interface amigavel e simples para todos os públicos</li>
-                                <li className='list-contrib'>Facilidade edição de anotações</li>
+                                <li className='list-contrib'>Facilidade de edição de anotações</li>
                                 <li className='list-contrib'>Criar Novo Projeto</li>
                                 <li className='list-contrib'>Abrir Projeto</li>
                                 <li className='list-contrib'>Exportar Projeto</li>
                             </ul>
                         </div>
+                    </div>
+
+                    <div>
+                        <p>Os arquivos de mídia suportados são WAV, MP3 para áudio e MPEG-4, MP4 e WebM para vídeo (de tamanho máximo de cerca de 10 minutos). 
+                            Os projetos são criados em formato EAF (Eudico Annotation Format), para serem usados no software ELAN.</p>
                     </div>
 
 
