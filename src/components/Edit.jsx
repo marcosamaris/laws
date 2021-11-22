@@ -77,25 +77,25 @@ export class Edit extends React.Component {
         return (
             <div>
                 <button className="btn btn-outline-dark btn-sm" onClick={this.handleClick}>
-                Edit
+                Editar
                 </button>
                 {this.state.clicked ? 
                     <div>
                         <div>
-                        <label className='labels transcriptions' htmlFor="transcriptions">Transcriptions</label>
+                        <label className='labels transcriptions' htmlFor="transcriptions">Transcrição</label>
                         <input value={this.state['transcriptions']} type="text" className='transcriptions' placeholder="Enter the transcriptions"
                             onChange={this.handleChangeInput} name="transcriptions" id="transcriptions" />
                         </div>
 
                         <div>
-                        <label className='labels translations' htmlFor="translations">Translations</label>
+                        <label className='labels translations' htmlFor="translations">Tradução</label>
                         <input value={this.state['translations']} type="text" className='translations' placeholder="Enter the Translations"
                             onChange={this.handleChangeInput} name="translations" id="translations" />
                         
                         </div>
                         <div >
                             <button className='btn btn-dark btn-sm' onClick={this.editSentence}>
-                            Editar
+                            Confirmar
                             </button>
                             <button  style={{margin: '0 20px'}} onClick={()=>this.setState({clicked: false })} >
                                 <AiOutlineArrowUp />

@@ -38,7 +38,7 @@ class Delete extends React.Component {
         return (
             <div >
                 <button className="btn btn-outline-dark btn-sm" onClick={this.handleClick}>
-                Delete
+                Deletar
                 </button>
             </div>); 
     }   

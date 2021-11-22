@@ -126,36 +126,36 @@ function Insert(props) {
             <div className="insert" >
 
                 <div>
-                    <label className='labels participant' htmlFor="participant">Participant</label>
+                    <label className='labels participant' htmlFor="participant">Participante</label>
                     <input value={trail['participant']} type="text" className='participant' placeholder="Enter participant name"
                         onChange={handleChangeInput} name="participant" id="participant" />
                 </div>
 
                 <div>
-                    <label className='labels starttime' htmlFor="starttime">Start Time</label>
+                    <label className='labels starttime' htmlFor="starttime">Tempo Inicial</label>
                     <input value={trail['starttime']} type="number" className='starttime' placeholder="Enter the Start time in milliseconds"
                         onChange={handleChangeInput} name="starttime" id="starttime" />
                 </div>
 
                 <div>
-                    <label className='labels endtime' htmlFor="endtime">End Time</label>
+                    <label className='labels endtime' htmlFor="endtime">Tempo final</label>
                     <input pattern="\d+" value={trail['endtime']} type="number" className='endtime' placeholder="Enter the End time in milliseconds"
                         onChange={handleChangeInput} name="endtime" id="endtime" />
                 </div>
 
                 <div>
-                    <label className='labels transcriptions' htmlFor="transcriptions">Transcriptions</label>
+                    <label className='labels transcriptions' htmlFor="transcriptions">Transcrição</label>
                     <input pattern="\d+" value={trail['transcriptions']} type="text" className='transcriptions' placeholder="Enter the transcriptions"
                         onChange={handleChangeInput} name="transcriptions" id="transcriptions" />
                 </div>
 
                 <div>
-                    <label className='labels translations' htmlFor="translations">Translations</label>
+                    <label className='labels translations' htmlFor="translations">Tradução</label>
                     <input value={trail['translations']} type="text" className='translations' placeholder="Enter the transcriptions"
                         onChange={handleChangeInput} name="translations" id="translations" />
                 </div>
 
-                <button type="Submit" id="submit" className="btn btn-dark btn-sm" onClick={initInsert}>Add</button>
+                <button type="Submit" id="submit" className="btn btn-dark btn-sm" onClick={initInsert}>Adicionar</button>
             </div>
             <div className="line"></div>
 
