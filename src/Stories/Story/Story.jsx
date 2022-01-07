@@ -18,6 +18,17 @@ export class Story extends React.Component {
             }
         }
     }
+    componentDidUpdate(){
+        if ($('#footer').length !== 0) {
+            setupTextSync();
+            // If video exists:
+            if ($('#video').length !== 0) {
+                Video.show();
+            } else {
+                Video.hide();
+            }
+        }
+    }
 
     render() {
         const story = this.props.story;

@@ -51,7 +51,7 @@ const OpenProject = ({modules}) => {
             reader2.onload= function(){
               json['metadata']['nameFile'] = files.media.name
               json['metadata']['media']['video']= reader2.result
-              json['metadata']['media']['audio']= reader2.result
+              // json['metadata']['media']['audio']= reader2.result
              
               setJson(json)
               dispatch({type: "actions/set", json})
