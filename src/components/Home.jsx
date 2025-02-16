@@ -16,7 +16,7 @@ export default class Home extends Component{
             <div className="container">
                     <div style={{padding: '20px 0px'}}>
                         <h2>Laws é uma ferramenta simples e acessível para anotações de gravações audiovisuais</h2> 
-                        <p style={{padding: '20px 0px'}}>Esta ferramenta foi inspirado no
+                        <p style={{padding: '20px 0px'}}>Esta ferramenta foi inspirada no
                         projeto <a 
                         onMouseOver={() => $( ".overlaygrad" ).css( "display", "block" )} 
                         onMouseOut={() => $( ".overlaygrad" ).css( "display", "none" )}
@@ -49,7 +49,7 @@ export default class Home extends Component{
                     <div className="container-contrib">
                         <img style={{padding:'0px 20px', borderRadius: '4%'}} src={Example} alt="Exibição do Site Laws" />
                         <div style={{padding:'0px 20px'}}>
-                            <h4 className="sub-desc">Nossas contribuições, foram:</h4>
+                            <h4 className="sub-desc">Nossas contribuições foram:</h4>
                             <ul>
                                 <li className='list-contrib'>Interface amigavel e simples para todos os públicos</li>
                                 <li className='list-contrib'>Facilidade de edição de anotações</li>
