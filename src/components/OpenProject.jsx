@@ -80,7 +80,7 @@ const OpenProject = ({modules}) => {
               <img style={{maxWidth: '40%'}} src={tutorial} alt="" />
             </div>
             <div style={{textAlign: 'center'}}>
-              <h3>Carregue os arquivos XML e de media.</h3>
+              <h3>Upload XML and media files.</h3>
             </div>
             <div className='row'>
               <div style={{textAlign: 'center'}}>
@@ -92,7 +92,7 @@ const OpenProject = ({modules}) => {
                 onChange={handleChangeInput} />
               </div>
 
-              <input className='btn btn-dark btn-sm' type="submit" value="Começar" onClick={open_file}/>
+              <input className='btn btn-dark btn-sm' type="submit" value="Start" onClick={open_file}/>
             </div>
           </div>
       

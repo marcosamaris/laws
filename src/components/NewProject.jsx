@@ -82,15 +82,16 @@ const NewProject = () => {
                     <img style={{maxWidth: '40%'}} src={tutorial} alt="" />
                 </div>
                 <div style={{textAlign: 'center'}}>
-                    <h3>Carregue um arquivo de media.</h3>
+                    <h3>Upload a media file (Audio or Video).</h3>
                 </div>
                 <div className='row'>
                     <div style={{textAlign: 'center'}}>
-                        <label htmlFor="media" style={{margin: '20px'}} className='btn btn-dark btn-sm'>Carregue uma Media</label>
+                        <label htmlFor="media" style={{margin: '20px'}} className='btn btn-dark btn-sm'>
+                            Upload Media file</label>
                         <input type="file" id="media" name="media" 
                 onChange={handleChangeInput}/>
                     </div>
-                    <input type="submit" className="btn btn-dark btn-sm" value="Começar" onClick={createJSON}/>
+                    <input type="submit" className="btn btn-dark btn-sm" value="Start" onClick={createJSON}/>
                 </div>
             </div>
         )

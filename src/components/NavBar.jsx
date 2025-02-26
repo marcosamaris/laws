@@ -14,8 +14,8 @@ export default class navBar extends Component {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav style={{fontSize: '1.5em'}} className="me-auto">
                     <Nav.Link href="#/">Home</Nav.Link>
-                    <Nav.Link href="#/openproject">Abrir Projeto</Nav.Link>
-                    <Nav.Link href="#/newproject">Novo Projeto</Nav.Link>
+                    <Nav.Link href="#/openproject">Open Project</Nav.Link>
+                    <Nav.Link href="#/newproject">New Project</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
