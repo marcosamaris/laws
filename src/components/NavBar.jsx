@@ -7,9 +7,9 @@ export default class navBar extends Component {
         return (
             <div>
 
-        <Navbar style={{backgroundColor: '#000'}} expand='lg' variant='dark'>
+        <Navbar style={{backgroundColor: '#AAA'}} expand='lg' variant='dark'>
             <Container>
-                <Navbar.Brand style={{fontSize: '2em'}} href="#/">Language Annotation Web System - LAWS</Navbar.Brand>
+                <Navbar.Brand style={{fontSize: '2em'}} color='#000'  href="#/">Language Annotation Web System - LAWS</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav style={{fontSize: '1.5em'}} className="me-auto">
