@@ -15,18 +15,17 @@ export default class Home extends Component{
         return(
             <div className="container">
                     <div style={{padding: '20px 0px'}}>
-                        <h2>Laws é uma ferramenta simples e acessível para anotações de gravações audiovisuais</h2> 
-                        <p style={{padding: '20px 0px'}}>Esta ferramenta foi inspirada no
-                        projeto <a 
+                        <h2>Laws is a simple and accessible tool for annotating audiovisual recordings</h2> 
+                        <p style={{padding: '20px 0px'}}>This tool was inspired in the project <a 
                         onMouseOver={() => $( ".overlaygrad" ).css( "display", "block" )} 
                         onMouseOut={() => $( ".overlaygrad" ).css( "display", "none" )}
                         target='_blank' 
                         style={{TextDecoder: 'underline', fontStyle: 'italic', fontWeight:'bold', cursor: 'pointer'}} 
                         className='link-tcc' href='https://github.com/BrownCLPS/LingView'
-                        >LingView</a>, o qual foi originalmente desenvolvido como parte do 
-                        Projeto de Documentação da língua A’ingae. O LingView é um software de visualização de anotações 
-                        linguísticas (como transcrição e tradução) e suas respectivas mídias simultaneamente e foi  projetado para 
-                        ser um recurso amigável a uma grande variedade de público.</p>
+                        >LingView</a>, which was originally developed as part of the A'ingae Language Documentation Project. 
+                        LingView is software for visualizing linguistic annotations (such as transcription and translation) 
+                        and their respective media simultaneously and is designed to be a user-friendly resource for a wide
+                         variety of audiences.</p>
                     </div>
 
                     <div  style={{position: "relative"}}>
@@ -41,28 +40,29 @@ export default class Home extends Component{
                     </div>
 
                     <div>
-                        <h3>Sobre o Laws</h3>
-                        <p>O objetivo do Laws é criar anotações em materiais audiovisuais de maneira simples, com uma interface de fácil
-                            manuseio e visualização. A partir do LingView, criamos funcionalidades, de uso acessível a um público amplo, 
-                            para a transcrição e tradução de materiais audiovisuais. </p>
+                        <h3>About o Laws</h3>
+                        <p>The aim of Laws is to create annotations on audiovisual materials in a simple way, 
+                            with an interface that is easy to use and visualize. Based on LingView, we have created functionalities, 
+                            accessible to a wide audience, for transcribing and translating audiovisual materials. </p>
                     </div>
                     <div className="container-contrib">
                         <img style={{padding:'0px 20px', borderRadius: '4%'}} src={Example} alt="Exibição do Site Laws" />
                         <div style={{padding:'0px 20px'}}>
-                            <h4 className="sub-desc">Nossas contribuições foram:</h4>
+                            <h4 className="sub-desc">Contributions of LAWS are:</h4>
                             <ul>
-                                <li className='list-contrib'>Interface amigavel e simples para todos os públicos</li>
-                                <li className='list-contrib'>Facilidade de edição de anotações</li>
-                                <li className='list-contrib'>Criar Novo Projeto</li>
-                                <li className='list-contrib'>Abrir Projeto</li>
-                                <li className='list-contrib'>Exportar Projeto</li>
+                                <li className='list-contrib'>User-friendly interface for all audiences</li>
+                                <li className='list-contrib'>Easy to edit annotations</li>
+                                <li className='list-contrib'> Easy to start new Projects</li>
+                                <li className='list-contrib'>Easy to continue a project</li>
+                                <li className='list-contrib'>Export projects with ELAN syntax</li>
                             </ul>
                         </div>
                     </div>
 
                     <div>
-                        <p>Os arquivos de mídia suportados são WAV, MP3 para áudio e MPEG-4, MP4 e WebM para vídeo (de tamanho máximo de cerca de 10 minutos). 
-                            Os projetos são criados em formato EAF (Eudico Annotation Format), para serem usados no software ELAN.</p>
+                        <p>The media files supported are WAV, MP3 for audio and MPEG-4, MP4 and WebM for video (maximum length 
+                            about 10 minutes). The projects are created in EAF format (Eudico Annotation Format), to be used in
+                             the ELAN software.</p>
                     </div>
 
 
