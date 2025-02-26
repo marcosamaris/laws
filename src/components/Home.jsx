@@ -15,7 +15,7 @@ export default class Home extends Component{
         return(
             <div className="container">
                     <div style={{padding: '20px 0px'}}>
-                        <h2>Laws is a simple and accessible tool for annotating audiovisual recordings</h2> 
+                        <h2>LAWS is a simple and accessible tool for annotating audiovisual recordings</h2> 
                         <p style={{padding: '20px 0px'}}>This tool was inspired in the project <a 
                         onMouseOver={() => $( ".overlaygrad" ).css( "display", "block" )} 
                         onMouseOut={() => $( ".overlaygrad" ).css( "display", "none" )}
@@ -40,8 +40,8 @@ export default class Home extends Component{
                     </div>
 
                     <div>
-                        <h3>About o Laws</h3>
-                        <p>The aim of Laws is to create annotations on audiovisual materials in a simple way, 
+                        <h3>About o LAWS</h3>
+                        <p>The aim of LAWS is to create annotations on audiovisual materials in a simple way, 
                             with an interface that is easy to use and visualize. Based on LingView, we have created functionalities, 
                             accessible to a wide audience, for transcribing and translating audiovisual materials. </p>
                     </div>
