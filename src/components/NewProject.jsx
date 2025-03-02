@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 import { Story } from '../Stories/Story/Story.jsx'
 import {useDispatch, connect} from 'react-redux'
-import Export from '../components/Export.jsx'
+
 
 import tutorial from './../../images/tuto-new.gif'
 
@@ -71,7 +71,7 @@ const NewProject = () => {
             jsonInit ?
             <Switch>
                     <div>
-                    <Export />
+
                     <Story story={jsonInit} />
                     </div>                          
             </Switch>

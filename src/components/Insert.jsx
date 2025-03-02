@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux'
 import {store} from '../redux/store.jsx'
 import {isDigit, isEmpty, isLengthMedia} from '../js/validation.js'
 import {showErrMsg, showSucessMsg} from './Notification.jsx'
-
+import Export from './Export.jsx'
 const initialState = {
     participant: '',
     translations: '',
@@ -38,15 +38,15 @@ function Insert(props) {
     const initInsert = () => {
 
         if(isEmpty(transcriptions) || isEmpty(translations) || isEmpty(participant) || isEmpty(starttime) || isEmpty(endtime)){
-            return setTrail({...trail, err: "Por favor, preencha todos os campos."})
+            return setTrail({...trail, err: "Please, complete all the fields"})
         }
 
         if(isTimeConfit(starttime, endtime)){
-            return setTrail({...trail, err: 'Tempo em conflito'})
+            return setTrail({...trail, err: 'Time conflict'})
         }
 
         if(isLengthMedia(endtime)){
-            return setTrail({...trail, err: 'Tempo informado ultrapassa duração da midia'})
+            return setTrail({...trail, err: 'Time informed ultrapass the media duration'})
         }
         
         let sentence = '';
@@ -86,7 +86,7 @@ function Insert(props) {
         setSentenceOnJSON(sentence);
         sortSentences()
         dispatch({type: "actions/set", json})          
-        setTrail({...trail, success: 'Trilha adcionada com sucesso.'})
+        setTrail({...trail, success: 'Annotation added successfully.'})
         console.log(store.getState())
     }
 
@@ -126,36 +126,37 @@ function Insert(props) {
             <div className="insert" >
 
                 <div>
-                    <label className='labels participant' htmlFor="participant">Participante</label>
+                    <label className='labels participant' htmlFor="participant">Participant</label>
                     <input value={trail['participant']} type="text" className='participant' placeholder="Enter participant name"
                         onChange={handleChangeInput} name="participant" id="participant" />
                 </div>
 
                 <div>
-                    <label className='labels starttime' htmlFor="starttime">Tempo Inicial</label>
-                    <input value={trail['starttime']} type="number" className='starttime' placeholder="Enter the Start time in milliseconds"
+                    <label className='labels starttime' htmlFor="starttime">Start Time</label>
+                    <input pattern="\d+" type="number" className='starttime' placeholder="Enter the Start time in milliseconds"
                         onChange={handleChangeInput} name="starttime" id="starttime" />
                 </div>
 
                 <div>
-                    <label className='labels endtime' htmlFor="endtime">Tempo final</label>
-                    <input pattern="\d+" value={trail['endtime']} type="number" className='endtime' placeholder="Enter the End time in milliseconds"
+                    <label className='labels endtime' htmlFor="endtime">End Time</label>
+                    <input pattern="\d+" type="number" className='endtime' placeholder="Enter the End time in milliseconds"
                         onChange={handleChangeInput} name="endtime" id="endtime" />
                 </div>
 
                 <div>
-                    <label className='labels transcriptions' htmlFor="transcriptions">Transcrição</label>
+                    <label className='labels transcriptions' htmlFor="transcriptions">Transcription</label>
                     <input pattern="\d+" value={trail['transcriptions']} type="text" className='transcriptions' placeholder="Enter the transcriptions"
                         onChange={handleChangeInput} name="transcriptions" id="transcriptions" />
                 </div>
 
                 <div>
-                    <label className='labels translations' htmlFor="translations">Tradução</label>
+                    <label className='labels translations' htmlFor="translations">Traduction</label>
                     <input value={trail['translations']} type="text" className='translations' placeholder="Enter the transcriptions"
                         onChange={handleChangeInput} name="translations" id="translations" />
                 </div>
 
-                <button type="Submit" id="submit" className="btn btn-dark btn-sm" onClick={initInsert}>Adicionar</button>
+                <button type="Submit" id="submit" className="btn btn-dark btn-sm" onClick={initInsert}>Add Annotation</button>
+                <Export />
             </div>
             <div className="line"></div>
 

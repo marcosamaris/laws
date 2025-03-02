@@ -16,6 +16,7 @@ export default class navBar extends Component {
                     <Nav.Link href="#/">Home</Nav.Link>
                     <Nav.Link href="#/openproject">Open Project</Nav.Link>
                     <Nav.Link href="#/newproject">New Project</Nav.Link>
+                    <Nav.Link href="#/manual">Manual</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>

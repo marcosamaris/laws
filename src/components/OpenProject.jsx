@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Story } from '../Stories/Story/Story.jsx';
 import { NotFound } from './NotFound.jsx';
-import Export from '../components/Export.jsx'
+
 
 import {useDispatch, connect} from 'react-redux'
 
@@ -67,7 +67,6 @@ const OpenProject = ({modules}) => {
       <Switch>
         {
               <div>
-                <Export />
                <Story story={json} />
               </div>          
         }
